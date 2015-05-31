@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Google Column Chart
+    <title>Google Annotation Chart
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Data visualization library for F#" />
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1><a name="Google-Column-Chart" class="anchor" href="#Google-Column-Chart">Google Column Chart</a></h1>
+<h1><a name="Google-Annotation-Chart" class="anchor" href="#Google-Annotation-Chart">Google Annotation Chart</a></h1>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -64,27 +64,19 @@
 <span class="l"> 8: </span>
 <span class="l"> 9: </span>
 <span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">options</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="t">Options</span>(
-        <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Company Performance&quot;</span>,
-        <span class="i">hAxis</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">Axis</span>(
-                <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Year&quot;</span>,
-                <span class="i">titleTextStyle</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="t">TextStyle</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span>)
-            )
-    )
-  
-[<span onmouseout="hideTip(event, 'fs3', 9)" onmouseover="showTip(event, 'fs3', 9)" class="i">sales</span>; <span onmouseout="hideTip(event, 'fs4', 10)" onmouseover="showTip(event, 'fs4', 10)" class="i">expenses</span>]
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 11)" onmouseover="showTip(event, 'fs9', 11)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 12)" onmouseover="showTip(event, 'fs10', 12)" class="f">Column</span>
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 13)" onmouseover="showTip(event, 'fs9', 13)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="f">WithOptions</span> <span onmouseout="hideTip(event, 'fs5', 15)" onmouseover="showTip(event, 'fs5', 15)" class="i">options</span>
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 16)" onmouseover="showTip(event, 'fs9', 16)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 17)" onmouseover="showTip(event, 'fs12', 17)" class="f">WithLabels</span> [<span class="s">&quot;Sales&quot;</span>; <span class="s">&quot;Expenses&quot;</span>]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 18)" onmouseover="showTip(event, 'fs7', 18)" class="i">options</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 19)" onmouseover="showTip(event, 'fs8', 19)" class="t">Options</span>(<span class="i">displayAnnotations</span> <span class="o">=</span> <span class="k">true</span>)
+ 
+[<span onmouseout="hideTip(event, 'fs4', 20)" onmouseover="showTip(event, 'fs4', 20)" class="i">kepler</span>; <span onmouseout="hideTip(event, 'fs6', 21)" onmouseover="showTip(event, 'fs6', 21)" class="i">gliese</span>]
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 22)" onmouseover="showTip(event, 'fs9', 22)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 23)" onmouseover="showTip(event, 'fs10', 23)" class="f">Annotation</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 24)" onmouseover="showTip(event, 'fs9', 24)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 25)" onmouseover="showTip(event, 'fs11', 25)" class="f">WithOptions</span> <span onmouseout="hideTip(event, 'fs7', 26)" onmouseover="showTip(event, 'fs7', 26)" class="i">options</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs9', 27)" onmouseover="showTip(event, 'fs9', 27)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 28)" onmouseover="showTip(event, 'fs12', 28)" class="f">WithLabels</span>
+    [
+        <span class="s">&quot;Kepler-22b mission&quot;</span>; <span class="s">&quot;Kepler-22b title&quot;</span>; <span class="s">&quot;Kepler-22b text&quot;</span>
+        <span class="s">&quot;Gliese 163 mission&quot;</span>; <span class="s">&quot;Gliese title&quot;</span>; <span class="s">&quot;Gliese text&quot;</span>            
+    ]
 </pre>
 </td>
 </tr>
@@ -94,26 +86,26 @@
     <script type="text/javascript">
         google.setOnLoadCallback(drawChart);
             function drawChart() {
-                var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Sales" ,"label": "Sales" }, {"type": "number" ,"id": "Expenses" ,"label": "Expenses" }], "rows" : [{"c" : [{"v": "2013"}, {"v": 1000}, {"v": 400}]}, {"c" : [{"v": "2014"}, {"v": 1170}, {"v": 460}]}, {"c" : [{"v": "2015"}, {"v": 660}, {"v": 1120}]}, {"c" : [{"v": "2016"}, {"v": 1030}, {"v": 540}]}]});
+                var data = new google.visualization.DataTable({"cols": [{"type": "datetime" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Kepler-22b mission" ,"label": "Kepler-22b mission" }, {"type": "string" ,"id": "Kepler-22b title" ,"label": "Kepler-22b title" }, {"type": "string" ,"id": "Kepler-22b text" ,"label": "Kepler-22b text" }, {"type": "number" ,"id": "Gliese 163 mission" ,"label": "Gliese 163 mission" }, {"type": "string" ,"id": "Gliese title" ,"label": "Gliese title" }, {"type": "string" ,"id": "Gliese text" ,"label": "Gliese text" }], "rows" : [{"c" : [{"v": "Date(2314, 2, 15, 0, 0, 0)"}, {"v": 12400}, {"v": ""}, {"v": ""}, {"v": 10645}, {"v": ""}, {"v": ""}]}, {"c" : [{"v": "Date(2314, 2, 16, 0, 0, 0)"}, {"v": 24045}, {"v": "Lalibertines"}, {"v": "First encounter"}, {"v": 12374}, {"v": ""}, {"v": ""}]}, {"c" : [{"v": "Date(2314, 2, 17, 0, 0, 0)"}, {"v": 35022}, {"v": "Lalibertines"}, {"v": "They are very tall"}, {"v": 15766}, {"v": "Gallantors"}, {"v": "First Encounter"}]}, {"c" : [{"v": "Date(2314, 2, 18, 0, 0, 0)"}, {"v": 12284}, {"v": "Lalibertines"}, {"v": "Attack on our crew!"}, {"v": 34334}, {"v": "Gallantors"}, {"v": "Statement of shared principles"}]}, {"c" : [{"v": "Date(2314, 2, 19, 0, 0, 0)"}, {"v": 8476}, {"v": "Lalibertines"}, {"v": "Heavy casualties"}, {"v": 66467}, {"v": "Gallantors"}, {"v": "Mysteries revealed"}]}, {"c" : [{"v": "Date(2314, 2, 20, 0, 0, 0)"}, {"v": 0}, {"v": "Lalibertines"}, {"v": "All crew lost"}, {"v": 79463}, {"v": "Gallantors"}, {"v": "Omniscience achieved"}]}]});
 
-                var options = {"hAxis":{"title":"Year","titleTextStyle":{"color":"red"}},"legend":{"position":"right"},"title":"Company Performance"} 
+                var options = {"legend":{"position":"right"},"displayAnnotations":true} 
 
-                var chart = new google.visualization.ColumnChart(document.getElementById('66c1b845-8629-4671-916c-c6fa782a8d28'));
+                var chart = new google.visualization.AnnotationChart(document.getElementById('a14eba0d-c28b-4ba1-ae6f-dfd3951b9046'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="66c1b845-8629-4671-916c-c6fa782a8d28" style="width: 700px; height: 400px;"></div>
+    <div id="a14eba0d-c28b-4ba1-ae6f-dfd3951b9046" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">module GoogleCharts<br /><br />from XPlot</div>
-<div class="tip" id="fs3">val sales : (string * int) list<br /><br />Full name: Google-column-chart.sales</div>
-<div class="tip" id="fs4">val expenses : (string * int) list<br /><br />Full name: Google-column-chart.expenses</div>
-<div class="tip" id="fs5">val options : Options<br /><br />Full name: Google-column-chart.options</div>
-<div class="tip" id="fs6">Multiple items<br />type Options =<br />&#160;&#160;new : unit -&gt; Options<br />&#160;&#160;member ShouldSerializeaggregationTarget : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallValuesSuffix : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallowHtml : unit -&gt; bool<br />&#160;&#160;member ShouldSerializealternatingRowStyle : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeanimation : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotationsWidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeareaOpacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeavoidOverlappingGridLines : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.Options<br /><br />--------------------<br />new : unit -&gt; Options</div>
-<div class="tip" id="fs7">Multiple items<br />type Axis =<br />&#160;&#160;new : unit -&gt; Axis<br />&#160;&#160;member ShouldSerializeallowContainerBoundaryTextCufoff : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebaseline : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebaselineColor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridlines : unit -&gt; bool<br />&#160;&#160;member ShouldSerializelogScale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxAlternation : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxTextLines : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.Axis<br /><br />--------------------<br />new : unit -&gt; Axis</div>
-<div class="tip" id="fs8">Multiple items<br />type TextStyle =<br />&#160;&#160;new : unit -&gt; TextStyle<br />&#160;&#160;member ShouldSerializeauraColor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebold : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefontName : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefontSize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeitalic : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member auraColor : string<br />&#160;&#160;member bold : bool<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.TextStyle<br /><br />--------------------<br />new : unit -&gt; TextStyle</div>
+<div class="tip" id="fs3">namespace System</div>
+<div class="tip" id="fs4">val kepler : (DateTime * int * string * string) list<br /><br />Full name: Annotation.kepler</div>
+<div class="tip" id="fs5">Multiple items<br />type DateTime =<br />&#160;&#160;struct<br />&#160;&#160;&#160;&#160;new : ticks:int64 -&gt; DateTime + 10 overloads<br />&#160;&#160;&#160;&#160;member Add : value:TimeSpan -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddDays : value:float -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddHours : value:float -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddMilliseconds : value:float -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddMinutes : value:float -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddMonths : months:int -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddSeconds : value:float -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddTicks : value:int64 -&gt; DateTime<br />&#160;&#160;&#160;&#160;member AddYears : value:int -&gt; DateTime<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;end<br /><br />Full name: System.DateTime<br /><br />--------------------<br />DateTime()<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64, kind: DateTimeKind) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, calendar: Globalization.Calendar) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, kind: DateTimeKind) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, calendar: Globalization.Calendar) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, kind: DateTimeKind) : unit<br />&#160;&#160;&#160;<em>(+0 other overloads)</em></div>
+<div class="tip" id="fs6">val gliese : (DateTime * int * string * string) list<br /><br />Full name: Annotation.gliese</div>
+<div class="tip" id="fs7">val options : Options<br /><br />Full name: Annotation.options</div>
+<div class="tip" id="fs8">Multiple items<br />type Options =<br />&#160;&#160;new : unit -&gt; Options<br />&#160;&#160;member ShouldSerializeaggregationTarget : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallValuesSuffix : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallowHtml : unit -&gt; bool<br />&#160;&#160;member ShouldSerializealternatingRowStyle : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeanimation : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotationsWidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeareaOpacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeavoidOverlappingGridLines : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.Options<br /><br />--------------------<br />new : unit -&gt; Options</div>
 <div class="tip" id="fs9">type Chart =<br />&#160;&#160;static member Annotation : data:seq&lt;#seq&lt;DateTime * &#39;V * string * string&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;V :&gt; value)<br />&#160;&#160;static member Annotation : data:seq&lt;DateTime * #value * string * string&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Calendar : data:seq&lt;DateTime * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Chart</div>
-<div class="tip" id="fs10">static member Chart.Column : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />static member Chart.Column : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart</div>
+<div class="tip" id="fs10">static member Chart.Annotation : data:seq&lt;#seq&lt;DateTime * &#39;V * string * string&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;V :&gt; value)<br />static member Chart.Annotation : data:seq&lt;DateTime * #value * string * string&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart</div>
 <div class="tip" id="fs11">static member Chart.WithOptions : options:Options -&gt; chart:GoogleChart -&gt; GoogleChart</div>
 <div class="tip" id="fs12">static member Chart.WithLabels : labels:seq&lt;string&gt; -&gt; chart:GoogleChart -&gt; GoogleChart</div>
 

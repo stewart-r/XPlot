@@ -1,214 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
- <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
-<script type='text/javascript'>
-if (typeof IntelliFactory !=='undefined')
-  IntelliFactory.Runtime.Start();
-</script>
-<title>XPlot &#183; Plotly Contour Plots</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="http://tahahachana.github.io/XPlot/style.css"><link rel="stylesheet" href="http://tahahachana.github.io/XPlot/vs.css"></head>
- <body>
-  <nav class="navbar navbar-default navbar-default-inner" role="navigation">
-   <div class="container">
-    <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-     </button>
-     <a class="navbar-brand" href="http://tahahachana.github.io/XPlot/">
-      <img src="http://tahahachana.github.io/XPlot/XPlot.png" alt="XPlot" id="logo">
-     </a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-     <ul class="nav navbar-nav">
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/">Home</a>
-      </li>
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/google-charts.html">Google Charts</a>
-      </li>
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/plotly.html">Plotly</a>
-      </li>
-     </ul>
-    </div>
-   </div>
-  </nav>
-  <div class="container">
-   <div class="row">
-    <div id="PlotlyBasicContourPlot">
-     <h2 class="page-header demo-header">Basic Contour Plot</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.5.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/MathNet.Numerics.3.6.0/lib/net40/MathNet.Numerics.dll&quot;&quot;&quot;
+<head>
+    <meta charset="utf-8" />
+    <title>Plotly Contour Plots
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Data visualization library for F#" />
+    <meta name="author" content="Taha Hachana; Tomas Petricek" />
 
-open MathNet.Numerics
-open System
-open XPlot.Plotly
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+    </script>
 
-let size = 100
+    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
+    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="http://fslab.org"><img height="16" width="16" src="http://fslab.org/img/thumbs/fslab.png" /> FsLab</a>
+                </li>
+                <li>
+                    <a href="http://fsharp.github.io/FSharp.Data"><img height="16" width="16" src="http://fslab.org/img/thumbs/fsharpdata.png" /> F# Data</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/Deedle"><img height="16" width="16" src="http://fslab.org/img/thumbs/deedle.png" /> Deedle</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/FSharpRProvider"><img height="16" width="16" src="http://fslab.org/img/thumbs/rprovider.png" /> R Provider</a>
+                </li>
+                <li>
+                    <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
+                </li>
+            </ul>
+            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span9" id="main">
+                
+<h1><a name="Plotly-Contour-Plots" class="anchor" href="#Plotly-Contour-Plots">Plotly Contour Plots</a></h1>
 
-let x = Generate.LinearSpaced(size, -2. * Math.PI, 2. * Math.PI)
-let y = Generate.LinearSpaced(size, -2. * Math.PI, 2. * Math.PI)
-let z = Array2D.create size size 0.
+<h2><a name="Basic-Contour-Plot" class="anchor" href="#Basic-Contour-Plot">Basic Contour Plot</a></h2>
 
-for i in 0 .. 99 do
-    for j in 0 .. 99 do
-        let r2 = x.[i] ** 2. + y.[j] ** 2.
-        z.[i,j] &lt;- sin x.[i] * cos y.[j] * sin r2 / log(r2 + 1.)
-
-let trace =
-    Contour(
-        z = z,
-        x = x,
-        y = y
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+<span class="l">8: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs41', 85)" onmouseover="showTip(event, 'fs41', 85)" class="i">trace</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs42', 86)" onmouseover="showTip(event, 'fs42', 86)" class="t">Contour</span>(
+        <span onmouseout="hideTip(event, 'fs43', 87)" onmouseover="showTip(event, 'fs43', 87)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 88)" onmouseover="showTip(event, 'fs18', 88)" class="i">z</span>,
+        <span onmouseout="hideTip(event, 'fs44', 89)" onmouseover="showTip(event, 'fs44', 89)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 90)" onmouseover="showTip(event, 'fs12', 90)" class="i">x</span>,
+        <span onmouseout="hideTip(event, 'fs45', 91)" onmouseover="showTip(event, 'fs45', 91)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 92)" onmouseover="showTip(event, 'fs17', 92)" class="i">y</span>
     )
 
-let data = Data [trace]
+<span onmouseout="hideTip(event, 'fs46', 93)" onmouseover="showTip(event, 'fs46', 93)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs47', 94)" onmouseover="showTip(event, 'fs47', 94)" class="t">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs48', 95)" onmouseover="showTip(event, 'fs48', 95)" class="f">From</span> [<span onmouseout="hideTip(event, 'fs41', 96)" onmouseover="showTip(event, 'fs41', 96)" class="i">trace</span>])
+</pre>
+</td>
+</tr>
+</table>
 
-let figure = Figure(data)
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/268.embed?width=640&height=480" ></iframe>
 
-let plotlyResponse = figure.Plot(&quot;Basic Contour Plot&quot;)
+<h2><a name="2D-Histogram-Contour-Plot-with-Histogram-Subplots" class="anchor" href="#2D-Histogram-Contour-Plot-with-Histogram-Subplots">2D Histogram Contour Plot with Histogram Subplots</a></h2>
 
-figure.Show()
-
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/268.embed?width=640&amp;height=480"></iframe>
-    </div>
-    <div id="2DHistogramContourPlotHistogramSubplots">
-     <h2 class="page-header demo-header">2D Histogram Contour Plot with Histogram Subplots</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.5.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/MathNet.Numerics.3.6.0/lib/net40/MathNet.Numerics.dll&quot;&quot;&quot;
-
-open MathNet.Numerics
-open MathNet.Numerics.Distributions
-open XPlot.Plotly
-
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
-
-let t = Generate.LinearSpaced(2000, -1., 1.2)
-
-let normal = new Normal(0., 1.0)
-
-let sample =
-    normal.Samples()
-    |&gt; Seq.take 2000
-    |&gt; Seq.toArray
-
-let x = Array.mapi (fun i x -&gt; t.[i] ** 3. + 0.3 * x) sample
-let y = Array.mapi (fun i x -&gt; t.[i] ** 6. + 0.3 * x) sample
-
-let trace1 =
-    Scatter(
-        x = x,
-        y = y,
-        mode = &quot;markers&quot;,
-        name = &quot;points&quot;,
-        marker =
-            Marker(
-                color = &quot;rgb(102,0,0)&quot;,
-                size = 2,
-                opacity = 0.4
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+<span class="l">22: </span>
+<span class="l">23: </span>
+<span class="l">24: </span>
+<span class="l">25: </span>
+<span class="l">26: </span>
+<span class="l">27: </span>
+<span class="l">28: </span>
+<span class="l">29: </span>
+<span class="l">30: </span>
+<span class="l">31: </span>
+<span class="l">32: </span>
+<span class="l">33: </span>
+<span class="l">34: </span>
+<span class="l">35: </span>
+<span class="l">36: </span>
+<span class="l">37: </span>
+<span class="l">38: </span>
+<span class="l">39: </span>
+<span class="l">40: </span>
+<span class="l">41: </span>
+<span class="l">42: </span>
+<span class="l">43: </span>
+<span class="l">44: </span>
+<span class="l">45: </span>
+<span class="l">46: </span>
+<span class="l">47: </span>
+<span class="l">48: </span>
+<span class="l">49: </span>
+<span class="l">50: </span>
+<span class="l">51: </span>
+<span class="l">52: </span>
+<span class="l">53: </span>
+<span class="l">54: </span>
+<span class="l">55: </span>
+<span class="l">56: </span>
+<span class="l">57: </span>
+<span class="l">58: </span>
+<span class="l">59: </span>
+<span class="l">60: </span>
+<span class="l">61: </span>
+<span class="l">62: </span>
+<span class="l">63: </span>
+<span class="l">64: </span>
+<span class="l">65: </span>
+<span class="l">66: </span>
+<span class="l">67: </span>
+<span class="l">68: </span>
+<span class="l">69: </span>
+<span class="l">70: </span>
+<span class="l">71: </span>
+<span class="l">72: </span>
+<span class="l">73: </span>
+<span class="l">74: </span>
+<span class="l">75: </span>
+<span class="l">76: </span>
+<span class="l">77: </span>
+<span class="l">78: </span>
+<span class="l">79: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs49', 97)" onmouseover="showTip(event, 'fs49', 97)" class="i">trace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs50', 98)" onmouseover="showTip(event, 'fs50', 98)" class="t">Scatter</span>(
+        <span onmouseout="hideTip(event, 'fs51', 99)" onmouseover="showTip(event, 'fs51', 99)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs35', 100)" onmouseover="showTip(event, 'fs35', 100)" class="i">x1</span>,
+        <span onmouseout="hideTip(event, 'fs52', 101)" onmouseover="showTip(event, 'fs52', 101)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs40', 102)" onmouseover="showTip(event, 'fs40', 102)" class="i">y1</span>,
+        <span class="i">mode</span> <span class="o">=</span> <span class="s">&quot;markers&quot;</span>,
+        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;points&quot;</span>,
+        <span class="i">marker</span> <span class="o">=</span>
+            <span onmouseout="hideTip(event, 'fs53', 103)" onmouseover="showTip(event, 'fs53', 103)" class="t">Marker</span>(
+                <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(102,0,0)&quot;</span>,
+                <span onmouseout="hideTip(event, 'fs11', 104)" onmouseover="showTip(event, 'fs11', 104)" class="i">size</span> <span class="o">=</span> <span class="n">2</span>,
+                <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.4</span>
             )
     )
 
-let trace2 =
-    Histogram2dContour(
-        x = x,
-        y = y,
-        name = &quot;density&quot;,
-        ncontours = 20.,
-        colorscale = &quot;Hot&quot;,
-        reversescale = true,
-        showscale = false
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs54', 105)" onmouseover="showTip(event, 'fs54', 105)" class="i">trace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs55', 106)" onmouseover="showTip(event, 'fs55', 106)" class="t">Histogram2dContour</span>(
+        <span onmouseout="hideTip(event, 'fs56', 107)" onmouseover="showTip(event, 'fs56', 107)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs35', 108)" onmouseover="showTip(event, 'fs35', 108)" class="i">x1</span>,
+        <span onmouseout="hideTip(event, 'fs57', 109)" onmouseover="showTip(event, 'fs57', 109)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs40', 110)" onmouseover="showTip(event, 'fs40', 110)" class="i">y1</span>,
+        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;density&quot;</span>,
+        <span class="i">ncontours</span> <span class="o">=</span> <span class="n">20.</span>,
+        <span class="i">colorscale</span> <span class="o">=</span> <span class="s">&quot;Hot&quot;</span>,
+        <span class="i">reversescale</span> <span class="o">=</span> <span class="k">true</span>,
+        <span class="i">showscale</span> <span class="o">=</span> <span class="k">false</span>
     )
 
-let trace3 =
-    Histogram(
-        x = x,
-        name = &quot;x density&quot;,
-        marker = Marker(color = &quot;rgb(102,0,0)&quot;),
-        yaxis = &quot;y2&quot;
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs58', 111)" onmouseover="showTip(event, 'fs58', 111)" class="i">trace3</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs59', 112)" onmouseover="showTip(event, 'fs59', 112)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs60', 113)" onmouseover="showTip(event, 'fs60', 113)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs35', 114)" onmouseover="showTip(event, 'fs35', 114)" class="i">x1</span>,
+        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;x density&quot;</span>,
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs53', 115)" onmouseover="showTip(event, 'fs53', 115)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(102,0,0)&quot;</span>),
+        <span class="i">yaxis</span> <span class="o">=</span> <span class="s">&quot;y2&quot;</span>
     )
 
-let trace4 =
-    Histogram(
-        y = y,
-        name = &quot;y density&quot;,
-        marker = Marker(color = &quot;rgb(102,0,0)&quot;),
-        xaxis = &quot;x2&quot;
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs61', 116)" onmouseover="showTip(event, 'fs61', 116)" class="i">trace4</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs59', 117)" onmouseover="showTip(event, 'fs59', 117)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs62', 118)" onmouseover="showTip(event, 'fs62', 118)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs40', 119)" onmouseover="showTip(event, 'fs40', 119)" class="i">y1</span>,
+        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;y density&quot;</span>,
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs53', 120)" onmouseover="showTip(event, 'fs53', 120)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(102,0,0)&quot;</span>),
+        <span class="i">xaxis</span> <span class="o">=</span> <span class="s">&quot;x2&quot;</span>
     )
 
-let data = Data [trace1; trace2; trace3; trace4]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs63', 121)" onmouseover="showTip(event, 'fs63', 121)" class="i">data&#39;</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs47', 122)" onmouseover="showTip(event, 'fs47', 122)" class="t">Data</span> [<span onmouseout="hideTip(event, 'fs49', 123)" onmouseover="showTip(event, 'fs49', 123)" class="i">trace1</span>; <span onmouseout="hideTip(event, 'fs54', 124)" onmouseover="showTip(event, 'fs54', 124)" class="i">trace2</span>; <span onmouseout="hideTip(event, 'fs58', 125)" onmouseover="showTip(event, 'fs58', 125)" class="i">trace3</span>; <span onmouseout="hideTip(event, 'fs61', 126)" onmouseover="showTip(event, 'fs61', 126)" class="i">trace4</span>]
 
-let layout =
-    Layout(
-        showlegend = false,
-        autosize = false,
-        width = 600.,
-        height = 550.,
-        xaxis =
-            Xaxis(
-                domain = [|0.; 0.85|],
-                showgrid = false,
-                zeroline = false
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs64', 127)" onmouseover="showTip(event, 'fs64', 127)" class="i">layout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs65', 128)" onmouseover="showTip(event, 'fs65', 128)" class="t">Layout</span>(
+        <span class="i">showlegend</span> <span class="o">=</span> <span class="k">false</span>,
+        <span class="i">autosize</span> <span class="o">=</span> <span class="k">false</span>,
+        <span class="i">width</span> <span class="o">=</span> <span class="n">600.</span>,
+        <span class="i">height</span> <span class="o">=</span> <span class="n">550.</span>,
+        <span class="i">xaxis</span> <span class="o">=</span>
+            <span onmouseout="hideTip(event, 'fs66', 129)" onmouseover="showTip(event, 'fs66', 129)" class="t">XAxis</span>(
+                <span class="i">domain</span> <span class="o">=</span> [|<span class="n">0.</span>; <span class="n">0.85</span>|],
+                <span class="i">showgrid</span> <span class="o">=</span> <span class="k">false</span>,
+                <span class="i">zeroline</span> <span class="o">=</span> <span class="k">false</span>
             ),
-        yaxis =
-            Yaxis(
-                domain = [|0.; 0.85|],
-                showgrid = false,
-                zeroline = false
+        <span class="i">yaxis</span> <span class="o">=</span>
+            <span onmouseout="hideTip(event, 'fs67', 130)" onmouseover="showTip(event, 'fs67', 130)" class="t">YAxis</span>(
+                <span class="i">domain</span> <span class="o">=</span> [|<span class="n">0.</span>; <span class="n">0.85</span>|],
+                <span class="i">showgrid</span> <span class="o">=</span> <span class="k">false</span>,
+                <span class="i">zeroline</span> <span class="o">=</span> <span class="k">false</span>
             ),
-        margin = Margin(t = 50.),
-        hovermode = &quot;closest&quot;,
-        bargap = 0.,
-        xaxis2 =
-            Xaxis(
-                domain = [|0.85; 1.|],
-                showgrid = false,
-                zeroline = false
+        <span class="i">margin</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs68', 131)" onmouseover="showTip(event, 'fs68', 131)" class="t">Margin</span>(<span onmouseout="hideTip(event, 'fs69', 132)" onmouseover="showTip(event, 'fs69', 132)" class="i">t</span> <span class="o">=</span> <span class="n">50.</span>),
+        <span class="i">hovermode</span> <span class="o">=</span> <span class="s">&quot;closest&quot;</span>,
+        <span class="i">bargap</span> <span class="o">=</span> <span class="n">0.</span>,
+        <span class="i">xaxis2</span> <span class="o">=</span>
+            <span onmouseout="hideTip(event, 'fs66', 133)" onmouseover="showTip(event, 'fs66', 133)" class="t">XAxis</span>(
+                <span class="i">domain</span> <span class="o">=</span> [|<span class="n">0.85</span>; <span class="n">1.</span>|],
+                <span class="i">showgrid</span> <span class="o">=</span> <span class="k">false</span>,
+                <span class="i">zeroline</span> <span class="o">=</span> <span class="k">false</span>
             ),
-        yaxis2 =
-            Yaxis(
-                domain = [|0.85; 1.|],
-                showgrid = false,
-                zeroline = false
+        <span class="i">yaxis2</span> <span class="o">=</span>
+            <span onmouseout="hideTip(event, 'fs67', 134)" onmouseover="showTip(event, 'fs67', 134)" class="t">YAxis</span>(
+                <span class="i">domain</span> <span class="o">=</span> [|<span class="n">0.85</span>; <span class="n">1.</span>|],
+                <span class="i">showgrid</span> <span class="o">=</span> <span class="k">false</span>,
+                <span class="i">zeroline</span> <span class="o">=</span> <span class="k">false</span>
             )
     )
 
-let figure = Figure(data, layout)
+<span onmouseout="hideTip(event, 'fs46', 135)" onmouseover="showTip(event, 'fs46', 135)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs63', 136)" onmouseover="showTip(event, 'fs63', 136)" class="i">data&#39;</span>, <span onmouseout="hideTip(event, 'fs64', 137)" onmouseover="showTip(event, 'fs64', 137)" class="i">layout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-let plotlyResponse = figure.Plot(&quot;2D Histogram Contour Plot with Histogram Subplots&quot;)
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/269.embed?width=640&height=480" ></iframe>
 
-figure.Show()
+<div class="tip" id="fs1">namespace XPlot</div>
+<div class="tip" id="fs2">namespace XPlot.Plotly</div>
+<div class="tip" id="fs3">namespace MathNet</div>
+<div class="tip" id="fs4">namespace MathNet.Numerics</div>
+<div class="tip" id="fs5">namespace MathNet.Numerics.Distributions</div>
+<div class="tip" id="fs6">namespace System</div>
+<div class="tip" id="fs7">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs8">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
+<div class="tip" id="fs9">module MyCredentials</div>
+<div class="tip" id="fs10">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
+<div class="tip" id="fs11">val size : int<br /><br />Full name: Plotly-contour-plots.size</div>
+<div class="tip" id="fs12">val x : float []<br /><br />Full name: Plotly-contour-plots.x</div>
+<div class="tip" id="fs13">type Generate =<br />&#160;&#160;static member Fibonacci : length:int -&gt; BigInteger[]<br />&#160;&#160;static member FibonacciSequence : unit -&gt; IEnumerable&lt;BigInteger&gt;<br />&#160;&#160;static member Gaussian : length:int * mean:float * standardDeviation:float -&gt; float[]<br />&#160;&#160;static member GaussianSequence : mean:float * standardDeviation:float -&gt; IEnumerable&lt;float&gt;<br />&#160;&#160;static member Impulse : length:int * amplitude:float * delay:int -&gt; float[]<br />&#160;&#160;static member ImpulseSequence : amplitude:float * delay:int -&gt; IEnumerable&lt;float&gt;<br />&#160;&#160;static member LinearRange : start:int * stop:int -&gt; float[] + 2 overloads<br />&#160;&#160;static member LinearRangeMap&lt;&#39;T&gt; : start:float * step:float * stop:float * map:Func&lt;float, &#39;T&gt; -&gt; &#39;T[]<br />&#160;&#160;static member LinearSpaced : length:int * start:float * stop:float -&gt; float[]<br />&#160;&#160;static member LinearSpacedMap&lt;&#39;T&gt; : length:int * start:float * stop:float * map:Func&lt;float, &#39;T&gt; -&gt; &#39;T[]<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Generate</div>
+<div class="tip" id="fs14">Generate.LinearSpaced(length: int, start: float, stop: float) : float []</div>
+<div class="tip" id="fs15">type Math =<br />&#160;&#160;static val PI : float<br />&#160;&#160;static val E : float<br />&#160;&#160;static member Abs : value:sbyte -&gt; sbyte + 6 overloads<br />&#160;&#160;static member Acos : d:float -&gt; float<br />&#160;&#160;static member Asin : d:float -&gt; float<br />&#160;&#160;static member Atan : d:float -&gt; float<br />&#160;&#160;static member Atan2 : y:float * x:float -&gt; float<br />&#160;&#160;static member BigMul : a:int * b:int -&gt; int64<br />&#160;&#160;static member Ceiling : d:decimal -&gt; decimal + 1 overload<br />&#160;&#160;static member Cos : d:float -&gt; float<br />&#160;&#160;...<br /><br />Full name: System.Math</div>
+<div class="tip" id="fs16">field Math.PI = 3.14159265359</div>
+<div class="tip" id="fs17">val y : float []<br /><br />Full name: Plotly-contour-plots.y</div>
+<div class="tip" id="fs18">val z : float [,]<br /><br />Full name: Plotly-contour-plots.z</div>
+<div class="tip" id="fs19">module Array2D<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs20">val create : length1:int -&gt; length2:int -&gt; value:&#39;T -&gt; &#39;T [,]<br /><br />Full name: Microsoft.FSharp.Collections.Array2D.create</div>
+<div class="tip" id="fs21">val i : int32</div>
+<div class="tip" id="fs22">val j : int32</div>
+<div class="tip" id="fs23">val r2 : float</div>
+<div class="tip" id="fs24">val sin : value:&#39;T -&gt; &#39;T (requires member Sin)<br /><br />Full name: Microsoft.FSharp.Core.Operators.sin</div>
+<div class="tip" id="fs25">val cos : value:&#39;T -&gt; &#39;T (requires member Cos)<br /><br />Full name: Microsoft.FSharp.Core.Operators.cos</div>
+<div class="tip" id="fs26">val log : value:&#39;T -&gt; &#39;T (requires member Log)<br /><br />Full name: Microsoft.FSharp.Core.Operators.log</div>
+<div class="tip" id="fs27">val t : float []<br /><br />Full name: Plotly-contour-plots.t</div>
+<div class="tip" id="fs28">val normal : Normal<br /><br />Full name: Plotly-contour-plots.normal</div>
+<div class="tip" id="fs29">Multiple items<br />type Normal =<br />&#160;&#160;new : unit -&gt; Normal + 3 overloads<br />&#160;&#160;member CumulativeDistribution : x:float -&gt; float<br />&#160;&#160;member Density : x:float -&gt; float<br />&#160;&#160;member DensityLn : x:float -&gt; float<br />&#160;&#160;member Entropy : float<br />&#160;&#160;member InverseCumulativeDistribution : p:float -&gt; float<br />&#160;&#160;member Maximum : float<br />&#160;&#160;member Mean : float<br />&#160;&#160;member Median : float<br />&#160;&#160;member Minimum : float<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Distributions.Normal<br /><br />--------------------<br />Normal() : unit<br />Normal(randomSource: Random) : unit<br />Normal(mean: float, stddev: float) : unit<br />Normal(mean: float, stddev: float, randomSource: Random) : unit</div>
+<div class="tip" id="fs30">val sample : float []<br /><br />Full name: Plotly-contour-plots.sample</div>
+<div class="tip" id="fs31">Normal.Samples() : Collections.Generic.IEnumerable&lt;float&gt;<br />Normal.Samples(values: float []) : unit</div>
+<div class="tip" id="fs32">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs33">val take : count:int -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.take</div>
+<div class="tip" id="fs34">val toArray : source:seq&lt;&#39;T&gt; -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Seq.toArray</div>
+<div class="tip" id="fs35">val x1 : float []<br /><br />Full name: Plotly-contour-plots.x1</div>
+<div class="tip" id="fs36">type Array =<br />&#160;&#160;member Clone : unit -&gt; obj<br />&#160;&#160;member CopyTo : array:Array * index:int -&gt; unit + 1 overload<br />&#160;&#160;member GetEnumerator : unit -&gt; IEnumerator<br />&#160;&#160;member GetLength : dimension:int -&gt; int<br />&#160;&#160;member GetLongLength : dimension:int -&gt; int64<br />&#160;&#160;member GetLowerBound : dimension:int -&gt; int<br />&#160;&#160;member GetUpperBound : dimension:int -&gt; int<br />&#160;&#160;member GetValue : params indices:int[] -&gt; obj + 7 overloads<br />&#160;&#160;member Initialize : unit -&gt; unit<br />&#160;&#160;member IsFixedSize : bool<br />&#160;&#160;...<br /><br />Full name: System.Array</div>
+<div class="tip" id="fs37">val mapi : mapping:(int -&gt; &#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.mapi</div>
+<div class="tip" id="fs38">val i : int</div>
+<div class="tip" id="fs39">val x : float</div>
+<div class="tip" id="fs40">val y1 : float []<br /><br />Full name: Plotly-contour-plots.y1</div>
+<div class="tip" id="fs41">val trace : Contour<br /><br />Full name: Plotly-contour-plots.trace</div>
+<div class="tip" id="fs42">Multiple items<br />type Contour =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Contour<br />&#160;&#160;member ShouldSerializeautocontour : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeconnectgaps : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecontours : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeline : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Contour<br /><br />--------------------<br />new : unit -&gt; Contour</div>
+<div class="tip" id="fs43">property Contour.z: obj</div>
+<div class="tip" id="fs44">property Contour.x: obj</div>
+<div class="tip" id="fs45">property Contour.y: obj</div>
+<div class="tip" id="fs46">Multiple items<br />type Figure =<br />&#160;&#160;new : data:Data * ?Layout:Layout -&gt; Figure<br />&#160;&#160;member GetInlineHtml : filename:string -&gt; string<br />&#160;&#160;member Plot : filename:string -&gt; PlotlyResponse option<br />&#160;&#160;member Fileopt : string<br />&#160;&#160;member Height : int<br />&#160;&#160;member Layout : Layout option<br />&#160;&#160;member Origin : string<br />&#160;&#160;member Response : PlotlyResponse option<br />&#160;&#160;member Width : int<br />&#160;&#160;member Fileopt : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Figure<br /><br />--------------------<br />new : data:Data * ?Layout:Layout -&gt; Figure</div>
+<div class="tip" id="fs47">Multiple items<br />namespace System.Data<br /><br />--------------------<br />namespace Microsoft.FSharp.Data<br /><br />--------------------<br />type Data =<br />&#160;&#160;new : traces:seq&lt;Trace&gt; -&gt; Data<br />&#160;&#160;member Json : string<br />&#160;&#160;static member From : traces:seq&lt;#Trace&gt; -&gt; Data<br /><br />Full name: XPlot.Plotly.Data<br /><br />--------------------<br />new : traces:seq&lt;Trace&gt; -&gt; Data</div>
+<div class="tip" id="fs48">static member Data.From : traces:seq&lt;#Trace&gt; -&gt; Data</div>
+<div class="tip" id="fs49">val trace1 : Scatter<br /><br />Full name: Plotly-contour-plots.trace1</div>
+<div class="tip" id="fs50">Multiple items<br />type Scatter =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Scatter<br />&#160;&#160;member ShouldSerializeconnectgaps : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefill : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefillcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeline : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemarker : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemode : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Scatter<br /><br />--------------------<br />new : unit -&gt; Scatter</div>
+<div class="tip" id="fs51">property Scatter.x: obj</div>
+<div class="tip" id="fs52">property Scatter.y: obj</div>
+<div class="tip" id="fs53">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeline : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxdisplayed : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
+<div class="tip" id="fs54">val trace2 : Histogram2dContour<br /><br />Full name: Plotly-contour-plots.trace2</div>
+<div class="tip" id="fs55">Multiple items<br />type Histogram2dContour =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram2dContour<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautocontour : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecontours : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram2dContour<br /><br />--------------------<br />new : unit -&gt; Histogram2dContour</div>
+<div class="tip" id="fs56">property Histogram2dContour.x: obj</div>
+<div class="tip" id="fs57">property Histogram2dContour.y: obj</div>
+<div class="tip" id="fs58">val trace3 : Histogram<br /><br />Full name: Plotly-contour-plots.trace3</div>
+<div class="tip" id="fs59">Multiple items<br />type Histogram =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemarker : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram<br /><br />--------------------<br />new : unit -&gt; Histogram</div>
+<div class="tip" id="fs60">property Histogram.x: obj</div>
+<div class="tip" id="fs61">val trace4 : Histogram<br /><br />Full name: Plotly-contour-plots.trace4</div>
+<div class="tip" id="fs62">property Histogram.y: obj</div>
+<div class="tip" id="fs63">val data&#39; : Data<br /><br />Full name: Plotly-contour-plots.data&#39;</div>
+<div class="tip" id="fs64">val layout : Layout<br /><br />Full name: Plotly-contour-plots.layout</div>
+<div class="tip" id="fs65">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgroupgap : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
+<div class="tip" id="fs66">Multiple items<br />type XAxis =<br />&#160;&#160;new : unit -&gt; XAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.XAxis<br /><br />--------------------<br />new : unit -&gt; XAxis</div>
+<div class="tip" id="fs67">Multiple items<br />type YAxis =<br />&#160;&#160;new : unit -&gt; YAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.YAxis<br /><br />--------------------<br />new : unit -&gt; YAxis</div>
+<div class="tip" id="fs68">Multiple items<br />type Margin =<br />&#160;&#160;new : unit -&gt; Margin<br />&#160;&#160;member ShouldSerializeautoexpand : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeb : unit -&gt; bool<br />&#160;&#160;member ShouldSerializel : unit -&gt; bool<br />&#160;&#160;member ShouldSerializepad : unit -&gt; bool<br />&#160;&#160;member ShouldSerializer : unit -&gt; bool<br />&#160;&#160;member ShouldSerializet : unit -&gt; bool<br />&#160;&#160;member autoexpand : string<br />&#160;&#160;member b : float<br />&#160;&#160;member l : float<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Margin<br /><br />--------------------<br />new : unit -&gt; Margin</div>
+<div class="tip" id="fs69">property Margin.t: float</div>
 
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/269.embed?width=640&amp;height=480"></iframe>
+            </div>
+            <div class="span3">
+                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                    <li class="nav-header">XPlot</li>
+                    <li><a href="/XPlot/">Home page</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
+                    <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
+                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+
+                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
+                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+
+                    
+
+                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
+                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+
+                    <li class="nav-header">Documentation</li>
+                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-   </div>
-  </div>
-  <div id="push"></div>
-  <div class="footer">
-   <div class="container">
-    <p class="text-muted">Built with <a href="http://www.websharper.com/" target="_blank">WebSharper</a></p>
-   </div>
-  </div>
-  <script src="http://tahahachana.github.io/XPlot/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50af450141ce9366"></script>
- </body>
+    <a href="http://github.com/TahaHachana/XPlot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
+</body>
 </html>

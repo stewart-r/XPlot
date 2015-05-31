@@ -1,250 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
- <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta id='websharper-data' name='websharper-data' content='{"$TYPES":[],"$DATA":{"$V":{}}}' />
-<script type='text/javascript'>
-if (typeof IntelliFactory !=='undefined')
-  IntelliFactory.Runtime.Start();
-</script>
-<title>XPlot &#183; Plotly Heatmaps</title><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="http://tahahachana.github.io/XPlot/style.css"><link rel="stylesheet" href="http://tahahachana.github.io/XPlot/vs.css"></head>
- <body>
-  <nav class="navbar navbar-default navbar-default-inner" role="navigation">
-   <div class="container">
-    <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-     </button>
-     <a class="navbar-brand" href="http://tahahachana.github.io/XPlot/">
-      <img src="http://tahahachana.github.io/XPlot/XPlot.png" alt="XPlot" id="logo">
-     </a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse">
-     <ul class="nav navbar-nav">
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/">Home</a>
-      </li>
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/google-charts.html">Google Charts</a>
-      </li>
-      <li>
-       <a href="http://tahahachana.github.io/XPlot/plotly.html">Plotly</a>
-      </li>
-     </ul>
-    </div>
-   </div>
-  </nav>
-  <div class="container">
-   <div class="row">
-    <div id="PlotlyBasicHeatmap">
-     <h2 class="page-header demo-header">Basic Heatmap</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.7.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
+<head>
+    <meta charset="utf-8" />
+    <title>Plotly Heatmaps
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Data visualization library for F#" />
+    <meta name="author" content="Taha Hachana; Tomas Petricek" />
 
-open XPlot.Plotly
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+    </script>
 
-let data =
-    Data(
+    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
+    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="http://fslab.org"><img height="16" width="16" src="http://fslab.org/img/thumbs/fslab.png" /> FsLab</a>
+                </li>
+                <li>
+                    <a href="http://fsharp.github.io/FSharp.Data"><img height="16" width="16" src="http://fslab.org/img/thumbs/fsharpdata.png" /> F# Data</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/Deedle"><img height="16" width="16" src="http://fslab.org/img/thumbs/deedle.png" /> Deedle</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/FSharpRProvider"><img height="16" width="16" src="http://fslab.org/img/thumbs/rprovider.png" /> R Provider</a>
+                </li>
+                <li>
+                    <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
+                </li>
+            </ul>
+            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span9" id="main">
+                
+<h1><a name="Plotly-Heatmaps" class="anchor" href="#Plotly-Heatmaps">Plotly Heatmaps</a></h1>
+
+<h2><a name="Basic-Heatmap" class="anchor" href="#Basic-Heatmap">Basic Heatmap</a></h2>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">basicData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="t">Data</span>(
         [
-            Heatmap(
-                z = [[1; 20; 30]; [20; 1; 60]; [30; 60; 1]]
+            <span onmouseout="hideTip(event, 'fs9', 9)" onmouseover="showTip(event, 'fs9', 9)" class="t">Heatmap</span>(
+                <span onmouseout="hideTip(event, 'fs10', 10)" onmouseover="showTip(event, 'fs10', 10)" class="i">z</span> <span class="o">=</span> [[<span class="n">1</span>; <span class="n">20</span>; <span class="n">30</span>]; [<span class="n">20</span>; <span class="n">1</span>; <span class="n">60</span>]; [<span class="n">30</span>; <span class="n">60</span>; <span class="n">1</span>]]
             )
         ]
     )
 
-let figure = Figure(data)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 11)" onmouseover="showTip(event, 'fs11', 11)" class="i">basicLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 12)" onmouseover="showTip(event, 'fs12', 12)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Basic Heatmap&quot;</span>)
 
-let plotlyResponse = figure.Plot(&quot;Basic Heatmap&quot;)
-    
-figure.Show()
+<span onmouseout="hideTip(event, 'fs13', 13)" onmouseover="showTip(event, 'fs13', 13)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs7', 14)" onmouseover="showTip(event, 'fs7', 14)" class="i">basicData</span>, <span onmouseout="hideTip(event, 'fs11', 15)" onmouseover="showTip(event, 'fs11', 15)" class="i">basicLayout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/365.embed?width=640&amp;height=480"></iframe>
-    </div>
-    <div id="PlotlyHeatmapCategoricalAxisLabels">
-     <h2 class="page-header demo-header">Heatmap with Categorical Axis Labels</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.7.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/365.embed?width=640&height=480" ></iframe>
 
-open XPlot.Plotly
+<h2><a name="Heatmap-with-Categorical-Axis-Labels" class="anchor" href="#Heatmap-with-Categorical-Axis-Labels">Heatmap with Categorical Axis Labels</a></h2>
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
-
-let data =
-    Data(
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 16)" onmouseover="showTip(event, 'fs14', 16)" class="i">categoricalData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 17)" onmouseover="showTip(event, 'fs8', 17)" class="t">Data</span>(
         [
-            Heatmap(
-                z = [[1; 20; 30; 50; 1]; [20; 1; 60; 80; 30]; [30; 60; 1; -10; 20]],
-                x = [&quot;Monday&quot;; &quot;Tuesday&quot;; &quot;Wednesday&quot;; &quot;Thursday&quot;; &quot;Friday&quot;],
-                y = [&quot;Morning&quot;; &quot;Afternoon&quot;; &quot;Evening&quot;]
+            <span onmouseout="hideTip(event, 'fs9', 18)" onmouseover="showTip(event, 'fs9', 18)" class="t">Heatmap</span>(
+                <span onmouseout="hideTip(event, 'fs10', 19)" onmouseover="showTip(event, 'fs10', 19)" class="i">z</span> <span class="o">=</span> [[<span class="n">1</span>; <span class="n">20</span>; <span class="n">30</span>; <span class="n">50</span>; <span class="n">1</span>]; [<span class="n">20</span>; <span class="n">1</span>; <span class="n">60</span>; <span class="n">80</span>; <span class="n">30</span>]; [<span class="n">30</span>; <span class="n">60</span>; <span class="n">1</span>; <span class="o">-</span><span class="n">10</span>; <span class="n">20</span>]],
+                <span onmouseout="hideTip(event, 'fs15', 20)" onmouseover="showTip(event, 'fs15', 20)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;Monday&quot;</span>; <span class="s">&quot;Tuesday&quot;</span>; <span class="s">&quot;Wednesday&quot;</span>; <span class="s">&quot;Thursday&quot;</span>; <span class="s">&quot;Friday&quot;</span>],
+                <span onmouseout="hideTip(event, 'fs16', 21)" onmouseover="showTip(event, 'fs16', 21)" class="i">y</span> <span class="o">=</span> [<span class="s">&quot;Morning&quot;</span>; <span class="s">&quot;Afternoon&quot;</span>; <span class="s">&quot;Evening&quot;</span>]
             )
         ]
     )
 
-let figure = Figure(data)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs17', 22)" onmouseover="showTip(event, 'fs17', 22)" class="i">categoricalLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 23)" onmouseover="showTip(event, 'fs12', 23)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Heatmap with Categorical Axis Labels&quot;</span>)
 
-let plotlyResponse = figure.Plot(&quot;Heatmap with Categorical Axis Labels&quot;)
-    
-figure.Show()
+<span onmouseout="hideTip(event, 'fs13', 24)" onmouseover="showTip(event, 'fs13', 24)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs14', 25)" onmouseover="showTip(event, 'fs14', 25)" class="i">categoricalData</span>, <span onmouseout="hideTip(event, 'fs17', 26)" onmouseover="showTip(event, 'fs17', 26)" class="i">categoricalLayout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/369.embed?width=640&amp;height=480"></iframe>
-    </div>
-    <div id="PlotlyCustomColorscale">
-     <h2 class="page-header demo-header">Custom Colorscale</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.7.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/369.embed?width=640&height=480" ></iframe>
 
-open XPlot.Plotly
+<h2><a name="Custom-Colorscale" class="anchor" href="#Custom-Colorscale">Custom Colorscale</a></h2>
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
-
-let z =
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+<span class="l">22: </span>
+<span class="l">23: </span>
+<span class="l">24: </span>
+<span class="l">25: </span>
+<span class="l">26: </span>
+<span class="l">27: </span>
+<span class="l">28: </span>
+<span class="l">29: </span>
+<span class="l">30: </span>
+<span class="l">31: </span>
+<span class="l">32: </span>
+<span class="l">33: </span>
+<span class="l">34: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs18', 27)" onmouseover="showTip(event, 'fs18', 27)" class="i">customZ</span> <span class="o">=</span>
     [
-        for x in 1 .. 50 do
-            let lst = List.map (fun y -&gt; y + x) [1..50]
-            yield lst
+        <span class="k">for</span> <span onmouseout="hideTip(event, 'fs19', 28)" onmouseover="showTip(event, 'fs19', 28)" class="i">x</span> <span class="k">in</span> <span class="n">1</span> <span class="o">..</span> <span class="n">50</span> <span class="k">do</span>
+            <span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 29)" onmouseover="showTip(event, 'fs20', 29)" class="i">lst</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 30)" onmouseover="showTip(event, 'fs21', 30)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs22', 31)" onmouseover="showTip(event, 'fs22', 31)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs23', 32)" onmouseover="showTip(event, 'fs23', 32)" class="i">y</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs23', 33)" onmouseover="showTip(event, 'fs23', 33)" class="i">y</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs19', 34)" onmouseover="showTip(event, 'fs19', 34)" class="i">x</span>) [<span class="n">1..</span><span class="n">50</span>]
+            <span class="k">yield</span> <span onmouseout="hideTip(event, 'fs20', 35)" onmouseover="showTip(event, 'fs20', 35)" class="i">lst</span>
     ]
 
-let colorScale =
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs24', 36)" onmouseover="showTip(event, 'fs24', 36)" class="i">colorScale</span> <span class="o">=</span>
     [
-        [box 0.0; box &quot;rgb(165,0,38)&quot;]
-        [0.1111111111111111; &quot;rgb(215,48,39)&quot;]
-        [0.2222222222222222; &quot;rgb(244,109,67)&quot;]
-        [0.3333333333333333; &quot;rgb(253,174,97)&quot;]
-        [0.4444444444444444; &quot;rgb(254,224,144)&quot;]
-        [0.5555555555555556; &quot;rgb(224,243,248)&quot;]
-        [0.6666666666666666; &quot;rgb(171,217,233)&quot;]
-        [0.7777777777777778; &quot;rgb(116,173,209)&quot;]
-        [0.8888888888888888; &quot;rgb(69,117,180)&quot;]
-        [1.0; &quot;rgb(49,54,149)&quot;]
+        [<span onmouseout="hideTip(event, 'fs25', 37)" onmouseover="showTip(event, 'fs25', 37)" class="f">box</span> <span class="n">0.0</span>; <span onmouseout="hideTip(event, 'fs25', 38)" onmouseover="showTip(event, 'fs25', 38)" class="f">box</span> <span class="s">&quot;rgb(165,0,38)&quot;</span>]
+        [<span class="n">0.1111111111111111</span>; <span class="s">&quot;rgb(215,48,39)&quot;</span>]
+        [<span class="n">0.2222222222222222</span>; <span class="s">&quot;rgb(244,109,67)&quot;</span>]
+        [<span class="n">0.3333333333333333</span>; <span class="s">&quot;rgb(253,174,97)&quot;</span>]
+        [<span class="n">0.4444444444444444</span>; <span class="s">&quot;rgb(254,224,144)&quot;</span>]
+        [<span class="n">0.5555555555555556</span>; <span class="s">&quot;rgb(224,243,248)&quot;</span>]
+        [<span class="n">0.6666666666666666</span>; <span class="s">&quot;rgb(171,217,233)&quot;</span>]
+        [<span class="n">0.7777777777777778</span>; <span class="s">&quot;rgb(116,173,209)&quot;</span>]
+        [<span class="n">0.8888888888888888</span>; <span class="s">&quot;rgb(69,117,180)&quot;</span>]
+        [<span class="n">1.0</span>; <span class="s">&quot;rgb(49,54,149)&quot;</span>]
     ]
 
-let data =
-    Data(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 39)" onmouseover="showTip(event, 'fs26', 39)" class="i">customData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 40)" onmouseover="showTip(event, 'fs8', 40)" class="t">Data</span>(
         [
-            Heatmap(
-                z = z,
-                colorscale = colorScale
+            <span onmouseout="hideTip(event, 'fs9', 41)" onmouseover="showTip(event, 'fs9', 41)" class="t">Heatmap</span>(
+                <span onmouseout="hideTip(event, 'fs10', 42)" onmouseover="showTip(event, 'fs10', 42)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 43)" onmouseover="showTip(event, 'fs18', 43)" class="i">customZ</span>,
+                <span class="i">colorscale</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 44)" onmouseover="showTip(event, 'fs24', 44)" class="i">colorScale</span>
             )
         ]
     )
 
-let figure = Figure(data)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 45)" onmouseover="showTip(event, 'fs27', 45)" class="i">customLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 46)" onmouseover="showTip(event, 'fs12', 46)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Custom Colorscale&quot;</span>)
 
-let plotlyResponse = figure.Plot(&quot;Custom Colorscale&quot;)
-    
-figure.Show()
+<span onmouseout="hideTip(event, 'fs13', 47)" onmouseover="showTip(event, 'fs13', 47)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs26', 48)" onmouseover="showTip(event, 'fs26', 48)" class="i">customData</span>, <span onmouseout="hideTip(event, 'fs27', 49)" onmouseover="showTip(event, 'fs27', 49)" class="i">customLayout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/370.embed?width=640&amp;height=480"></iframe>
-    </div>
-    <div id="PlotlyEarthColorscale">
-     <h2 class="page-header demo-header">Earth Colorscale</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.7.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/370.embed?width=640&height=480" ></iframe>
 
-open XPlot.Plotly
+<h2><a name="Earth-Colorscale" class="anchor" href="#Earth-Colorscale">Earth Colorscale</a></h2>
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
-
-let z =
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 50)" onmouseover="showTip(event, 'fs28', 50)" class="i">earthZ</span> <span class="o">=</span>
     [
-        for x in 1 .. 50 -&gt;
-            List.map (fun y -&gt; y + x) [1..50]
+        <span class="k">for</span> <span onmouseout="hideTip(event, 'fs19', 51)" onmouseover="showTip(event, 'fs19', 51)" class="i">x</span> <span class="k">in</span> <span class="n">1</span> <span class="o">..</span> <span class="n">50</span> <span class="k">-&gt;</span>
+            <span onmouseout="hideTip(event, 'fs21', 52)" onmouseover="showTip(event, 'fs21', 52)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs22', 53)" onmouseover="showTip(event, 'fs22', 53)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs23', 54)" onmouseover="showTip(event, 'fs23', 54)" class="i">y</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs23', 55)" onmouseover="showTip(event, 'fs23', 55)" class="i">y</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs19', 56)" onmouseover="showTip(event, 'fs19', 56)" class="i">x</span>) [<span class="n">1..</span><span class="n">50</span>]
     ]
 
-let data =
-    Data(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 57)" onmouseover="showTip(event, 'fs29', 57)" class="i">earthData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 58)" onmouseover="showTip(event, 'fs8', 58)" class="t">Data</span>(
         [
-            Heatmap(
-                z = z,
-                colorscale = &quot;Earth&quot;
+            <span onmouseout="hideTip(event, 'fs9', 59)" onmouseover="showTip(event, 'fs9', 59)" class="t">Heatmap</span>(
+                <span onmouseout="hideTip(event, 'fs10', 60)" onmouseover="showTip(event, 'fs10', 60)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 61)" onmouseover="showTip(event, 'fs28', 61)" class="i">earthZ</span>,
+                <span class="i">colorscale</span> <span class="o">=</span> <span class="s">&quot;Earth&quot;</span>
             )
         ]
     )
 
-let layout = Layout(title = &quot;Earth&quot;)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs30', 62)" onmouseover="showTip(event, 'fs30', 62)" class="i">earthLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 63)" onmouseover="showTip(event, 'fs12', 63)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Earth Colorscale&quot;</span>)
 
-let figure = Figure(data, layout)
+<span onmouseout="hideTip(event, 'fs13', 64)" onmouseover="showTip(event, 'fs13', 64)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs29', 65)" onmouseover="showTip(event, 'fs29', 65)" class="i">earthData</span>, <span onmouseout="hideTip(event, 'fs30', 66)" onmouseover="showTip(event, 'fs30', 66)" class="i">earthLayout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-let plotlyResponse = figure.Plot(&quot;Earth Colorscale&quot;)
-    
-figure.Show()
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/371.embed?width=640&amp;height=480"></iframe>
-    </div>
-    <div id="PlotlyYIGnBuColorscale">
-     <h2 class="page-header demo-header">YIGnBu Colorscale</h2>
-     <div>
-      <pre>
-       <code class="fsharp">#r &quot;&quot;&quot;../packages/Http.fs.1.5.1/lib/net40/HttpClient.dll&quot;&quot;&quot;
-#r &quot;&quot;&quot;../packages/XPlot.Plotly.0.7.0/Lib/Net45/XPlot.Plotly.dll&quot;&quot;&quot;
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/371.embed?width=640&height=480" ></iframe>
 
-open XPlot.Plotly
+<h2><a name="YIGnBu-Colorscale" class="anchor" href="#YIGnBu-Colorscale">YIGnBu Colorscale</a></h2>
 
-Plotly.Signin(&quot;Username&quot;, &quot;API Key&quot;)
-
-let z =
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 67)" onmouseover="showTip(event, 'fs31', 67)" class="i">yignbuZ</span> <span class="o">=</span>
     [
-        for x in 1 .. 50 -&gt;
-            List.map (fun y -&gt; y + x) [1..50]
+        <span class="k">for</span> <span onmouseout="hideTip(event, 'fs19', 68)" onmouseover="showTip(event, 'fs19', 68)" class="i">x</span> <span class="k">in</span> <span class="n">1</span> <span class="o">..</span> <span class="n">50</span> <span class="k">-&gt;</span>
+            <span onmouseout="hideTip(event, 'fs21', 69)" onmouseover="showTip(event, 'fs21', 69)" class="t">List</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs22', 70)" onmouseover="showTip(event, 'fs22', 70)" class="f">map</span> (<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs23', 71)" onmouseover="showTip(event, 'fs23', 71)" class="i">y</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs23', 72)" onmouseover="showTip(event, 'fs23', 72)" class="i">y</span> <span class="o">+</span> <span onmouseout="hideTip(event, 'fs19', 73)" onmouseover="showTip(event, 'fs19', 73)" class="i">x</span>) [<span class="n">1..</span><span class="n">50</span>]
     ]
 
-let data =
-    Data(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs32', 74)" onmouseover="showTip(event, 'fs32', 74)" class="i">yignbuData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 75)" onmouseover="showTip(event, 'fs8', 75)" class="t">Data</span>(
         [
-            Heatmap(
-                z = z,
-                colorscale = &quot;YIGnBu&quot;
+            <span onmouseout="hideTip(event, 'fs9', 76)" onmouseover="showTip(event, 'fs9', 76)" class="t">Heatmap</span>(
+                <span onmouseout="hideTip(event, 'fs10', 77)" onmouseover="showTip(event, 'fs10', 77)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs31', 78)" onmouseover="showTip(event, 'fs31', 78)" class="i">yignbuZ</span>,
+                <span class="i">colorscale</span> <span class="o">=</span> <span class="s">&quot;YIGnBu&quot;</span>
             )
         ]
     )
 
-let layout = Layout(title = &quot;YIGnBu&quot;)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs33', 79)" onmouseover="showTip(event, 'fs33', 79)" class="i">yignbuLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 80)" onmouseover="showTip(event, 'fs12', 80)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;YIGnBu Colorscale&quot;</span>)
 
-let figure = Figure(data, layout)
+<span onmouseout="hideTip(event, 'fs13', 81)" onmouseover="showTip(event, 'fs13', 81)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs32', 82)" onmouseover="showTip(event, 'fs32', 82)" class="i">yignbuData</span>, <span onmouseout="hideTip(event, 'fs33', 83)" onmouseover="showTip(event, 'fs33', 83)" class="i">yignbuLayout</span>)
+</pre>
+</td>
+</tr>
+</table>
 
-let plotlyResponse = figure.Plot(&quot;YIGnBu Colorscale&quot;)
-    
-figure.Show()
+<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/372.embed?width=640&height=480" ></iframe>
 
-</code>
-      </pre>
-     </div>
-     <iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/372.embed?width=640&amp;height=480"></iframe>
+<div class="tip" id="fs1">namespace XPlot</div>
+<div class="tip" id="fs2">namespace XPlot.Plotly</div>
+<div class="tip" id="fs3">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs4">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
+<div class="tip" id="fs5">module MyCredentials</div>
+<div class="tip" id="fs6">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
+<div class="tip" id="fs7">val basicData : Data<br /><br />Full name: Plotly-heatmaps.basicData</div>
+<div class="tip" id="fs8">Multiple items<br />namespace Microsoft.FSharp.Data<br /><br />--------------------<br />type Data =<br />&#160;&#160;new : traces:seq&lt;Trace&gt; -&gt; Data<br />&#160;&#160;member Json : string<br />&#160;&#160;static member From : traces:seq&lt;#Trace&gt; -&gt; Data<br /><br />Full name: XPlot.Plotly.Data<br /><br />--------------------<br />new : traces:seq&lt;Trace&gt; -&gt; Data</div>
+<div class="tip" id="fs9">Multiple items<br />type Heatmap =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Heatmap<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeconnectgaps : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializereversescale : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Heatmap<br /><br />--------------------<br />new : unit -&gt; Heatmap</div>
+<div class="tip" id="fs10">property Heatmap.z: obj</div>
+<div class="tip" id="fs11">val basicLayout : Layout<br /><br />Full name: Plotly-heatmaps.basicLayout</div>
+<div class="tip" id="fs12">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgroupgap : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
+<div class="tip" id="fs13">Multiple items<br />type Figure =<br />&#160;&#160;new : data:Data * ?Layout:Layout -&gt; Figure<br />&#160;&#160;member GetInlineHtml : filename:string -&gt; string<br />&#160;&#160;member Plot : filename:string -&gt; PlotlyResponse option<br />&#160;&#160;member Fileopt : string<br />&#160;&#160;member Height : int<br />&#160;&#160;member Layout : Layout option<br />&#160;&#160;member Origin : string<br />&#160;&#160;member Response : PlotlyResponse option<br />&#160;&#160;member Width : int<br />&#160;&#160;member Fileopt : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Figure<br /><br />--------------------<br />new : data:Data * ?Layout:Layout -&gt; Figure</div>
+<div class="tip" id="fs14">val categoricalData : Data<br /><br />Full name: Plotly-heatmaps.categoricalData</div>
+<div class="tip" id="fs15">property Heatmap.x: obj</div>
+<div class="tip" id="fs16">property Heatmap.y: obj</div>
+<div class="tip" id="fs17">val categoricalLayout : Layout<br /><br />Full name: Plotly-heatmaps.categoricalLayout</div>
+<div class="tip" id="fs18">val customZ : int list list<br /><br />Full name: Plotly-heatmaps.customZ</div>
+<div class="tip" id="fs19">val x : int</div>
+<div class="tip" id="fs20">val lst : int list</div>
+<div class="tip" id="fs21">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
+<div class="tip" id="fs22">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; list:&#39;T list -&gt; &#39;U list<br /><br />Full name: Microsoft.FSharp.Collections.List.map</div>
+<div class="tip" id="fs23">val y : int</div>
+<div class="tip" id="fs24">val colorScale : obj list list<br /><br />Full name: Plotly-heatmaps.colorScale</div>
+<div class="tip" id="fs25">val box : value:&#39;T -&gt; obj<br /><br />Full name: Microsoft.FSharp.Core.Operators.box</div>
+<div class="tip" id="fs26">val customData : Data<br /><br />Full name: Plotly-heatmaps.customData</div>
+<div class="tip" id="fs27">val customLayout : Layout<br /><br />Full name: Plotly-heatmaps.customLayout</div>
+<div class="tip" id="fs28">val earthZ : int list list<br /><br />Full name: Plotly-heatmaps.earthZ</div>
+<div class="tip" id="fs29">val earthData : Data<br /><br />Full name: Plotly-heatmaps.earthData</div>
+<div class="tip" id="fs30">val earthLayout : Layout<br /><br />Full name: Plotly-heatmaps.earthLayout</div>
+<div class="tip" id="fs31">val yignbuZ : int list list<br /><br />Full name: Plotly-heatmaps.yignbuZ</div>
+<div class="tip" id="fs32">val yignbuData : Data<br /><br />Full name: Plotly-heatmaps.yignbuData</div>
+<div class="tip" id="fs33">val yignbuLayout : Layout<br /><br />Full name: Plotly-heatmaps.yignbuLayout</div>
+
+            </div>
+            <div class="span3">
+                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                    <li class="nav-header">XPlot</li>
+                    <li><a href="/XPlot/">Home page</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
+                    <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
+                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+
+                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
+                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+
+                    
+
+                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
+                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+
+                    <li class="nav-header">Documentation</li>
+                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-   </div>
-  </div>
-  <div id="push"></div>
-  <div class="footer">
-   <div class="container">
-    <p class="text-muted">Built with <a href="http://www.websharper.com/" target="_blank">WebSharper</a></p>
-   </div>
-  </div>
-  <script src="http://tahahachana.github.io/XPlot/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50af450141ce9366"></script>
- </body>
+    <a href="http://github.com/TahaHachana/XPlot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
+</body>
 </html>

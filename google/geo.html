@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Google Geo charts
+    <title>XPlot Google: Geo charts
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Data visualization library for F#" />
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1><a name="Google-Geo-charts" class="anchor" href="#Google-Geo-charts">Google Geo charts</a></h1>
+<h1><a name="XPlot-Google-Geo-charts" class="anchor" href="#XPlot-Google-Geo-charts">XPlot Google: Geo charts</a></h1>
 
 <p>This example shows how to create geo charts and line charts using the 
 <code>XPlot.GoogleCharts</code> library.</p>
@@ -95,11 +95,11 @@ works just fine:</p>
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.GeoChart(document.getElementById('51d36514-3910-4556-816a-1adad09b5272'));
+                var chart = new google.visualization.GeoChart(document.getElementById('079cd597-1927-4e21-9d02-d92ac81834d7'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="51d36514-3910-4556-816a-1adad09b5272" style="width: 700px; height: 400px;"></div>
+    <div id="079cd597-1927-4e21-9d02-d92ac81834d7" style="width: 700px; height: 400px;"></div>
 
 <h2><a name="A-regional-geo-chart" class="anchor" href="#A-regional-geo-chart">A regional geo chart</a></h2>
 
@@ -163,19 +163,19 @@ and takes a series of either two-element (as above) or three-element (as below) 
 
                 var options = {"legend":{"position":"none"},"colorAxis":{"colors":["green","blue"]},"displayMode":"markers","region":"IT"} 
 
-                var chart = new google.visualization.GeoChart(document.getElementById('b7400c46-2100-4ea7-9fcf-feb400e78d1a'));
+                var chart = new google.visualization.GeoChart(document.getElementById('f60f17a6-06c9-44da-8839-7e04f8997cfb'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="b7400c46-2100-4ea7-9fcf-feb400e78d1a" style="width: 700px; height: 400px;"></div>
+    <div id="f60f17a6-06c9-44da-8839-7e04f8997cfb" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">module GoogleCharts<br /><br />from XPlot</div>
-<div class="tip" id="fs3">val pop : (string * int) list<br /><br />Full name: Google-geo-chart.pop</div>
+<div class="tip" id="fs3">val pop : (string * int) list<br /><br />Full name: Geo.pop</div>
 <div class="tip" id="fs4">type Chart =<br />&#160;&#160;static member Annotation : data:seq&lt;#seq&lt;DateTime * &#39;V * string * string&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;V :&gt; value)<br />&#160;&#160;static member Annotation : data:seq&lt;DateTime * #value * string * string&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Calendar : data:seq&lt;DateTime * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Chart</div>
 <div class="tip" id="fs5">static member Chart.Geo : data:seq&lt;string * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />static member Chart.Geo : data:seq&lt;string * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart</div>
-<div class="tip" id="fs6">val data : (string * int * float) list<br /><br />Full name: Google-geo-chart.data</div>
-<div class="tip" id="fs7">val options : Options<br /><br />Full name: Google-geo-chart.options</div>
+<div class="tip" id="fs6">val data : (string * int * float) list<br /><br />Full name: Geo.data</div>
+<div class="tip" id="fs7">val options : Options<br /><br />Full name: Geo.options</div>
 <div class="tip" id="fs8">Multiple items<br />type Options =<br />&#160;&#160;new : unit -&gt; Options<br />&#160;&#160;member ShouldSerializeaggregationTarget : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallValuesSuffix : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeallowHtml : unit -&gt; bool<br />&#160;&#160;member ShouldSerializealternatingRowStyle : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeanimation : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotationsWidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeareaOpacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeavoidOverlappingGridLines : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.Options<br /><br />--------------------<br />new : unit -&gt; Options</div>
 <div class="tip" id="fs9">Multiple items<br />type ColorAxis =<br />&#160;&#160;new : unit -&gt; ColorAxis<br />&#160;&#160;member ShouldSerializecolors : unit -&gt; bool<br />&#160;&#160;member ShouldSerializelegend : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxValue : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeminValue : unit -&gt; bool<br />&#160;&#160;member ShouldSerializevalues : unit -&gt; bool<br />&#160;&#160;member colors : string []<br />&#160;&#160;member legend : Legend<br />&#160;&#160;member maxValue : int<br />&#160;&#160;member minValue : int<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Configuration.ColorAxis<br /><br />--------------------<br />new : unit -&gt; ColorAxis</div>
 <div class="tip" id="fs10">static member Chart.WithLabels : labels:seq&lt;string&gt; -&gt; chart:GoogleChart -&gt; GoogleChart</div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>XPlot - Google Charts Support
+    <title>Introducing your project
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Data visualization library for F#" />
@@ -51,43 +51,36 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1><a name="XPlot-Google-Charts-Support" class="anchor" href="#XPlot-Google-Charts-Support">XPlot - Google Charts Support</a></h1>
+<h1><a name="Introducing-your-project" class="anchor" href="#Introducing-your-project">Introducing your project</a></h1>
 
-<h2><a name="NuGet" class="anchor" href="#NuGet">NuGet</a></h2>
+<p>Say more</p>
 
-<p>It's recommended to get XPlot as part of <a href="http://www.fslab.org/">FsLab</a>. FsLab takes care
-of installing and referencing the necessary packages and adds an FSI printer that shows the charts
-you'll create in a browser window.</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">XPlot</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">GoogleCharts</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 3)" onmouseover="showTip(event, 'fs1', 3)" class="i">XPlot</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">Plotly</span>
 
-<p>Alternatively, the <code>XPlot.GoogleCharts</code> package is available on NuGet. On Windows, you
-can also install the <code>XPlot.GoogleCharts.WPF</code> package which provides the <code>Chart.Show</code>
-method that displays charts in a WPF window.</p>
+<span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="t">Plotly</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="f">Signin</span> <span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="t">MyCredentials</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">userAndKey</span>
+</pre>
+</td>
+</tr>
+</table>
 
-<h2><a name="Chart-Gallery" class="anchor" href="#Chart-Gallery">Chart Gallery</a></h2>
+<p>Some more info</p>
 
-<ul>
-<li><a href="chart/google-annotation-chart.html">Annotation Chart</a></li>
-<li><a href="chart/google-area-chart.html">Area Chart</a></li>
-<li><a href="chart/google-bar-chart.html">Bar Chart</a></li>
-<li><a href="chart/google-bubble-chart.html">Bubble Chart</a></li>
-<li><a href="chart/google-calendar-chart.html">Calendar Chart</a></li>
-<li><a href="chart/google-candlestick-chart.html">Candlestick Chart</a></li>
-<li><a href="chart/google-column-chart.html">Column Chart</a></li>
-<li><a href="chart/google-combo-chart.html">Combo Chart</a></li>
-<li><a href="chart/google-gauge-chart.html">Gauge Chart</a></li>
-<li><a href="chart/google-geo-chart.html">Geo Chart</a></li>
-<li><a href="chart/google-histogram-chart.html">Histogram Chart</a></li>
-<li><a href="chart/google-line-chart.html">Line Chart</a></li>
-<li><a href="chart/google-map-chart.html">Map Chart</a></li>
-<li><a href="chart/google-pie-chart.html">Pie Chart</a></li>
-<li><a href="chart/google-sankey-diagram.html">Sankey Diagram</a></li>
-<li><a href="chart/google-scatter-chart.html">Scatter Chart</a></li>
-<li><a href="chart/google-stepped-area-chart.html">Stepped Area Chart</a></li>
-<li><a href="chart/google-timeline-chart.html">Timeline</a></li>
-<li><a href="chart/google-table-chart.html">Table</a></li>
-<li><a href="chart/google-treemap-chart.html">Treemap</a></li>
-</ul>
-
+<div class="tip" id="fs1">namespace XPlot</div>
+<div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>
+<div class="tip" id="fs3">namespace XPlot.Plotly</div>
+<div class="tip" id="fs4">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs5">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
+<div class="tip" id="fs6">module MyCredentials</div>
+<div class="tip" id="fs7">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
 
             </div>
             <div class="span3">
