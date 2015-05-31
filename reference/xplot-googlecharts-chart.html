@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Chart - XPlot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Taha Hachana; Tomas Petricek" />
+
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
+    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <a href="http://fslab.org"><img height="16" width="16" src="http://fslab.org/img/thumbs/fslab.png" /> FsLab</a>
+                </li>
+                <li>
+                    <a href="http://fsharp.github.io/FSharp.Data"><img height="16" width="16" src="http://fslab.org/img/thumbs/fsharpdata.png" /> F# Data</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/Deedle"><img height="16" width="16" src="http://fslab.org/img/thumbs/deedle.png" /> Deedle</a>
+                </li>
+                <li>
+                    <a href="http://bluemountaincapital.github.io/FSharpRProvider"><img height="16" width="16" src="http://fslab.org/img/thumbs/rprovider.png" /> R Provider</a>
+                </li>
+                <li>
+                    <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
+                </li>
+            </ul>
+            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="span9" id="main">
+                
+
+
+
+<h1>Chart</h1>
+<div class="xmldoc">
+</div>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1083', 1083)" onmouseover="showTip(event, '1083', 1083)">
+            Annotation(data, Labels, Options)
+          </code>
+          <div class="tip" id="1083">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6249&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6249, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L374-374" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates an annotation chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1084', 1084)" onmouseover="showTip(event, '1084', 1084)">
+            Annotation(data, Labels, Options)
+          </code>
+          <div class="tip" id="1084">
+            <strong>Signature:</strong> (data:seq&lt;DateTime * &#39;?6247 * string * string&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6247          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L362-362" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates an annotation chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1085', 1085)" onmouseover="showTip(event, '1085', 1085)">
+            Area(data, Labels, Options)
+          </code>
+          <div class="tip" id="1085">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6255&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6255, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L400-400" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates an area chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1086', 1086)" onmouseover="showTip(event, '1086', 1086)">
+            Area(data, Labels, Options)
+          </code>
+          <div class="tip" id="1086">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6252 * &#39;?6253&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6252, '?6253          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L388-388" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates an area chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1087', 1087)" onmouseover="showTip(event, '1087', 1087)">
+            Bar(data, Labels, Options)
+          </code>
+          <div class="tip" id="1087">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6262&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6262, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L426-426" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a bar chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1088', 1088)" onmouseover="showTip(event, '1088', 1088)">
+            Bar(data, Labels, Options)
+          </code>
+          <div class="tip" id="1088">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6259 * &#39;?6260&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6259, '?6260          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L414-414" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a bar chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1089', 1089)" onmouseover="showTip(event, '1089', 1089)">
+            Bubble(data, Labels, Options)
+          </code>
+          <div class="tip" id="1089">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6273 * &#39;?6274 * &#39;?6275 * &#39;?6276&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6273, '?6274, '?6275, '?6276          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L464-464" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a bubble chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1090', 1090)" onmouseover="showTip(event, '1090', 1090)">
+            Bubble(data, Labels, Options)
+          </code>
+          <div class="tip" id="1090">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6269 * &#39;?6270 * &#39;?6271&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6269, '?6270, '?6271          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L452-452" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a bubble chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1091', 1091)" onmouseover="showTip(event, '1091', 1091)">
+            Bubble(data, Labels, Options)
+          </code>
+          <div class="tip" id="1091">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6266 * &#39;?6267&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6266, '?6267          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L440-440" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a bubble chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1092', 1092)" onmouseover="showTip(event, '1092', 1092)">
+            Calendar(data, Labels, Options)
+          </code>
+          <div class="tip" id="1092">
+            <strong>Signature:</strong> (data:seq&lt;DateTime * &#39;?6278&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6278          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L476-476" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a calendar chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1093', 1093)" onmouseover="showTip(event, '1093', 1093)">
+            Candlestick(data, Labels, Options)
+          </code>
+          <div class="tip" id="1093">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6286&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6286, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L500-500" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a candlestick chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1094', 1094)" onmouseover="showTip(event, '1094', 1094)">
+            Candlestick(data, Labels, Options)
+          </code>
+          <div class="tip" id="1094">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6280 * &#39;?6281 * &#39;?6282 * &#39;?6283 * &#39;?6284&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6280, '?6281, '?6282, '?6283, '?6284          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L488-488" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a candlestick chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1095', 1095)" onmouseover="showTip(event, '1095', 1095)">
+            Column(data, Labels, Options)
+          </code>
+          <div class="tip" id="1095">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6293&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6293, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L526-526" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a column chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1096', 1096)" onmouseover="showTip(event, '1096', 1096)">
+            Column(data, Labels, Options)
+          </code>
+          <div class="tip" id="1096">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6290 * &#39;?6291&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6290, '?6291          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L514-514" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a column chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1097', 1097)" onmouseover="showTip(event, '1097', 1097)">
+            Combo(data, Labels, Options)
+          </code>
+          <div class="tip" id="1097">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6297&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6297, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L540-540" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a combo chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1098', 1098)" onmouseover="showTip(event, '1098', 1098)">
+            Gauge(data, Labels, Options)
+          </code>
+          <div class="tip" id="1098">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6301&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6301          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L554-554" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a gauge chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1099', 1099)" onmouseover="showTip(event, '1099', 1099)">
+            Geo(data, Labels, Options)
+          </code>
+          <div class="tip" id="1099">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6305 * &#39;?6306&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6305, '?6306          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L578-578" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a geo chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1100', 1100)" onmouseover="showTip(event, '1100', 1100)">
+            Geo(data, Labels, Options)
+          </code>
+          <div class="tip" id="1100">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6303&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6303          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L566-566" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a geo chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1101', 1101)" onmouseover="showTip(event, '1101', 1101)">
+            Histogram(data, Labels, Options)
+          </code>
+          <div class="tip" id="1101">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6308&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6308          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L590-590" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a histogram chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1102', 1102)" onmouseover="showTip(event, '1102', 1102)">
+            Line(data, Labels, Options)
+          </code>
+          <div class="tip" id="1102">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6313&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6313, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L614-614" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a line chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1103', 1103)" onmouseover="showTip(event, '1103', 1103)">
+            Line(data, Labels, Options)
+          </code>
+          <div class="tip" id="1103">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6310 * &#39;?6311&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6310, '?6311          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L602-602" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a line chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1104', 1104)" onmouseover="showTip(event, '1104', 1104)">
+            Map(data, Labels, Options)
+          </code>
+          <div class="tip" id="1104">
+            <strong>Signature:</strong> (data:seq&lt;float * float * string&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L640-640" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a map chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1105', 1105)" onmouseover="showTip(event, '1105', 1105)">
+            Map(data, Labels, Options)
+          </code>
+          <div class="tip" id="1105">
+            <strong>Signature:</strong> (data:seq&lt;string * string&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L628-628" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a map chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1106', 1106)" onmouseover="showTip(event, '1106', 1106)">
+            Pie(data, Labels, Options)
+          </code>
+          <div class="tip" id="1106">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6319&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6319          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L652-652" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a pie chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1107', 1107)" onmouseover="showTip(event, '1107', 1107)">
+            Sankey(data, Labels, Options)
+          </code>
+          <div class="tip" id="1107">
+            <strong>Signature:</strong> (data:seq&lt;string * string * &#39;?6321&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6321          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L664-664" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a sankey diagram.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1108', 1108)" onmouseover="showTip(event, '1108', 1108)">
+            Scatter(data, Labels, Options)
+          </code>
+          <div class="tip" id="1108">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6326&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6326, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L688-688" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a scatter chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1109', 1109)" onmouseover="showTip(event, '1109', 1109)">
+            Scatter(data, Labels, Options)
+          </code>
+          <div class="tip" id="1109">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6323 * &#39;?6324&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6323, '?6324          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L676-676" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a scatter chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1110', 1110)" onmouseover="showTip(event, '1110', 1110)">
+            SteppedArea(data, Labels, Options)
+          </code>
+          <div class="tip" id="1110">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6333&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6333, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L714-714" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a stepped area chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1111', 1111)" onmouseover="showTip(event, '1111', 1111)">
+            SteppedArea(data, Labels, Options)
+          </code>
+          <div class="tip" id="1111">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6330 * &#39;?6331&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6330, '?6331          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L702-702" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a stepped area chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1112', 1112)" onmouseover="showTip(event, '1112', 1112)">
+            Table(data, Labels, Options)
+          </code>
+          <div class="tip" id="1112">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6340&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6340, 'K, 'V          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L740-740" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a table chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1113', 1113)" onmouseover="showTip(event, '1113', 1113)">
+            Table(data, Labels, Options)
+          </code>
+          <div class="tip" id="1113">
+            <strong>Signature:</strong> (data:seq&lt;&#39;?6337 * &#39;?6338&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6337, '?6338          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L728-728" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a table chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1114', 1114)" onmouseover="showTip(event, '1114', 1114)">
+            Timeline(data, Labels, Options)
+          </code>
+          <div class="tip" id="1114">
+            <strong>Signature:</strong> (data:seq&lt;string * string * &#39;?6347 * &#39;?6348&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6347, '?6348          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L766-766" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a timeline chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1115', 1115)" onmouseover="showTip(event, '1115', 1115)">
+            Timeline(data, Labels, Options)
+          </code>
+          <div class="tip" id="1115">
+            <strong>Signature:</strong> (data:seq&lt;string * &#39;?6344 * &#39;?6345&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6344, '?6345          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L754-754" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a timeline chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1116', 1116)" onmouseover="showTip(event, '1116', 1116)">
+            Treemap(data, Labels, Options)
+          </code>
+          <div class="tip" id="1116">
+            <strong>Signature:</strong> (data:seq&lt;string * string * &#39;?6352 * &#39;?6353&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6352, '?6353          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L790-790" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a treemap chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1117', 1117)" onmouseover="showTip(event, '1117', 1117)">
+            Treemap(data, Labels, Options)
+          </code>
+          <div class="tip" id="1117">
+            <strong>Signature:</strong> (data:seq&lt;string * string * &#39;?6350&gt; * Labels:seq&lt;string&gt; option * Options:Options option) -&gt; GoogleChart<br />
+                          <strong>Type parameters:</strong> '?6350          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L778-778" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Creates a treemap chart.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1118', 1118)" onmouseover="showTip(event, '1118', 1118)">
+            WithHeight(height chart)
+          </code>
+          <div class="tip" id="1118">
+            <strong>Signature:</strong> height:int -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L843-843" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's height.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1119', 1119)" onmouseover="showTip(event, '1119', 1119)">
+            WithId(id chart)
+          </code>
+          <div class="tip" id="1119">
+            <strong>Signature:</strong> id:string -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L833-833" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's container div id.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1120', 1120)" onmouseover="showTip(event, '1120', 1120)">
+            WithLabel(label chart)
+          </code>
+          <div class="tip" id="1120">
+            <strong>Signature:</strong> label:string -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L802-802" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the data series label. Use this member if the
+chart's data is a single series.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1121', 1121)" onmouseover="showTip(event, '1121', 1121)">
+            WithLabels(labels chart)
+          </code>
+          <div class="tip" id="1121">
+            <strong>Signature:</strong> labels:seq&lt;string&gt; -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L808-808" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the data series labels. Use this member if the
+chart's data is a series collection.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1122', 1122)" onmouseover="showTip(event, '1122', 1122)">
+            WithLegend(enabled chart)
+          </code>
+          <div class="tip" id="1122">
+            <strong>Signature:</strong> enabled:bool -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L828-828" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Display/hide the legend.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1123', 1123)" onmouseover="showTip(event, '1123', 1123)">
+            WithOptions(options chart)
+          </code>
+          <div class="tip" id="1123">
+            <strong>Signature:</strong> options:Options -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L838-838" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's configuration options.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1124', 1124)" onmouseover="showTip(event, '1124', 1124)">
+            WithSize(size chart)
+          </code>
+          <div class="tip" id="1124">
+            <strong>Signature:</strong> (size:(int * int)) -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L853-853" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's height.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1125', 1125)" onmouseover="showTip(event, '1125', 1125)">
+            WithTitle(title chart)
+          </code>
+          <div class="tip" id="1125">
+            <strong>Signature:</strong> title:string -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L813-813" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's title.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1126', 1126)" onmouseover="showTip(event, '1126', 1126)">
+            WithWidth(width chart)
+          </code>
+          <div class="tip" id="1126">
+            <strong>Signature:</strong> width:int -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L848-848" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's width.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1127', 1127)" onmouseover="showTip(event, '1127', 1127)">
+            WithXTitle(xTitle chart)
+          </code>
+          <div class="tip" id="1127">
+            <strong>Signature:</strong> xTitle:string -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L818-818" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's X-axis title.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1128', 1128)" onmouseover="showTip(event, '1128', 1128)">
+            WithYTitle(yTitle chart)
+          </code>
+          <div class="tip" id="1128">
+            <strong>Signature:</strong> yTitle:string -&gt; chart:GoogleChart -&gt; GoogleChart<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.GoogleCharts/Main.fs#L823-823" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the chart's Y-axis title.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+            </div>
+            <div class="span3">
+                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                    <li class="nav-header">XPlot</li>
+                    <li><a href="/XPlot/">Home page</a></li>
+                    <li class="divider"></li>
+                    <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
+                    <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
+                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+
+                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
+                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+
+                    
+
+                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
+                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+
+                    <li class="nav-header">Documentation</li>
+                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="http://github.com/TahaHachana/XPlot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
+</body>
+</html>
