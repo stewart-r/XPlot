@@ -17,7 +17,7 @@
     <script type="text/javascript">
         google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
-
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
     <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -92,11 +92,11 @@
 
                 var options = {"isStacked":true,"legend":{"position":"right"},"title":"The decline of 'The 39 Steps'","vAxis":{"title":"Accumulated Rating"}} 
 
-                var chart = new google.visualization.SteppedAreaChart(document.getElementById('8e9e3e7a-2b6f-42cd-9783-0d5378e60281'));
+                var chart = new google.visualization.SteppedAreaChart(document.getElementById('34ca087f-d0af-4823-96fe-106435f98697'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="8e9e3e7a-2b6f-42cd-9783-0d5378e60281" style="width: 700px; height: 400px;"></div>
+    <div id="34ca087f-d0af-4823-96fe-106435f98697" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">module GoogleCharts<br /><br />from XPlot</div>
@@ -146,22 +146,9 @@
                     
 
                     <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    
                     <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/XPlot/reference/index.html">API Reference</a></li>

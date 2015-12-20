@@ -17,7 +17,7 @@
     <script type="text/javascript">
         google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
-
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
     <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -64,11 +64,11 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 65)" onmouseover="showTip(event, 'fs27', 65)" class="i">basicData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 66)" onmouseover="showTip(event, 'fs28', 66)" class="t">Data</span>([<span onmouseout="hideTip(event, 'fs29', 67)" onmouseover="showTip(event, 'fs29', 67)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs30', 68)" onmouseover="showTip(event, 'fs30', 68)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 69)" onmouseover="showTip(event, 'fs12', 69)" class="i">basicX</span>)])
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 64)" onmouseover="showTip(event, 'fs26', 64)" class="i">basicData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs27', 65)" onmouseover="showTip(event, 'fs27', 65)" class="i">Data</span>([<span onmouseout="hideTip(event, 'fs28', 66)" onmouseover="showTip(event, 'fs28', 66)" class="i">Histogram</span>(<span class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs11', 67)" onmouseover="showTip(event, 'fs11', 67)" class="i">basicX</span>)])
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 70)" onmouseover="showTip(event, 'fs31', 70)" class="i">basicLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs32', 71)" onmouseover="showTip(event, 'fs32', 71)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Basic Histogram&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 68)" onmouseover="showTip(event, 'fs29', 68)" class="i">basicLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs30', 69)" onmouseover="showTip(event, 'fs30', 69)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Basic Histogram&quot;</span>)
 
-<span onmouseout="hideTip(event, 'fs33', 72)" onmouseover="showTip(event, 'fs33', 72)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 73)" onmouseover="showTip(event, 'fs27', 73)" class="i">basicData</span>, <span onmouseout="hideTip(event, 'fs31', 74)" onmouseover="showTip(event, 'fs31', 74)" class="i">basicLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs26', 70)" onmouseover="showTip(event, 'fs26', 70)" class="i">basicData</span>, <span onmouseout="hideTip(event, 'fs29', 71)" onmouseover="showTip(event, 'fs29', 71)" class="i">basicLayout</span>)
 </pre>
 </td>
 </tr>
@@ -87,11 +87,11 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs34', 75)" onmouseover="showTip(event, 'fs34', 75)" class="i">horizontalData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 76)" onmouseover="showTip(event, 'fs28', 76)" class="t">Data</span>([<span onmouseout="hideTip(event, 'fs29', 77)" onmouseover="showTip(event, 'fs29', 77)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs35', 78)" onmouseover="showTip(event, 'fs35', 78)" class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 79)" onmouseover="showTip(event, 'fs17', 79)" class="i">horizontalY</span>)])
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 72)" onmouseover="showTip(event, 'fs31', 72)" class="i">horizontalData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs27', 73)" onmouseover="showTip(event, 'fs27', 73)" class="i">Data</span>([<span onmouseout="hideTip(event, 'fs28', 74)" onmouseover="showTip(event, 'fs28', 74)" class="i">Histogram</span>(<span class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs16', 75)" onmouseover="showTip(event, 'fs16', 75)" class="i">horizontalY</span>)])
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs36', 80)" onmouseover="showTip(event, 'fs36', 80)" class="i">horizontalLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs32', 81)" onmouseover="showTip(event, 'fs32', 81)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Horizontal Histogram&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs32', 76)" onmouseover="showTip(event, 'fs32', 76)" class="i">horizontalLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs30', 77)" onmouseover="showTip(event, 'fs30', 77)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Horizontal Histogram&quot;</span>)
 
-<span onmouseout="hideTip(event, 'fs33', 82)" onmouseover="showTip(event, 'fs33', 82)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs34', 83)" onmouseover="showTip(event, 'fs34', 83)" class="i">horizontalData</span>, <span onmouseout="hideTip(event, 'fs36', 84)" onmouseover="showTip(event, 'fs36', 84)" class="i">horizontalLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs31', 78)" onmouseover="showTip(event, 'fs31', 78)" class="i">horizontalData</span>, <span onmouseout="hideTip(event, 'fs32', 79)" onmouseover="showTip(event, 'fs32', 79)" class="i">horizontalLayout</span>)
 </pre>
 </td>
 </tr>
@@ -124,25 +124,25 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs37', 85)" onmouseover="showTip(event, 'fs37', 85)" class="i">overlaidTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs29', 86)" onmouseover="showTip(event, 'fs29', 86)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs30', 87)" onmouseover="showTip(event, 'fs30', 87)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 88)" onmouseover="showTip(event, 'fs18', 88)" class="i">overlaidX0</span>,
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs33', 80)" onmouseover="showTip(event, 'fs33', 80)" class="i">overlaidTrace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs28', 81)" onmouseover="showTip(event, 'fs28', 81)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs34', 82)" onmouseover="showTip(event, 'fs34', 82)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 83)" onmouseover="showTip(event, 'fs17', 83)" class="i">overlaidX0</span>,
         <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs38', 89)" onmouseover="showTip(event, 'fs38', 89)" class="i">overlaidTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs29', 90)" onmouseover="showTip(event, 'fs29', 90)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs30', 91)" onmouseover="showTip(event, 'fs30', 91)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs19', 92)" onmouseover="showTip(event, 'fs19', 92)" class="i">overlaidX1</span>,
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs35', 84)" onmouseover="showTip(event, 'fs35', 84)" class="i">overlaidTrace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs28', 85)" onmouseover="showTip(event, 'fs28', 85)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs34', 86)" onmouseover="showTip(event, 'fs34', 86)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 87)" onmouseover="showTip(event, 'fs18', 87)" class="i">overlaidX1</span>,
         <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs39', 93)" onmouseover="showTip(event, 'fs39', 93)" class="i">overlaidLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs32', 94)" onmouseover="showTip(event, 'fs32', 94)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs36', 88)" onmouseover="showTip(event, 'fs36', 88)" class="i">overlaidLayout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs30', 89)" onmouseover="showTip(event, 'fs30', 89)" class="t">Layout</span>(
         <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;overlay&quot;</span>,
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Overlaid Histogram&quot;</span>
     )
 
-<span onmouseout="hideTip(event, 'fs33', 95)" onmouseover="showTip(event, 'fs33', 95)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs28', 96)" onmouseover="showTip(event, 'fs28', 96)" class="t">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs40', 97)" onmouseover="showTip(event, 'fs40', 97)" class="f">From</span> [<span onmouseout="hideTip(event, 'fs37', 98)" onmouseover="showTip(event, 'fs37', 98)" class="i">overlaidTrace1</span>; <span onmouseout="hideTip(event, 'fs38', 99)" onmouseover="showTip(event, 'fs38', 99)" class="i">overlaidTrace2</span>], <span onmouseout="hideTip(event, 'fs39', 100)" onmouseover="showTip(event, 'fs39', 100)" class="i">overlaidLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 90)" onmouseover="showTip(event, 'fs27', 90)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs33', 91)" onmouseover="showTip(event, 'fs33', 91)" class="i">overlaidTrace1</span>; <span onmouseout="hideTip(event, 'fs35', 92)" onmouseover="showTip(event, 'fs35', 92)" class="i">overlaidTrace2</span>], <span onmouseout="hideTip(event, 'fs36', 93)" onmouseover="showTip(event, 'fs36', 93)" class="i">overlaidLayout</span>)
 </pre>
 </td>
 </tr>
@@ -167,17 +167,17 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs41', 101)" onmouseover="showTip(event, 'fs41', 101)" class="i">stackedTrace1</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs29', 102)" onmouseover="showTip(event, 'fs29', 102)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs30', 103)" onmouseover="showTip(event, 'fs30', 103)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 104)" onmouseover="showTip(event, 'fs23', 104)" class="i">stackedX0</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs37', 94)" onmouseover="showTip(event, 'fs37', 94)" class="i">stackedTrace1</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 95)" onmouseover="showTip(event, 'fs28', 95)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs34', 96)" onmouseover="showTip(event, 'fs34', 96)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs22', 97)" onmouseover="showTip(event, 'fs22', 97)" class="i">stackedX0</span>)
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs42', 105)" onmouseover="showTip(event, 'fs42', 105)" class="i">stackedTrace2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs29', 106)" onmouseover="showTip(event, 'fs29', 106)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs30', 107)" onmouseover="showTip(event, 'fs30', 107)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 108)" onmouseover="showTip(event, 'fs24', 108)" class="i">stackedX1</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs38', 98)" onmouseover="showTip(event, 'fs38', 98)" class="i">stackedTrace2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 99)" onmouseover="showTip(event, 'fs28', 99)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs34', 100)" onmouseover="showTip(event, 'fs34', 100)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 101)" onmouseover="showTip(event, 'fs23', 101)" class="i">stackedX1</span>)
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs43', 109)" onmouseover="showTip(event, 'fs43', 109)" class="i">stackedLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs32', 110)" onmouseover="showTip(event, 'fs32', 110)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs39', 102)" onmouseover="showTip(event, 'fs39', 102)" class="i">stackedLayout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs30', 103)" onmouseover="showTip(event, 'fs30', 103)" class="t">Layout</span>(
         <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;stack&quot;</span>,
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Stacked Histograms&quot;</span>
     )
 
-<span onmouseout="hideTip(event, 'fs33', 111)" onmouseover="showTip(event, 'fs33', 111)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs28', 112)" onmouseover="showTip(event, 'fs28', 112)" class="t">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs40', 113)" onmouseover="showTip(event, 'fs40', 113)" class="f">From</span> [<span onmouseout="hideTip(event, 'fs41', 114)" onmouseover="showTip(event, 'fs41', 114)" class="i">stackedTrace1</span>; <span onmouseout="hideTip(event, 'fs42', 115)" onmouseover="showTip(event, 'fs42', 115)" class="i">stackedTrace2</span>], <span onmouseout="hideTip(event, 'fs43', 116)" onmouseover="showTip(event, 'fs43', 116)" class="i">stackedLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 104)" onmouseover="showTip(event, 'fs27', 104)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs37', 105)" onmouseover="showTip(event, 'fs37', 105)" class="i">stackedTrace1</span>; <span onmouseout="hideTip(event, 'fs38', 106)" onmouseover="showTip(event, 'fs38', 106)" class="i">stackedTrace2</span>], <span onmouseout="hideTip(event, 'fs39', 107)" onmouseover="showTip(event, 'fs39', 107)" class="i">stackedLayout</span>)
 </pre>
 </td>
 </tr>
@@ -241,23 +241,23 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs44', 117)" onmouseover="showTip(event, 'fs44', 117)" class="i">coloredTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs29', 118)" onmouseover="showTip(event, 'fs29', 118)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs30', 119)" onmouseover="showTip(event, 'fs30', 119)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs25', 120)" onmouseover="showTip(event, 'fs25', 120)" class="i">coloredX0</span>,
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs40', 108)" onmouseover="showTip(event, 'fs40', 108)" class="i">coloredTrace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs28', 109)" onmouseover="showTip(event, 'fs28', 109)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs34', 110)" onmouseover="showTip(event, 'fs34', 110)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 111)" onmouseover="showTip(event, 'fs24', 111)" class="i">coloredX0</span>,
         <span class="i">histnorm</span> <span class="o">=</span> <span class="s">&quot;count&quot;</span>,
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;control&quot;</span>,
         <span class="i">autobinx</span> <span class="o">=</span> <span class="k">false</span>,
         <span class="i">xbins</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs45', 121)" onmouseover="showTip(event, 'fs45', 121)" class="t">XBins</span>(
+            <span class="i">XBins</span>(
                 <span class="i">start</span> <span class="o">=</span> <span class="o">-</span><span class="n">3.2</span>,
                 <span class="i">``end``</span> <span class="o">=</span> <span class="n">2.8</span>,
                 <span class="i">size</span> <span class="o">=</span> <span class="n">0.2</span>
             ),
         <span class="i">marker</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs46', 122)" onmouseover="showTip(event, 'fs46', 122)" class="t">Marker</span>(
+            <span onmouseout="hideTip(event, 'fs41', 112)" onmouseover="showTip(event, 'fs41', 112)" class="t">Marker</span>(
                 <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;fuchsia&quot;</span>,
                 <span class="i">line</span> <span class="o">=</span>
-                    <span onmouseout="hideTip(event, 'fs47', 123)" onmouseover="showTip(event, 'fs47', 123)" class="t">Line</span>(
+                    <span onmouseout="hideTip(event, 'fs42', 113)" onmouseover="showTip(event, 'fs42', 113)" class="t">Line</span>(
                         <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;grey&quot;</span>,
                         <span class="i">width</span> <span class="o">=</span> <span class="n">0</span>
                     ),
@@ -265,32 +265,32 @@
             )
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs48', 124)" onmouseover="showTip(event, 'fs48', 124)" class="i">coloredTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs29', 125)" onmouseover="showTip(event, 'fs29', 125)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs30', 126)" onmouseover="showTip(event, 'fs30', 126)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs26', 127)" onmouseover="showTip(event, 'fs26', 127)" class="i">coloredX1</span>,
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs43', 114)" onmouseover="showTip(event, 'fs43', 114)" class="i">coloredTrace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs28', 115)" onmouseover="showTip(event, 'fs28', 115)" class="t">Histogram</span>(
+        <span onmouseout="hideTip(event, 'fs34', 116)" onmouseover="showTip(event, 'fs34', 116)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs25', 117)" onmouseover="showTip(event, 'fs25', 117)" class="i">coloredX1</span>,
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;experimental&quot;</span>,
         <span class="i">autobinx</span> <span class="o">=</span> <span class="k">false</span>,
         <span class="i">xbins</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs45', 128)" onmouseover="showTip(event, 'fs45', 128)" class="t">XBins</span>(
+            <span class="i">XBins</span>(
                 <span class="i">start</span> <span class="o">=</span> <span class="o">-</span><span class="n">1.8</span>,
                 <span class="i">``end``</span> <span class="o">=</span> <span class="n">4.2</span>,
                 <span class="i">size</span> <span class="o">=</span> <span class="n">0.2</span>
             ),
-        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs46', 129)" onmouseover="showTip(event, 'fs46', 129)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(255, 217, 102)&quot;</span>),
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs41', 118)" onmouseover="showTip(event, 'fs41', 118)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(255, 217, 102)&quot;</span>),
         <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs49', 130)" onmouseover="showTip(event, 'fs49', 130)" class="i">coloredLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs32', 131)" onmouseover="showTip(event, 'fs32', 131)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs44', 119)" onmouseover="showTip(event, 'fs44', 119)" class="i">coloredLayout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs30', 120)" onmouseover="showTip(event, 'fs30', 120)" class="t">Layout</span>(
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Colored and Styled Histograms&quot;</span>,
-        <span class="i">xaxis</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs50', 132)" onmouseover="showTip(event, 'fs50', 132)" class="t">XAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Value&quot;</span>),
-        <span class="i">yaxis</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs51', 133)" onmouseover="showTip(event, 'fs51', 133)" class="t">YAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Count&quot;</span>),
+        <span class="i">xaxis</span> <span class="o">=</span> <span class="i">XAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Value&quot;</span>),
+        <span class="i">yaxis</span> <span class="o">=</span> <span class="i">YAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Count&quot;</span>),
         <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;overlay&quot;</span>,
         <span class="i">bargap</span> <span class="o">=</span> <span class="n">0.25</span>,
         <span class="i">bargroupgap</span> <span class="o">=</span> <span class="n">0.3</span>
     )
 
-<span onmouseout="hideTip(event, 'fs33', 134)" onmouseover="showTip(event, 'fs33', 134)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs28', 135)" onmouseover="showTip(event, 'fs28', 135)" class="t">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs40', 136)" onmouseover="showTip(event, 'fs40', 136)" class="f">From</span> [<span onmouseout="hideTip(event, 'fs44', 137)" onmouseover="showTip(event, 'fs44', 137)" class="i">coloredTrace1</span>; <span onmouseout="hideTip(event, 'fs48', 138)" onmouseover="showTip(event, 'fs48', 138)" class="i">coloredTrace2</span>], <span onmouseout="hideTip(event, 'fs49', 139)" onmouseover="showTip(event, 'fs49', 139)" class="i">coloredLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 121)" onmouseover="showTip(event, 'fs27', 121)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs40', 122)" onmouseover="showTip(event, 'fs40', 122)" class="i">coloredTrace1</span>; <span onmouseout="hideTip(event, 'fs43', 123)" onmouseover="showTip(event, 'fs43', 123)" class="i">coloredTrace2</span>], <span onmouseout="hideTip(event, 'fs44', 124)" onmouseover="showTip(event, 'fs44', 124)" class="i">coloredLayout</span>)
 </pre>
 </td>
 </tr>
@@ -303,52 +303,45 @@
 <div class="tip" id="fs3">namespace MathNet</div>
 <div class="tip" id="fs4">namespace MathNet.Numerics</div>
 <div class="tip" id="fs5">namespace MathNet.Numerics.Distributions</div>
-<div class="tip" id="fs6">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
-<div class="tip" id="fs7">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
-<div class="tip" id="fs8">module MyCredentials</div>
-<div class="tip" id="fs9">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
-<div class="tip" id="fs10">val normal : Normal<br /><br />Full name: Plotly-histograms.normal</div>
-<div class="tip" id="fs11">Multiple items<br />type Normal =<br />&#160;&#160;new : unit -&gt; Normal + 3 overloads<br />&#160;&#160;member CumulativeDistribution : x:float -&gt; float<br />&#160;&#160;member Density : x:float -&gt; float<br />&#160;&#160;member DensityLn : x:float -&gt; float<br />&#160;&#160;member Entropy : float<br />&#160;&#160;member InverseCumulativeDistribution : p:float -&gt; float<br />&#160;&#160;member Maximum : float<br />&#160;&#160;member Mean : float<br />&#160;&#160;member Median : float<br />&#160;&#160;member Minimum : float<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Distributions.Normal<br /><br />--------------------<br />Normal() : unit<br />Normal(randomSource: System.Random) : unit<br />Normal(mean: float, stddev: float) : unit<br />Normal(mean: float, stddev: float, randomSource: System.Random) : unit</div>
-<div class="tip" id="fs12">val basicX : float []<br /><br />Full name: Plotly-histograms.basicX</div>
-<div class="tip" id="fs13">Normal.Samples() : System.Collections.Generic.IEnumerable&lt;float&gt;<br />Normal.Samples(values: float []) : unit</div>
-<div class="tip" id="fs14">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs15">val take : count:int -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.take</div>
-<div class="tip" id="fs16">val toArray : source:seq&lt;&#39;T&gt; -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Seq.toArray</div>
-<div class="tip" id="fs17">val horizontalY : float []<br /><br />Full name: Plotly-histograms.horizontalY</div>
-<div class="tip" id="fs18">val overlaidX0 : float []<br /><br />Full name: Plotly-histograms.overlaidX0</div>
-<div class="tip" id="fs19">val overlaidX1 : float []<br /><br />Full name: Plotly-histograms.overlaidX1</div>
-<div class="tip" id="fs20">module Array<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs21">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.map</div>
-<div class="tip" id="fs22">val x : float</div>
-<div class="tip" id="fs23">val stackedX0 : float []<br /><br />Full name: Plotly-histograms.stackedX0</div>
-<div class="tip" id="fs24">val stackedX1 : float []<br /><br />Full name: Plotly-histograms.stackedX1</div>
-<div class="tip" id="fs25">val coloredX0 : float []<br /><br />Full name: Plotly-histograms.coloredX0</div>
-<div class="tip" id="fs26">val coloredX1 : float []<br /><br />Full name: Plotly-histograms.coloredX1</div>
-<div class="tip" id="fs27">val basicData : Data<br /><br />Full name: Plotly-histograms.basicData</div>
-<div class="tip" id="fs28">Multiple items<br />namespace Microsoft.FSharp.Data<br /><br />--------------------<br />type Data =<br />&#160;&#160;new : traces:seq&lt;Trace&gt; -&gt; Data<br />&#160;&#160;member Json : string<br />&#160;&#160;static member From : traces:seq&lt;#Trace&gt; -&gt; Data<br /><br />Full name: XPlot.Plotly.Data<br /><br />--------------------<br />new : traces:seq&lt;Trace&gt; -&gt; Data</div>
-<div class="tip" id="fs29">Multiple items<br />type Histogram =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemarker : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram<br /><br />--------------------<br />new : unit -&gt; Histogram</div>
-<div class="tip" id="fs30">property Histogram.x: obj</div>
-<div class="tip" id="fs31">val basicLayout : Layout<br /><br />Full name: Plotly-histograms.basicLayout</div>
-<div class="tip" id="fs32">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgroupgap : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
-<div class="tip" id="fs33">Multiple items<br />type Figure =<br />&#160;&#160;new : data:Data * ?Layout:Layout -&gt; Figure<br />&#160;&#160;member GetInlineHtml : filename:string -&gt; string<br />&#160;&#160;member Plot : filename:string -&gt; PlotlyResponse option<br />&#160;&#160;member Fileopt : string<br />&#160;&#160;member Height : int<br />&#160;&#160;member Layout : Layout option<br />&#160;&#160;member Origin : string<br />&#160;&#160;member Response : PlotlyResponse option<br />&#160;&#160;member Width : int<br />&#160;&#160;member Fileopt : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Figure<br /><br />--------------------<br />new : data:Data * ?Layout:Layout -&gt; Figure</div>
-<div class="tip" id="fs34">val horizontalData : Data<br /><br />Full name: Plotly-histograms.horizontalData</div>
-<div class="tip" id="fs35">property Histogram.y: obj</div>
-<div class="tip" id="fs36">val horizontalLayout : Layout<br /><br />Full name: Plotly-histograms.horizontalLayout</div>
-<div class="tip" id="fs37">val overlaidTrace1 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace1</div>
-<div class="tip" id="fs38">val overlaidTrace2 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace2</div>
-<div class="tip" id="fs39">val overlaidLayout : Layout<br /><br />Full name: Plotly-histograms.overlaidLayout</div>
-<div class="tip" id="fs40">static member Data.From : traces:seq&lt;#Trace&gt; -&gt; Data</div>
-<div class="tip" id="fs41">val stackedTrace1 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace1</div>
-<div class="tip" id="fs42">val stackedTrace2 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace2</div>
-<div class="tip" id="fs43">val stackedLayout : Layout<br /><br />Full name: Plotly-histograms.stackedLayout</div>
-<div class="tip" id="fs44">val coloredTrace1 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace1</div>
-<div class="tip" id="fs45">Multiple items<br />type XBins =<br />&#160;&#160;new : unit -&gt; XBins<br />&#160;&#160;member ShouldSerializeend : unit -&gt; bool<br />&#160;&#160;member ShouldSerializesize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializestart : unit -&gt; bool<br />&#160;&#160;member end : float<br />&#160;&#160;member size : float<br />&#160;&#160;member start : float<br />&#160;&#160;member end : float with set<br />&#160;&#160;member size : float with set<br />&#160;&#160;member start : float with set<br /><br />Full name: XPlot.Plotly.Graph.XBins<br /><br />--------------------<br />new : unit -&gt; XBins</div>
-<div class="tip" id="fs46">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeline : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxdisplayed : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
-<div class="tip" id="fs47">Multiple items<br />type Line =<br />&#160;&#160;new : unit -&gt; Line<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedash : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutlierwidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeshape : unit -&gt; bool<br />&#160;&#160;member ShouldSerializesmoothing : unit -&gt; bool<br />&#160;&#160;member ShouldSerializewidth : unit -&gt; bool<br />&#160;&#160;member color : obj<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Line<br /><br />--------------------<br />new : unit -&gt; Line</div>
-<div class="tip" id="fs48">val coloredTrace2 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace2</div>
-<div class="tip" id="fs49">val coloredLayout : Layout<br /><br />Full name: Plotly-histograms.coloredLayout</div>
-<div class="tip" id="fs50">Multiple items<br />type XAxis =<br />&#160;&#160;new : unit -&gt; XAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.XAxis<br /><br />--------------------<br />new : unit -&gt; XAxis</div>
-<div class="tip" id="fs51">Multiple items<br />type YAxis =<br />&#160;&#160;new : unit -&gt; YAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.YAxis<br /><br />--------------------<br />new : unit -&gt; YAxis</div>
+<div class="tip" id="fs6">type Plotly =<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart<br />&#160;&#160;static member Show : chart:PlotlyChart -&gt; unit<br />&#160;&#160;static member WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br />&#160;&#160;static member WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs7">module MyCredentials</div>
+<div class="tip" id="fs8">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
+<div class="tip" id="fs9">val normal : Normal<br /><br />Full name: Plotly-histograms.normal</div>
+<div class="tip" id="fs10">Multiple items<br />type Normal =<br />&#160;&#160;new : unit -&gt; Normal + 3 overloads<br />&#160;&#160;member CumulativeDistribution : x:float -&gt; float<br />&#160;&#160;member Density : x:float -&gt; float<br />&#160;&#160;member DensityLn : x:float -&gt; float<br />&#160;&#160;member Entropy : float<br />&#160;&#160;member InverseCumulativeDistribution : p:float -&gt; float<br />&#160;&#160;member Maximum : float<br />&#160;&#160;member Mean : float<br />&#160;&#160;member Median : float<br />&#160;&#160;member Minimum : float<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Distributions.Normal<br /><br />--------------------<br />Normal() : unit<br />Normal(randomSource: System.Random) : unit<br />Normal(mean: float, stddev: float) : unit<br />Normal(mean: float, stddev: float, randomSource: System.Random) : unit</div>
+<div class="tip" id="fs11">val basicX : float []<br /><br />Full name: Plotly-histograms.basicX</div>
+<div class="tip" id="fs12">Normal.Samples() : System.Collections.Generic.IEnumerable&lt;float&gt;<br />Normal.Samples(values: float []) : unit</div>
+<div class="tip" id="fs13">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs14">val take : count:int -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.take</div>
+<div class="tip" id="fs15">val toArray : source:seq&lt;&#39;T&gt; -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Seq.toArray</div>
+<div class="tip" id="fs16">val horizontalY : float []<br /><br />Full name: Plotly-histograms.horizontalY</div>
+<div class="tip" id="fs17">val overlaidX0 : float []<br /><br />Full name: Plotly-histograms.overlaidX0</div>
+<div class="tip" id="fs18">val overlaidX1 : float []<br /><br />Full name: Plotly-histograms.overlaidX1</div>
+<div class="tip" id="fs19">module Array<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs20">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.map</div>
+<div class="tip" id="fs21">val x : float</div>
+<div class="tip" id="fs22">val stackedX0 : float []<br /><br />Full name: Plotly-histograms.stackedX0</div>
+<div class="tip" id="fs23">val stackedX1 : float []<br /><br />Full name: Plotly-histograms.stackedX1</div>
+<div class="tip" id="fs24">val coloredX0 : float []<br /><br />Full name: Plotly-histograms.coloredX0</div>
+<div class="tip" id="fs25">val coloredX1 : float []<br /><br />Full name: Plotly-histograms.coloredX1</div>
+<div class="tip" id="fs26">val basicData : obj<br /><br />Full name: Plotly-histograms.basicData</div>
+<div class="tip" id="fs27">namespace Microsoft.FSharp.Data</div>
+<div class="tip" id="fs28">Multiple items<br />type Histogram =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram<br /><br />--------------------<br />new : unit -&gt; Histogram</div>
+<div class="tip" id="fs29">val basicLayout : Layout<br /><br />Full name: Plotly-histograms.basicLayout</div>
+<div class="tip" id="fs30">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedragmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegeo : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeheight : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehidesources : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
+<div class="tip" id="fs31">val horizontalData : obj<br /><br />Full name: Plotly-histograms.horizontalData</div>
+<div class="tip" id="fs32">val horizontalLayout : Layout<br /><br />Full name: Plotly-histograms.horizontalLayout</div>
+<div class="tip" id="fs33">val overlaidTrace1 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace1</div>
+<div class="tip" id="fs34">property Histogram.x: obj</div>
+<div class="tip" id="fs35">val overlaidTrace2 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace2</div>
+<div class="tip" id="fs36">val overlaidLayout : obj<br /><br />Full name: Plotly-histograms.overlaidLayout</div>
+<div class="tip" id="fs37">val stackedTrace1 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace1</div>
+<div class="tip" id="fs38">val stackedTrace2 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace2</div>
+<div class="tip" id="fs39">val stackedLayout : obj<br /><br />Full name: Plotly-histograms.stackedLayout</div>
+<div class="tip" id="fs40">val coloredTrace1 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace1</div>
+<div class="tip" id="fs41">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolors : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
+<div class="tip" id="fs42">Multiple items<br />type Line =<br />&#160;&#160;new : unit -&gt; Line<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedash : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Line<br /><br />--------------------<br />new : unit -&gt; Line</div>
+<div class="tip" id="fs43">val coloredTrace2 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace2</div>
+<div class="tip" id="fs44">val coloredLayout : obj<br /><br />Full name: Plotly-histograms.coloredLayout</div>
 
             </div>
             <div class="span3">
@@ -387,22 +380,9 @@
                     
 
                     <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    
                     <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/XPlot/reference/index.html">API Reference</a></li>

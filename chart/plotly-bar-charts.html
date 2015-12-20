@@ -17,7 +17,7 @@
     <script type="text/javascript">
         google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
-
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
     <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -70,17 +70,17 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">basicData</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="t">Data</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">basicData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">Data</span>(
         [
-            <span onmouseout="hideTip(event, 'fs9', 9)" onmouseover="showTip(event, 'fs9', 9)" class="t">Bar</span>(
-                <span onmouseout="hideTip(event, 'fs10', 10)" onmouseover="showTip(event, 'fs10', 10)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
-                <span onmouseout="hideTip(event, 'fs11', 11)" onmouseover="showTip(event, 'fs11', 11)" class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>]
+            <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="i">Bar</span>(
+                <span class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
+                <span class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>]
             )
         ]
     )
 
-<span onmouseout="hideTip(event, 'fs12', 12)" onmouseover="showTip(event, 'fs12', 12)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs7', 13)" onmouseover="showTip(event, 'fs7', 13)" class="i">basicData</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">basicData</span>)
 </pre>
 </td>
 </tr>
@@ -113,25 +113,25 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="i">groupedTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 15)" onmouseover="showTip(event, 'fs9', 15)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 16)" onmouseover="showTip(event, 'fs10', 16)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
-        <span onmouseout="hideTip(event, 'fs11', 17)" onmouseover="showTip(event, 'fs11', 17)" class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>],
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">groupedTrace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 12)" onmouseover="showTip(event, 'fs10', 12)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
+        <span onmouseout="hideTip(event, 'fs11', 13)" onmouseover="showTip(event, 'fs11', 13)" class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>],
         <span class="i">name</span><span class="o">=</span> <span class="s">&quot;SF Zoo&quot;</span>            
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 18)" onmouseover="showTip(event, 'fs14', 18)" class="i">groupedTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 19)" onmouseover="showTip(event, 'fs9', 19)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 20)" onmouseover="showTip(event, 'fs10', 20)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
-        <span onmouseout="hideTip(event, 'fs11', 21)" onmouseover="showTip(event, 'fs11', 21)" class="i">y</span> <span class="o">=</span> [<span class="n">12</span>; <span class="n">18</span>; <span class="n">29</span>],
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 14)" onmouseover="showTip(event, 'fs12', 14)" class="i">groupedTrace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 16)" onmouseover="showTip(event, 'fs10', 16)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
+        <span onmouseout="hideTip(event, 'fs11', 17)" onmouseover="showTip(event, 'fs11', 17)" class="i">y</span> <span class="o">=</span> [<span class="n">12</span>; <span class="n">18</span>; <span class="n">29</span>],
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;LA Zoo&quot;</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs15', 22)" onmouseover="showTip(event, 'fs15', 22)" class="i">data2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="t">Data</span> [<span onmouseout="hideTip(event, 'fs13', 24)" onmouseover="showTip(event, 'fs13', 24)" class="i">groupedTrace1</span>; <span onmouseout="hideTip(event, 'fs14', 25)" onmouseover="showTip(event, 'fs14', 25)" class="i">groupedTrace2</span>]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 18)" onmouseover="showTip(event, 'fs13', 18)" class="i">data2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 19)" onmouseover="showTip(event, 'fs7', 19)" class="i">Data</span> [<span onmouseout="hideTip(event, 'fs9', 20)" onmouseover="showTip(event, 'fs9', 20)" class="i">groupedTrace1</span>; <span onmouseout="hideTip(event, 'fs12', 21)" onmouseover="showTip(event, 'fs12', 21)" class="i">groupedTrace2</span>]
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs16', 26)" onmouseover="showTip(event, 'fs16', 26)" class="i">groupedLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 27)" onmouseover="showTip(event, 'fs17', 27)" class="t">Layout</span>(<span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;group&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 22)" onmouseover="showTip(event, 'fs14', 22)" class="i">groupedLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs15', 23)" onmouseover="showTip(event, 'fs15', 23)" class="t">Layout</span>(<span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;group&quot;</span>)
 
-<span onmouseout="hideTip(event, 'fs12', 28)" onmouseover="showTip(event, 'fs12', 28)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs15', 29)" onmouseover="showTip(event, 'fs15', 29)" class="i">data2</span>, <span onmouseout="hideTip(event, 'fs16', 30)" onmouseover="showTip(event, 'fs16', 30)" class="i">groupedLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs13', 24)" onmouseover="showTip(event, 'fs13', 24)" class="i">data2</span>, <span onmouseout="hideTip(event, 'fs14', 25)" onmouseover="showTip(event, 'fs14', 25)" class="i">groupedLayout</span>)
 </pre>
 </td>
 </tr>
@@ -164,25 +164,25 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs18', 31)" onmouseover="showTip(event, 'fs18', 31)" class="i">stackedTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 32)" onmouseover="showTip(event, 'fs9', 32)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 33)" onmouseover="showTip(event, 'fs10', 33)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
-        <span onmouseout="hideTip(event, 'fs11', 34)" onmouseover="showTip(event, 'fs11', 34)" class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>],
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs16', 26)" onmouseover="showTip(event, 'fs16', 26)" class="i">stackedTrace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 27)" onmouseover="showTip(event, 'fs8', 27)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 28)" onmouseover="showTip(event, 'fs10', 28)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
+        <span onmouseout="hideTip(event, 'fs11', 29)" onmouseover="showTip(event, 'fs11', 29)" class="i">y</span> <span class="o">=</span> [<span class="n">20</span>; <span class="n">14</span>; <span class="n">23</span>],
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;SF Zoo&quot;</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs19', 35)" onmouseover="showTip(event, 'fs19', 35)" class="i">stackedTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 36)" onmouseover="showTip(event, 'fs9', 36)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 37)" onmouseover="showTip(event, 'fs10', 37)" class="i">x</span><span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
-        <span onmouseout="hideTip(event, 'fs11', 38)" onmouseover="showTip(event, 'fs11', 38)" class="i">y</span><span class="o">=</span> [<span class="n">12</span>; <span class="n">18</span>; <span class="n">29</span>],
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs17', 30)" onmouseover="showTip(event, 'fs17', 30)" class="i">stackedTrace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 31)" onmouseover="showTip(event, 'fs8', 31)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 32)" onmouseover="showTip(event, 'fs10', 32)" class="i">x</span><span class="o">=</span> [<span class="s">&quot;giraffes&quot;</span>; <span class="s">&quot;orangutans&quot;</span>; <span class="s">&quot;monkeys&quot;</span>],
+        <span onmouseout="hideTip(event, 'fs11', 33)" onmouseover="showTip(event, 'fs11', 33)" class="i">y</span><span class="o">=</span> [<span class="n">12</span>; <span class="n">18</span>; <span class="n">29</span>],
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;LA Zoo&quot;</span>
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 39)" onmouseover="showTip(event, 'fs20', 39)" class="i">stackedData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 40)" onmouseover="showTip(event, 'fs8', 40)" class="t">Data</span> [<span onmouseout="hideTip(event, 'fs18', 41)" onmouseover="showTip(event, 'fs18', 41)" class="i">stackedTrace1</span>; <span onmouseout="hideTip(event, 'fs19', 42)" onmouseover="showTip(event, 'fs19', 42)" class="i">stackedTrace2</span>]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs18', 34)" onmouseover="showTip(event, 'fs18', 34)" class="i">stackedData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 35)" onmouseover="showTip(event, 'fs7', 35)" class="i">Data</span> [<span onmouseout="hideTip(event, 'fs16', 36)" onmouseover="showTip(event, 'fs16', 36)" class="i">stackedTrace1</span>; <span onmouseout="hideTip(event, 'fs17', 37)" onmouseover="showTip(event, 'fs17', 37)" class="i">stackedTrace2</span>]
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs21', 43)" onmouseover="showTip(event, 'fs21', 43)" class="i">stackedLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 44)" onmouseover="showTip(event, 'fs17', 44)" class="t">Layout</span>(<span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;stack&quot;</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs19', 38)" onmouseover="showTip(event, 'fs19', 38)" class="i">stackedLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs15', 39)" onmouseover="showTip(event, 'fs15', 39)" class="t">Layout</span>(<span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;stack&quot;</span>)
     
-<span onmouseout="hideTip(event, 'fs12', 45)" onmouseover="showTip(event, 'fs12', 45)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs20', 46)" onmouseover="showTip(event, 'fs20', 46)" class="i">stackedData</span>, <span onmouseout="hideTip(event, 'fs21', 47)" onmouseover="showTip(event, 'fs21', 47)" class="i">stackedLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs18', 40)" onmouseover="showTip(event, 'fs18', 40)" class="i">stackedData</span>, <span onmouseout="hideTip(event, 'fs19', 41)" onmouseover="showTip(event, 'fs19', 41)" class="i">stackedLayout</span>)
 </pre>
 </td>
 </tr>
@@ -260,61 +260,61 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 48)" onmouseover="showTip(event, 'fs22', 48)" class="i">styledTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 49)" onmouseover="showTip(event, 'fs9', 49)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 50)" onmouseover="showTip(event, 'fs10', 50)" class="i">x</span> <span class="o">=</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 42)" onmouseover="showTip(event, 'fs20', 42)" class="i">styledTrace1</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 43)" onmouseover="showTip(event, 'fs8', 43)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 44)" onmouseover="showTip(event, 'fs10', 44)" class="i">x</span> <span class="o">=</span>
             [<span class="n">1995</span>; <span class="n">1996</span>; <span class="n">1997</span>; <span class="n">1998</span>; <span class="n">1999</span>; <span class="n">2000</span>; <span class="n">2001</span>; <span class="n">2002</span>; <span class="n">2003</span>; <span class="n">2004</span>; <span class="n">2005</span>; <span class="n">2006</span>;
              <span class="n">2007</span>; <span class="n">2008</span>; <span class="n">2009</span>; <span class="n">2010</span>; <span class="n">2011</span>; <span class="n">2012</span>],
-        <span onmouseout="hideTip(event, 'fs11', 51)" onmouseover="showTip(event, 'fs11', 51)" class="i">y</span> <span class="o">=</span>
+        <span onmouseout="hideTip(event, 'fs11', 45)" onmouseover="showTip(event, 'fs11', 45)" class="i">y</span> <span class="o">=</span>
             [<span class="n">219</span>; <span class="n">146</span>; <span class="n">112</span>; <span class="n">127</span>; <span class="n">124</span>; <span class="n">180</span>; <span class="n">236</span>; <span class="n">207</span>; <span class="n">236</span>; <span class="n">263</span>; <span class="n">350</span>; <span class="n">430</span>; <span class="n">474</span>; <span class="n">526</span>; <span class="n">488</span>;
             <span class="n">537</span>; <span class="n">500</span>; <span class="n">439</span>],
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;Rest of world&quot;</span>,
-        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 52)" onmouseover="showTip(event, 'fs23', 52)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(55, 83, 109)&quot;</span>)
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 46)" onmouseover="showTip(event, 'fs21', 46)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(55, 83, 109)&quot;</span>)
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs24', 53)" onmouseover="showTip(event, 'fs24', 53)" class="i">styledTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 54)" onmouseover="showTip(event, 'fs9', 54)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 55)" onmouseover="showTip(event, 'fs10', 55)" class="i">x</span> <span class="o">=</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 47)" onmouseover="showTip(event, 'fs22', 47)" class="i">styledTrace2</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 48)" onmouseover="showTip(event, 'fs8', 48)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 49)" onmouseover="showTip(event, 'fs10', 49)" class="i">x</span> <span class="o">=</span>
             [<span class="n">1995</span>; <span class="n">1996</span>; <span class="n">1997</span>; <span class="n">1998</span>; <span class="n">1999</span>; <span class="n">2000</span>; <span class="n">2001</span>; <span class="n">2002</span>; <span class="n">2003</span>; <span class="n">2004</span>; <span class="n">2005</span>; <span class="n">2006</span>;
             <span class="n">2007</span>; <span class="n">2008</span>; <span class="n">2009</span>; <span class="n">2010</span>; <span class="n">2011</span>; <span class="n">2012</span>],
-        <span onmouseout="hideTip(event, 'fs11', 56)" onmouseover="showTip(event, 'fs11', 56)" class="i">y</span> <span class="o">=</span>
+        <span onmouseout="hideTip(event, 'fs11', 50)" onmouseover="showTip(event, 'fs11', 50)" class="i">y</span> <span class="o">=</span>
             [<span class="n">16</span>; <span class="n">13</span>; <span class="n">10</span>; <span class="n">11</span>; <span class="n">28</span>; <span class="n">37</span>; <span class="n">43</span>; <span class="n">55</span>; <span class="n">56</span>; <span class="n">88</span>; <span class="n">105</span>; <span class="n">156</span>; <span class="n">270</span>; <span class="n">299</span>; <span class="n">340</span>; <span class="n">403</span>; <span class="n">549</span>;
             <span class="n">499</span>],        
         <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;China&quot;</span>,
-        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 57)" onmouseover="showTip(event, 'fs23', 57)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(26, 118, 255)&quot;</span>)
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 51)" onmouseover="showTip(event, 'fs21', 51)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(26, 118, 255)&quot;</span>)
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs25', 58)" onmouseover="showTip(event, 'fs25', 58)" class="i">styledData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 59)" onmouseover="showTip(event, 'fs8', 59)" class="t">Data</span> [<span onmouseout="hideTip(event, 'fs22', 60)" onmouseover="showTip(event, 'fs22', 60)" class="i">styledTrace1</span>; <span onmouseout="hideTip(event, 'fs24', 61)" onmouseover="showTip(event, 'fs24', 61)" class="i">styledTrace2</span>]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs23', 52)" onmouseover="showTip(event, 'fs23', 52)" class="i">styledData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 53)" onmouseover="showTip(event, 'fs7', 53)" class="i">Data</span> [<span onmouseout="hideTip(event, 'fs20', 54)" onmouseover="showTip(event, 'fs20', 54)" class="i">styledTrace1</span>; <span onmouseout="hideTip(event, 'fs22', 55)" onmouseover="showTip(event, 'fs22', 55)" class="i">styledTrace2</span>]
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 62)" onmouseover="showTip(event, 'fs26', 62)" class="i">styledLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs17', 63)" onmouseover="showTip(event, 'fs17', 63)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs24', 56)" onmouseover="showTip(event, 'fs24', 56)" class="i">styledLayout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs15', 57)" onmouseover="showTip(event, 'fs15', 57)" class="t">Layout</span>(
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;US Export of Plastic Scrap&quot;</span>,
         <span class="i">xaxis</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs27', 64)" onmouseover="showTip(event, 'fs27', 64)" class="t">XAxis</span>(
+            <span class="i">XAxis</span>(
                 <span class="i">tickfont</span> <span class="o">=</span>
-                    <span onmouseout="hideTip(event, 'fs28', 65)" onmouseover="showTip(event, 'fs28', 65)" class="t">Font</span>(
+                    <span onmouseout="hideTip(event, 'fs25', 58)" onmouseover="showTip(event, 'fs25', 58)" class="i">Font</span>(
                         <span class="i">size</span> <span class="o">=</span> <span class="n">14.</span>,
                         <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(107, 107, 107)&quot;</span>
                     )
             ),
         <span class="i">yaxis</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs29', 66)" onmouseover="showTip(event, 'fs29', 66)" class="t">YAxis</span>(
+            <span class="i">YAxis</span>(
                 <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;USD (millions)&quot;</span>,
                 <span class="i">titlefont</span> <span class="o">=</span>
-                    <span onmouseout="hideTip(event, 'fs28', 67)" onmouseover="showTip(event, 'fs28', 67)" class="t">Font</span>(
+                    <span onmouseout="hideTip(event, 'fs25', 59)" onmouseover="showTip(event, 'fs25', 59)" class="i">Font</span>(
                         <span class="i">size</span> <span class="o">=</span> <span class="n">16.</span>,
                         <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(107, 107, 107)&quot;</span>
                     ),
                 <span class="i">tickfont</span> <span class="o">=</span>
-                    <span onmouseout="hideTip(event, 'fs28', 68)" onmouseover="showTip(event, 'fs28', 68)" class="t">Font</span>(
+                    <span onmouseout="hideTip(event, 'fs25', 60)" onmouseover="showTip(event, 'fs25', 60)" class="i">Font</span>(
                         <span class="i">size</span> <span class="o">=</span> <span class="n">14.</span>,
                         <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(107, 107, 107)&quot;</span>
                     )
             ),
         <span class="i">legend</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs30', 69)" onmouseover="showTip(event, 'fs30', 69)" class="t">Legend</span>(
-                <span onmouseout="hideTip(event, 'fs31', 70)" onmouseover="showTip(event, 'fs31', 70)" class="i">x</span> <span class="o">=</span> <span class="n">0.</span>,
-                <span onmouseout="hideTip(event, 'fs32', 71)" onmouseover="showTip(event, 'fs32', 71)" class="i">y</span> <span class="o">=</span> <span class="n">1.0</span>,
+            <span onmouseout="hideTip(event, 'fs26', 61)" onmouseover="showTip(event, 'fs26', 61)" class="i">Legend</span>(
+                <span class="i">x</span> <span class="o">=</span> <span class="n">0.</span>,
+                <span class="i">y</span> <span class="o">=</span> <span class="n">1.0</span>,
                 <span class="i">bgcolor</span> <span class="o">=</span> <span class="s">&quot;rgba(255, 255, 255, 0)&quot;</span>,
                 <span class="i">bordercolor</span> <span class="o">=</span> <span class="s">&quot;rgba(255, 255, 255, 0)&quot;</span>
             ),
@@ -323,7 +323,7 @@
         <span class="i">bargroupgap</span> <span class="o">=</span> <span class="n">0.1</span>
     )
 
-<span onmouseout="hideTip(event, 'fs12', 72)" onmouseover="showTip(event, 'fs12', 72)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs25', 73)" onmouseover="showTip(event, 'fs25', 73)" class="i">styledData</span>, <span onmouseout="hideTip(event, 'fs26', 74)" onmouseover="showTip(event, 'fs26', 74)" class="i">styledLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs23', 62)" onmouseover="showTip(event, 'fs23', 62)" class="i">styledData</span>, <span onmouseout="hideTip(event, 'fs24', 63)" onmouseover="showTip(event, 'fs24', 63)" class="i">styledLayout</span>)
 </pre>
 </td>
 </tr>
@@ -364,33 +364,33 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs33', 75)" onmouseover="showTip(event, 'fs33', 75)" class="i">hoverTrace</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs9', 76)" onmouseover="showTip(event, 'fs9', 76)" class="t">Bar</span>(
-        <span onmouseout="hideTip(event, 'fs10', 77)" onmouseover="showTip(event, 'fs10', 77)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;Liam&quot;</span>; <span class="s">&quot;Sophie&quot;</span>; <span class="s">&quot;Jacob&quot;</span>; <span class="s">&quot;Mia&quot;</span>; <span class="s">&quot;William&quot;</span>; <span class="s">&quot;Olivia&quot;</span>],
-        <span onmouseout="hideTip(event, 'fs11', 78)" onmouseover="showTip(event, 'fs11', 78)" class="i">y</span> <span class="o">=</span> [<span class="n">8.0</span>; <span class="n">8.0</span>; <span class="n">12.0</span>; <span class="n">12.0</span>; <span class="n">13.0</span>; <span class="n">20.0</span>],
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 64)" onmouseover="showTip(event, 'fs27', 64)" class="i">hoverTrace</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs8', 65)" onmouseover="showTip(event, 'fs8', 65)" class="t">Bar</span>(
+        <span onmouseout="hideTip(event, 'fs10', 66)" onmouseover="showTip(event, 'fs10', 66)" class="i">x</span> <span class="o">=</span> [<span class="s">&quot;Liam&quot;</span>; <span class="s">&quot;Sophie&quot;</span>; <span class="s">&quot;Jacob&quot;</span>; <span class="s">&quot;Mia&quot;</span>; <span class="s">&quot;William&quot;</span>; <span class="s">&quot;Olivia&quot;</span>],
+        <span onmouseout="hideTip(event, 'fs11', 67)" onmouseover="showTip(event, 'fs11', 67)" class="i">y</span> <span class="o">=</span> [<span class="n">8.0</span>; <span class="n">8.0</span>; <span class="n">12.0</span>; <span class="n">12.0</span>; <span class="n">13.0</span>; <span class="n">20.0</span>],
         <span class="i">text</span> <span class="o">=</span>
             [<span class="s">&quot;4.17 below the mean&quot;</span>; <span class="s">&quot;4.17 below the mean&quot;</span>; <span class="s">&quot;0.17 below the mean&quot;</span>;
             <span class="s">&quot;0.17 below the mean&quot;</span>; <span class="s">&quot;0.83 above the mean&quot;</span>; <span class="s">&quot;7.83 above the mean&quot;</span>],
-        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 79)" onmouseover="showTip(event, 'fs23', 79)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(142, 124, 195)&quot;</span>)
+        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 68)" onmouseover="showTip(event, 'fs21', 68)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(142, 124, 195)&quot;</span>)
     )
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs34', 80)" onmouseover="showTip(event, 'fs34', 80)" class="i">hoverData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 81)" onmouseover="showTip(event, 'fs8', 81)" class="t">Data</span> [<span onmouseout="hideTip(event, 'fs33', 82)" onmouseover="showTip(event, 'fs33', 82)" class="i">hoverTrace</span>]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="i">hoverData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 70)" onmouseover="showTip(event, 'fs7', 70)" class="i">Data</span> [<span onmouseout="hideTip(event, 'fs27', 71)" onmouseover="showTip(event, 'fs27', 71)" class="i">hoverTrace</span>]
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs35', 83)" onmouseover="showTip(event, 'fs35', 83)" class="i">hoverLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs17', 84)" onmouseover="showTip(event, 'fs17', 84)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 72)" onmouseover="showTip(event, 'fs29', 72)" class="i">hoverLayout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs15', 73)" onmouseover="showTip(event, 'fs15', 73)" class="t">Layout</span>(
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Number of graphs made this week&quot;</span>,
-        <span class="i">font</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 85)" onmouseover="showTip(event, 'fs28', 85)" class="t">Font</span>(<span class="i">family</span> <span class="o">=</span> <span class="s">&quot;Raleway, sans-serif&quot;</span>),
+        <span class="i">font</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs25', 74)" onmouseover="showTip(event, 'fs25', 74)" class="i">Font</span>(<span class="i">family</span> <span class="o">=</span> <span class="s">&quot;Raleway, sans-serif&quot;</span>),
         <span class="i">showlegend</span> <span class="o">=</span> <span class="k">false</span>,
-        <span class="i">xaxis</span><span class="o">=</span> <span onmouseout="hideTip(event, 'fs27', 86)" onmouseover="showTip(event, 'fs27', 86)" class="t">XAxis</span>(<span class="i">tickangle</span> <span class="o">=</span> <span class="o">-</span><span class="n">45.</span>),
+        <span class="i">xaxis</span><span class="o">=</span> <span class="i">XAxis</span>(<span class="i">tickangle</span> <span class="o">=</span> <span class="o">-</span><span class="n">45.</span>),
         <span class="i">yaxis</span><span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs29', 87)" onmouseover="showTip(event, 'fs29', 87)" class="t">YAxis</span>(
+            <span class="i">YAxis</span>(
                 <span class="i">zeroline</span> <span class="o">=</span> <span class="k">false</span>,
                 <span class="i">gridwidth</span> <span class="o">=</span> <span class="n">2.</span>
             ),
         <span class="i">bargap</span> <span class="o">=</span> <span class="n">0.05</span>
     )
 
-<span onmouseout="hideTip(event, 'fs12', 88)" onmouseover="showTip(event, 'fs12', 88)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs34', 89)" onmouseover="showTip(event, 'fs34', 89)" class="i">hoverData</span>, <span onmouseout="hideTip(event, 'fs35', 90)" onmouseover="showTip(event, 'fs35', 90)" class="i">hoverLayout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs28', 75)" onmouseover="showTip(event, 'fs28', 75)" class="i">hoverData</span>, <span onmouseout="hideTip(event, 'fs29', 76)" onmouseover="showTip(event, 'fs29', 76)" class="i">hoverLayout</span>)
 </pre>
 </td>
 </tr>
@@ -416,18 +416,18 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs36', 91)" onmouseover="showTip(event, 'fs36', 91)" class="i">customData</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs8', 92)" onmouseover="showTip(event, 'fs8', 92)" class="t">Data</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs30', 77)" onmouseover="showTip(event, 'fs30', 77)" class="i">customData</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs7', 78)" onmouseover="showTip(event, 'fs7', 78)" class="i">Data</span>(
         [
-            <span onmouseout="hideTip(event, 'fs9', 93)" onmouseover="showTip(event, 'fs9', 93)" class="t">Bar</span>(
-                <span onmouseout="hideTip(event, 'fs10', 94)" onmouseover="showTip(event, 'fs10', 94)" class="i">x</span> <span class="o">=</span> [<span class="n">1</span>; <span class="n">2</span>; <span class="n">3</span>; <span class="n">4</span>],
-                <span onmouseout="hideTip(event, 'fs11', 95)" onmouseover="showTip(event, 'fs11', 95)" class="i">y</span> <span class="o">=</span> [<span class="n">5</span>; <span class="n">4</span>; <span class="o">-</span><span class="n">3</span>; <span class="n">2</span>],
-                <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 96)" onmouseover="showTip(event, 'fs23', 96)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> [<span class="s">&quot;#447adb&quot;</span>; <span class="s">&quot;#447adb&quot;</span>; <span class="s">&quot;#db5a44&quot;</span>; <span class="s">&quot;#447adb&quot;</span>])
+            <span onmouseout="hideTip(event, 'fs8', 79)" onmouseover="showTip(event, 'fs8', 79)" class="i">Bar</span>(
+                <span class="i">x</span> <span class="o">=</span> [<span class="n">1</span>; <span class="n">2</span>; <span class="n">3</span>; <span class="n">4</span>],
+                <span class="i">y</span> <span class="o">=</span> [<span class="n">5</span>; <span class="n">4</span>; <span class="o">-</span><span class="n">3</span>; <span class="n">2</span>],
+                <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 80)" onmouseover="showTip(event, 'fs21', 80)" class="i">Marker</span>(<span class="i">color</span> <span class="o">=</span> [<span class="s">&quot;#447adb&quot;</span>; <span class="s">&quot;#447adb&quot;</span>; <span class="s">&quot;#db5a44&quot;</span>; <span class="s">&quot;#447adb&quot;</span>])
             )
         ]
     )
 
-<span onmouseout="hideTip(event, 'fs12', 97)" onmouseover="showTip(event, 'fs12', 97)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs36', 98)" onmouseover="showTip(event, 'fs36', 98)" class="i">customData</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs30', 81)" onmouseover="showTip(event, 'fs30', 81)" class="i">customData</span>)
 </pre>
 </td>
 </tr>
@@ -437,40 +437,34 @@
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.Plotly</div>
-<div class="tip" id="fs3">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
-<div class="tip" id="fs4">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
-<div class="tip" id="fs5">module MyCredentials</div>
-<div class="tip" id="fs6">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
-<div class="tip" id="fs7">val basicData : Data<br /><br />Full name: Plotly-bar-charts.basicData</div>
-<div class="tip" id="fs8">Multiple items<br />namespace Microsoft.FSharp.Data<br /><br />--------------------<br />type Data =<br />&#160;&#160;new : traces:seq&lt;Trace&gt; -&gt; Data<br />&#160;&#160;member Json : string<br />&#160;&#160;static member From : traces:seq&lt;#Trace&gt; -&gt; Data<br /><br />Full name: XPlot.Plotly.Data<br /><br />--------------------<br />new : traces:seq&lt;Trace&gt; -&gt; Data</div>
-<div class="tip" id="fs9">Multiple items<br />type Bar =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Bar<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemarker : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeorientation : unit -&gt; bool<br />&#160;&#160;member ShouldSerializer : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeshowlegend : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Bar<br /><br />--------------------<br />new : unit -&gt; Bar</div>
+<div class="tip" id="fs3">type Plotly =<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart<br />&#160;&#160;static member Show : chart:PlotlyChart -&gt; unit<br />&#160;&#160;static member WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br />&#160;&#160;static member WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs4">module MyCredentials</div>
+<div class="tip" id="fs5">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
+<div class="tip" id="fs6">val basicData : obj<br /><br />Full name: Plotly-bar-charts.basicData</div>
+<div class="tip" id="fs7">namespace Microsoft.FSharp.Data</div>
+<div class="tip" id="fs8">Multiple items<br />type Bar =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Bar<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehoverinfo : unit -&gt; bool<br />&#160;&#160;member ShouldSerializelegendgroup : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemarker : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Bar<br /><br />--------------------<br />new : unit -&gt; Bar</div>
+<div class="tip" id="fs9">val groupedTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.groupedTrace1</div>
 <div class="tip" id="fs10">property Bar.x: obj</div>
 <div class="tip" id="fs11">property Bar.y: obj</div>
-<div class="tip" id="fs12">Multiple items<br />type Figure =<br />&#160;&#160;new : data:Data * ?Layout:Layout -&gt; Figure<br />&#160;&#160;member GetInlineHtml : filename:string -&gt; string<br />&#160;&#160;member Plot : filename:string -&gt; PlotlyResponse option<br />&#160;&#160;member Fileopt : string<br />&#160;&#160;member Height : int<br />&#160;&#160;member Layout : Layout option<br />&#160;&#160;member Origin : string<br />&#160;&#160;member Response : PlotlyResponse option<br />&#160;&#160;member Width : int<br />&#160;&#160;member Fileopt : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Figure<br /><br />--------------------<br />new : data:Data * ?Layout:Layout -&gt; Figure</div>
-<div class="tip" id="fs13">val groupedTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.groupedTrace1</div>
-<div class="tip" id="fs14">val groupedTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.groupedTrace2</div>
-<div class="tip" id="fs15">val data2 : Data<br /><br />Full name: Plotly-bar-charts.data2</div>
-<div class="tip" id="fs16">val groupedLayout : Layout<br /><br />Full name: Plotly-bar-charts.groupedLayout</div>
-<div class="tip" id="fs17">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgroupgap : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
-<div class="tip" id="fs18">val stackedTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.stackedTrace1</div>
-<div class="tip" id="fs19">val stackedTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.stackedTrace2</div>
-<div class="tip" id="fs20">val stackedData : Data<br /><br />Full name: Plotly-bar-charts.stackedData</div>
-<div class="tip" id="fs21">val stackedLayout : Layout<br /><br />Full name: Plotly-bar-charts.stackedLayout</div>
-<div class="tip" id="fs22">val styledTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.styledTrace1</div>
-<div class="tip" id="fs23">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeline : unit -&gt; bool<br />&#160;&#160;member ShouldSerializemaxdisplayed : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeopacity : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
-<div class="tip" id="fs24">val styledTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.styledTrace2</div>
-<div class="tip" id="fs25">val styledData : Data<br /><br />Full name: Plotly-bar-charts.styledData</div>
-<div class="tip" id="fs26">val styledLayout : Layout<br /><br />Full name: Plotly-bar-charts.styledLayout</div>
-<div class="tip" id="fs27">Multiple items<br />type XAxis =<br />&#160;&#160;new : unit -&gt; XAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.XAxis<br /><br />--------------------<br />new : unit -&gt; XAxis</div>
-<div class="tip" id="fs28">Multiple items<br />type Font =<br />&#160;&#160;new : unit -&gt; Font<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefamily : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutlinecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializesize : unit -&gt; bool<br />&#160;&#160;member color : string<br />&#160;&#160;member family : string<br />&#160;&#160;member outlinecolor : string<br />&#160;&#160;member size : float<br />&#160;&#160;member color : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Font<br /><br />--------------------<br />new : unit -&gt; Font</div>
-<div class="tip" id="fs29">Multiple items<br />type YAxis =<br />&#160;&#160;new : unit -&gt; YAxis<br />&#160;&#160;member ShouldSerializeanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautorange : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautotick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebackgroundcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedomain : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedtick : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeexponentformat : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegridwidth : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.YAxis<br /><br />--------------------<br />new : unit -&gt; YAxis</div>
-<div class="tip" id="fs30">Multiple items<br />type Legend =<br />&#160;&#160;new : unit -&gt; Legend<br />&#160;&#160;member ShouldSerializebgcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebordercolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeborderwidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializetraceorder : unit -&gt; bool<br />&#160;&#160;member ShouldSerializex : unit -&gt; bool<br />&#160;&#160;member ShouldSerializexanchor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializexref : unit -&gt; bool<br />&#160;&#160;member ShouldSerializey : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Legend<br /><br />--------------------<br />new : unit -&gt; Legend</div>
-<div class="tip" id="fs31">property Legend.x: float</div>
-<div class="tip" id="fs32">property Legend.y: float</div>
-<div class="tip" id="fs33">val hoverTrace : Bar<br /><br />Full name: Plotly-bar-charts.hoverTrace</div>
-<div class="tip" id="fs34">val hoverData : Data<br /><br />Full name: Plotly-bar-charts.hoverData</div>
-<div class="tip" id="fs35">val hoverLayout : Layout<br /><br />Full name: Plotly-bar-charts.hoverLayout</div>
-<div class="tip" id="fs36">val customData : Data<br /><br />Full name: Plotly-bar-charts.customData</div>
+<div class="tip" id="fs12">val groupedTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.groupedTrace2</div>
+<div class="tip" id="fs13">val data2 : obj<br /><br />Full name: Plotly-bar-charts.data2</div>
+<div class="tip" id="fs14">val groupedLayout : obj<br /><br />Full name: Plotly-bar-charts.groupedLayout</div>
+<div class="tip" id="fs15">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedragmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegeo : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeheight : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehidesources : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
+<div class="tip" id="fs16">val stackedTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.stackedTrace1</div>
+<div class="tip" id="fs17">val stackedTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.stackedTrace2</div>
+<div class="tip" id="fs18">val stackedData : obj<br /><br />Full name: Plotly-bar-charts.stackedData</div>
+<div class="tip" id="fs19">val stackedLayout : obj<br /><br />Full name: Plotly-bar-charts.stackedLayout</div>
+<div class="tip" id="fs20">val styledTrace1 : Bar<br /><br />Full name: Plotly-bar-charts.styledTrace1</div>
+<div class="tip" id="fs21">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolors : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
+<div class="tip" id="fs22">val styledTrace2 : Bar<br /><br />Full name: Plotly-bar-charts.styledTrace2</div>
+<div class="tip" id="fs23">val styledData : obj<br /><br />Full name: Plotly-bar-charts.styledData</div>
+<div class="tip" id="fs24">val styledLayout : obj<br /><br />Full name: Plotly-bar-charts.styledLayout</div>
+<div class="tip" id="fs25">Multiple items<br />type Font =<br />&#160;&#160;new : unit -&gt; Font<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedescription : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefamily : unit -&gt; bool<br />&#160;&#160;member ShouldSerializerole : unit -&gt; bool<br />&#160;&#160;member ShouldSerializesize : unit -&gt; bool<br />&#160;&#160;member color : string<br />&#160;&#160;member description : string<br />&#160;&#160;member family : string<br />&#160;&#160;member role : string<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Font<br /><br />--------------------<br />new : unit -&gt; Font</div>
+<div class="tip" id="fs26">Multiple items<br />type Legend =<br />&#160;&#160;new : unit -&gt; Legend<br />&#160;&#160;member ShouldSerializebgcolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebordercolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeborderwidth : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializerole : unit -&gt; bool<br />&#160;&#160;member ShouldSerializetracegroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializetraceorder : unit -&gt; bool<br />&#160;&#160;member ShouldSerializex : unit -&gt; bool<br />&#160;&#160;member ShouldSerializexanchor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Legend<br /><br />--------------------<br />new : unit -&gt; Legend</div>
+<div class="tip" id="fs27">val hoverTrace : Bar<br /><br />Full name: Plotly-bar-charts.hoverTrace</div>
+<div class="tip" id="fs28">val hoverData : obj<br /><br />Full name: Plotly-bar-charts.hoverData</div>
+<div class="tip" id="fs29">val hoverLayout : obj<br /><br />Full name: Plotly-bar-charts.hoverLayout</div>
+<div class="tip" id="fs30">val customData : obj<br /><br />Full name: Plotly-bar-charts.customData</div>
 
             </div>
             <div class="span3">
@@ -509,22 +503,9 @@
                     
 
                     <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    
                     <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/XPlot/reference/index.html">API Reference</a></li>

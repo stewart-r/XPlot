@@ -17,7 +17,7 @@
     <script type="text/javascript">
         google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
-
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
     <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -95,11 +95,11 @@ works just fine:</p>
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.GeoChart(document.getElementById('e2fc3c9a-b2bf-4f7c-8923-8d70630b67a8'));
+                var chart = new google.visualization.GeoChart(document.getElementById('9aa09469-31d1-4e31-b472-7b6c638acb1f'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="e2fc3c9a-b2bf-4f7c-8923-8d70630b67a8" style="width: 700px; height: 400px;"></div>
+    <div id="9aa09469-31d1-4e31-b472-7b6c638acb1f" style="width: 700px; height: 400px;"></div>
 
 <h2><a name="A-regional-geo-chart" class="anchor" href="#A-regional-geo-chart">A regional geo chart</a></h2>
 
@@ -163,11 +163,11 @@ and takes a series of either two-element (as above) or three-element (as below) 
 
                 var options = {"legend":{"position":"none"},"colorAxis":{"colors":["green","blue"]},"displayMode":"markers","region":"IT"} 
 
-                var chart = new google.visualization.GeoChart(document.getElementById('4d08cb6c-5dbc-408d-a904-9166fa5cae64'));
+                var chart = new google.visualization.GeoChart(document.getElementById('04154bc2-f64e-47e4-92b7-d3d51f674147'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="4d08cb6c-5dbc-408d-a904-9166fa5cae64" style="width: 700px; height: 400px;"></div>
+    <div id="04154bc2-f64e-47e4-92b7-d3d51f674147" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">module GoogleCharts<br /><br />from XPlot</div>
@@ -218,22 +218,9 @@ and takes a series of either two-element (as above) or three-element (as below) 
                     
 
                     <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    
                     <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/XPlot/reference/index.html">API Reference</a></li>

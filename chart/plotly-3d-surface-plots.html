@@ -17,7 +17,7 @@
     <script type="text/javascript">
         google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
-
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
     <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -77,24 +77,24 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="i">trace</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs9', 9)" onmouseover="showTip(event, 'fs9', 9)" class="t">Surface</span>(<span onmouseout="hideTip(event, 'fs10', 10)" onmouseover="showTip(event, 'fs10', 10)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 11)" onmouseover="showTip(event, 'fs7', 11)" class="i">z</span>)
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="i">trace</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="t">Surface</span>(<span onmouseout="hideTip(event, 'fs9', 9)" onmouseover="showTip(event, 'fs9', 9)" class="i">z</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs6', 10)" onmouseover="showTip(event, 'fs6', 10)" class="i">z</span>)
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="i">layout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs12', 13)" onmouseover="showTip(event, 'fs12', 13)" class="t">Layout</span>(
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">layout</span> <span class="o">=</span>
+    <span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="t">Layout</span>(
         <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Mt Bruno Elevation&quot;</span>,
         <span class="i">autosize</span> <span class="o">=</span> <span class="k">false</span>,
         <span class="i">width</span> <span class="o">=</span> <span class="n">500.</span>,
         <span class="i">height</span> <span class="o">=</span> <span class="n">500.</span>,
         <span class="i">margin</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="t">Margin</span>(
-                <span onmouseout="hideTip(event, 'fs14', 15)" onmouseover="showTip(event, 'fs14', 15)" class="i">l</span> <span class="o">=</span> <span class="n">65.</span>,
-                <span onmouseout="hideTip(event, 'fs15', 16)" onmouseover="showTip(event, 'fs15', 16)" class="i">r</span> <span class="o">=</span> <span class="n">50.</span>,
-                <span onmouseout="hideTip(event, 'fs16', 17)" onmouseover="showTip(event, 'fs16', 17)" class="i">b</span> <span class="o">=</span> <span class="n">65.</span>,
-                <span onmouseout="hideTip(event, 'fs17', 18)" onmouseover="showTip(event, 'fs17', 18)" class="i">t</span> <span class="o">=</span> <span class="n">90.</span>
+            <span onmouseout="hideTip(event, 'fs12', 13)" onmouseover="showTip(event, 'fs12', 13)" class="t">Margin</span>(
+                <span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="i">l</span> <span class="o">=</span> <span class="n">65.</span>,
+                <span onmouseout="hideTip(event, 'fs14', 15)" onmouseover="showTip(event, 'fs14', 15)" class="i">r</span> <span class="o">=</span> <span class="n">50.</span>,
+                <span onmouseout="hideTip(event, 'fs15', 16)" onmouseover="showTip(event, 'fs15', 16)" class="i">b</span> <span class="o">=</span> <span class="n">65.</span>,
+                <span onmouseout="hideTip(event, 'fs16', 17)" onmouseover="showTip(event, 'fs16', 17)" class="i">t</span> <span class="o">=</span> <span class="n">90.</span>
             )
     )
 
-<span onmouseout="hideTip(event, 'fs18', 19)" onmouseover="showTip(event, 'fs18', 19)" class="t">Figure</span>(<span onmouseout="hideTip(event, 'fs19', 20)" onmouseover="showTip(event, 'fs19', 20)" class="t">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs20', 21)" onmouseover="showTip(event, 'fs20', 21)" class="f">From</span> [<span onmouseout="hideTip(event, 'fs8', 22)" onmouseover="showTip(event, 'fs8', 22)" class="i">trace</span>], <span onmouseout="hideTip(event, 'fs11', 23)" onmouseover="showTip(event, 'fs11', 23)" class="i">layout</span>)
+<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs17', 18)" onmouseover="showTip(event, 'fs17', 18)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs7', 19)" onmouseover="showTip(event, 'fs7', 19)" class="i">trace</span>], <span onmouseout="hideTip(event, 'fs10', 20)" onmouseover="showTip(event, 'fs10', 20)" class="i">layout</span>)
 </pre>
 </td>
 </tr>
@@ -104,24 +104,21 @@
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.Plotly</div>
-<div class="tip" id="fs3">type Plotly =<br />&#160;&#160;private new : unit -&gt; Plotly<br />&#160;&#160;static member Signin : username:string * password:string -&gt; unit<br /><br />Full name: XPlot.Plotly.Plotly</div>
-<div class="tip" id="fs4">static member Plotly.Signin : username:string * password:string -&gt; unit</div>
-<div class="tip" id="fs5">module MyCredentials</div>
-<div class="tip" id="fs6">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
-<div class="tip" id="fs7">val z : float list list<br /><br />Full name: Plotly-3d-surface-plots.z</div>
-<div class="tip" id="fs8">val trace : Surface<br /><br />Full name: Plotly-3d-surface-plots.trace</div>
-<div class="tip" id="fs9">Multiple items<br />type Surface =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Surface<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializename : unit -&gt; bool<br />&#160;&#160;member ShouldSerializescene : unit -&gt; bool<br />&#160;&#160;member ShouldSerializestream : unit -&gt; bool<br />&#160;&#160;member ShouldSerializetype : unit -&gt; bool<br />&#160;&#160;member ShouldSerializevisible : unit -&gt; bool<br />&#160;&#160;member ShouldSerializex : unit -&gt; bool<br />&#160;&#160;member ShouldSerializey : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Surface<br /><br />--------------------<br />new : unit -&gt; Surface</div>
-<div class="tip" id="fs10">property Surface.z: obj</div>
-<div class="tip" id="fs11">val layout : Layout<br /><br />Full name: Plotly-3d-surface-plots.layout</div>
-<div class="tip" id="fs12">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargroupgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarnorm : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeboxgroupgap : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
-<div class="tip" id="fs13">Multiple items<br />type Margin =<br />&#160;&#160;new : unit -&gt; Margin<br />&#160;&#160;member ShouldSerializeautoexpand : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeb : unit -&gt; bool<br />&#160;&#160;member ShouldSerializel : unit -&gt; bool<br />&#160;&#160;member ShouldSerializepad : unit -&gt; bool<br />&#160;&#160;member ShouldSerializer : unit -&gt; bool<br />&#160;&#160;member ShouldSerializet : unit -&gt; bool<br />&#160;&#160;member autoexpand : string<br />&#160;&#160;member b : float<br />&#160;&#160;member l : float<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Margin<br /><br />--------------------<br />new : unit -&gt; Margin</div>
-<div class="tip" id="fs14">property Margin.l: float</div>
-<div class="tip" id="fs15">property Margin.r: float</div>
-<div class="tip" id="fs16">property Margin.b: float</div>
-<div class="tip" id="fs17">property Margin.t: float</div>
-<div class="tip" id="fs18">Multiple items<br />type Figure =<br />&#160;&#160;new : data:Data * ?Layout:Layout -&gt; Figure<br />&#160;&#160;member GetInlineHtml : filename:string -&gt; string<br />&#160;&#160;member Plot : filename:string -&gt; PlotlyResponse option<br />&#160;&#160;member Fileopt : string<br />&#160;&#160;member Height : int<br />&#160;&#160;member Layout : Layout option<br />&#160;&#160;member Origin : string<br />&#160;&#160;member Response : PlotlyResponse option<br />&#160;&#160;member Width : int<br />&#160;&#160;member Fileopt : string with set<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Figure<br /><br />--------------------<br />new : data:Data * ?Layout:Layout -&gt; Figure</div>
-<div class="tip" id="fs19">Multiple items<br />namespace Microsoft.FSharp.Data<br /><br />--------------------<br />type Data =<br />&#160;&#160;new : traces:seq&lt;Trace&gt; -&gt; Data<br />&#160;&#160;member Json : string<br />&#160;&#160;static member From : traces:seq&lt;#Trace&gt; -&gt; Data<br /><br />Full name: XPlot.Plotly.Data<br /><br />--------------------<br />new : traces:seq&lt;Trace&gt; -&gt; Data</div>
-<div class="tip" id="fs20">static member Data.From : traces:seq&lt;#Trace&gt; -&gt; Data</div>
+<div class="tip" id="fs3">type Plotly =<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart<br />&#160;&#160;static member Show : chart:PlotlyChart -&gt; unit<br />&#160;&#160;static member WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br />&#160;&#160;static member WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br /><br />Full name: XPlot.Plotly.Plotly</div>
+<div class="tip" id="fs4">module MyCredentials</div>
+<div class="tip" id="fs5">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
+<div class="tip" id="fs6">val z : float list list<br /><br />Full name: Plotly-3d-surface-plots.z</div>
+<div class="tip" id="fs7">val trace : Surface<br /><br />Full name: Plotly-3d-surface-plots.trace</div>
+<div class="tip" id="fs8">Multiple items<br />type Surface =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Surface<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecontours : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehidesurface : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehoverinfo : unit -&gt; bool<br />&#160;&#160;member ShouldSerializelegendgroup : unit -&gt; bool<br />&#160;&#160;member ShouldSerializelighting : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Surface<br /><br />--------------------<br />new : unit -&gt; Surface</div>
+<div class="tip" id="fs9">property Surface.z: obj</div>
+<div class="tip" id="fs10">val layout : Layout<br /><br />Full name: Plotly-3d-surface-plots.layout</div>
+<div class="tip" id="fs11">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedragmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegeo : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeheight : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehidesources : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
+<div class="tip" id="fs12">Multiple items<br />type Margin =<br />&#160;&#160;new : unit -&gt; Margin<br />&#160;&#160;member ShouldSerializeautoexpand : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeb : unit -&gt; bool<br />&#160;&#160;member ShouldSerializel : unit -&gt; bool<br />&#160;&#160;member ShouldSerializepad : unit -&gt; bool<br />&#160;&#160;member ShouldSerializer : unit -&gt; bool<br />&#160;&#160;member ShouldSerializerole : unit -&gt; bool<br />&#160;&#160;member ShouldSerializet : unit -&gt; bool<br />&#160;&#160;member autoexpand : bool<br />&#160;&#160;member b : float<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Margin<br /><br />--------------------<br />new : unit -&gt; Margin</div>
+<div class="tip" id="fs13">property Margin.l: float</div>
+<div class="tip" id="fs14">property Margin.r: float</div>
+<div class="tip" id="fs15">property Margin.b: float</div>
+<div class="tip" id="fs16">property Margin.t: float</div>
+<div class="tip" id="fs17">namespace Microsoft.FSharp.Data</div>
 
             </div>
             <div class="span3">
@@ -160,22 +157,9 @@
                     
 
                     <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    
                     <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/XPlot/reference/index.html">API Reference</a></li>
