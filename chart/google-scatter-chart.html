@@ -21,8 +21,8 @@
         //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/content/style.css" />
-    <script type="text/javascript" src="/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
+    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,7 +48,7 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/">XPlot</a></h3>
+            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
@@ -75,15 +75,15 @@ points by multiplying two numbers for the X coordinate and two numbers for the Y
     <script type="text/javascript">
         google.setOnLoadCallback(drawChart);
             function drawChart() {
-                var data = new google.visualization.DataTable({"cols": [{"type": "number" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": 0.00955005753430648}, {"v": 0.34782507462053}]}, {"c" : [{"v": 0.735338404185044}, {"v": 0.0500892103255827}]}, {"c" : [{"v": 0.0710621253713527}, {"v": 0.0779619802124101}]}, {"c" : [{"v": 0.466357768878788}, {"v": 0.344009541102972}]}, {"c" : [{"v": 0.161750509807224}, {"v": 0.666137051653527}]}, {"c" : [{"v": 0.0079267593677066}, {"v": 0.131860599439116}]}, {"c" : [{"v": 0.110687573726499}, {"v": 0.31358816616492}]}, {"c" : [{"v": 0.535966063275671}, {"v": 0.00434619207900748}]}, {"c" : [{"v": 0.217801436149608}, {"v": 0.081066574846902}]}, {"c" : [{"v": 0.256116020049056}, {"v": 0.10953204676446}]}, {"c" : [{"v": 0.101733516768359}, {"v": 0.352330407567313}]}, {"c" : [{"v": 0.302134780571309}, {"v": 0.387495902919985}]}, {"c" : [{"v": 0.237702116806885}, {"v": 0.779005970938427}]}, {"c" : [{"v": 0.262241467134515}, {"v": 0.00575728038966185}]}, {"c" : [{"v": 0.438345526997814}, {"v": 0.0504216829550305}]}, {"c" : [{"v": 0.0911185627617531}, {"v": 0.569084740956349}]}, {"c" : [{"v": 0.034794531246323}, {"v": 0.727598717956848}]}, {"c" : [{"v": 0.149238250283926}, {"v": 0.159116322760815}]}, {"c" : [{"v": 0.0123781921442735}, {"v": 0.266795129209823}]}, {"c" : [{"v": 0.0561532844457858}, {"v": 0.276918768743496}]}, {"c" : [{"v": 0.086208138132415}, {"v": 0.437284590321234}]}, {"c" : [{"v": 0.150524150016854}, {"v": 0.376099050207359}]}, {"c" : [{"v": 0.194431149579303}, {"v": 0.634175127657067}]}, {"c" : [{"v": 0.164652666982959}, {"v": 0.289497491011292}]}, {"c" : [{"v": 0.806921834335449}, {"v": 0.343974024597081}]}, {"c" : [{"v": 0.0716599032306573}, {"v": 0.0466245460844404}]}, {"c" : [{"v": 0.315683602413042}, {"v": 0.357525866118131}]}, {"c" : [{"v": 0.658178103738225}, {"v": 0.302427167547442}]}, {"c" : [{"v": 0.653795071088012}, {"v": 0.0090672069861121}]}, {"c" : [{"v": 0.104160537622305}, {"v": 0.0203524015171036}]}, {"c" : [{"v": 0.130170966135935}, {"v": 0.00932565327449666}]}, {"c" : [{"v": 0.628723367678676}, {"v": 0.465838479731168}]}, {"c" : [{"v": 0.0760165278076932}, {"v": 0.169891277677084}]}, {"c" : [{"v": 0.0361449369950972}, {"v": 0.141528466951682}]}, {"c" : [{"v": 0.00848249498277354}, {"v": 0.0133761316463368}]}, {"c" : [{"v": 0.0180046582880034}, {"v": 0.00648187861325966}]}, {"c" : [{"v": 0.130043953836473}, {"v": 0.0755732906159149}]}, {"c" : [{"v": 0.312034012063824}, {"v": 0.517473393924678}]}, {"c" : [{"v": 0.507041667818898}, {"v": 0.800406695042899}]}, {"c" : [{"v": 0.0560213363040633}, {"v": 0.41492871606365}]}, {"c" : [{"v": 0.218165202521198}, {"v": 0.527519323956151}]}, {"c" : [{"v": 0.140892020209222}, {"v": 0.491107083230586}]}, {"c" : [{"v": 0.204559042247502}, {"v": 0.552880891867625}]}, {"c" : [{"v": 0.909601918365645}, {"v": 0.446486567557801}]}, {"c" : [{"v": 0.0505923234879146}, {"v": 0.266392326997716}]}, {"c" : [{"v": 0.292362672721842}, {"v": 0.118583256483545}]}, {"c" : [{"v": 0.328554464549718}, {"v": 0.0946461934696888}]}, {"c" : [{"v": 0.0586412882221998}, {"v": 0.732856225099471}]}, {"c" : [{"v": 0.318513596970366}, {"v": 0.0343251547834333}]}, {"c" : [{"v": 0.0811224104644923}, {"v": 0.0613494364948411}]}, {"c" : [{"v": 0.220937533761765}, {"v": 0.260525186360069}]}, {"c" : [{"v": 0.0767022290377164}, {"v": 0.0116385796821418}]}, {"c" : [{"v": 0.0594652012381591}, {"v": 0.335986619854008}]}, {"c" : [{"v": 0.0362660028450994}, {"v": 0.00712995305777057}]}, {"c" : [{"v": 0.318369309656168}, {"v": 0.12166933770384}]}, {"c" : [{"v": 0.0156375913392382}, {"v": 0.140622502517065}]}, {"c" : [{"v": 0.0147332054590018}, {"v": 0.458353429904342}]}, {"c" : [{"v": 0.205416946692315}, {"v": 0.542840845192159}]}, {"c" : [{"v": 0.33808375459366}, {"v": 0.274398163667976}]}, {"c" : [{"v": 0.282717234713672}, {"v": 0.161575780352144}]}, {"c" : [{"v": 0.0279881658325612}, {"v": 0.0515853271402533}]}, {"c" : [{"v": 0.171448041506443}, {"v": 0.244038360110829}]}, {"c" : [{"v": 0.0553757862940116}, {"v": 0.332416299672184}]}, {"c" : [{"v": 0.124818851342527}, {"v": 0.023951543449465}]}, {"c" : [{"v": 0.544623104972259}, {"v": 0.3086701193375}]}, {"c" : [{"v": 0.059579117075004}, {"v": 0.329326184672139}]}, {"c" : [{"v": 0.0119825297743636}, {"v": 0.101931205340726}]}, {"c" : [{"v": 0.0943258631585298}, {"v": 0.684850509964848}]}, {"c" : [{"v": 0.0380553943411283}, {"v": 0.301151540206199}]}, {"c" : [{"v": 0.0595637817012974}, {"v": 0.197629008680961}]}, {"c" : [{"v": 0.135926752209634}, {"v": 0.0449600038889599}]}, {"c" : [{"v": 0.142882381201735}, {"v": 0.0385393509145145}]}, {"c" : [{"v": 0.171440728902159}, {"v": 0.415996546243868}]}, {"c" : [{"v": 0.161932377574946}, {"v": 0.833795232121115}]}, {"c" : [{"v": 0.444610608070044}, {"v": 0.0381383943941076}]}, {"c" : [{"v": 0.132903334233159}, {"v": 0.356004352079695}]}, {"c" : [{"v": 0.266199565824594}, {"v": 0.0758092132417744}]}, {"c" : [{"v": 0.197443399684565}, {"v": 0.0241420777348672}]}, {"c" : [{"v": 0.380432461553307}, {"v": 0.0737015810242878}]}, {"c" : [{"v": 0.00750350982556279}, {"v": 0.00460287088692833}]}, {"c" : [{"v": 0.166778674633876}, {"v": 0.430189560302684}]}, {"c" : [{"v": 0.197482764229086}, {"v": 0.846087585999784}]}, {"c" : [{"v": 0.0192214961391825}, {"v": 0.543445318594284}]}, {"c" : [{"v": 0.0741019193592224}, {"v": 0.174149508872643}]}, {"c" : [{"v": 0.293787213922691}, {"v": 0.00120739244455563}]}, {"c" : [{"v": 0.320871994842422}, {"v": 0.491079551854672}]}, {"c" : [{"v": 0.0574802067342384}, {"v": 0.422045395129582}]}, {"c" : [{"v": 0.303977850223748}, {"v": 0.627340209009319}]}, {"c" : [{"v": 0.0504000706151055}, {"v": 0.529795561680773}]}, {"c" : [{"v": 0.0127131876143647}, {"v": 0.186177743553275}]}, {"c" : [{"v": 0.472637101199716}, {"v": 0.107443260697316}]}, {"c" : [{"v": 0.233117421219881}, {"v": 0.137890903721955}]}, {"c" : [{"v": 0.0146315340934016}, {"v": 0.26179965451764}]}, {"c" : [{"v": 0.0473987511256175}, {"v": 0.307299513193558}]}, {"c" : [{"v": 0.125001276367447}, {"v": 0.0881743567699542}]}, {"c" : [{"v": 0.0795149906742813}, {"v": 0.0881849958897731}]}, {"c" : [{"v": 0.00417678049365423}, {"v": 0.0126919416651839}]}, {"c" : [{"v": 0.279663845451757}, {"v": 0.209558182171402}]}, {"c" : [{"v": 0.60959927313992}, {"v": 0.01698673661396}]}, {"c" : [{"v": 0.239161596065181}, {"v": 0.0529983481995326}]}, {"c" : [{"v": 0.149412841143485}, {"v": 0.0139949899558966}]}]});
+                var data = new google.visualization.DataTable({"cols": [{"type": "number" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": 0.031577800416935}, {"v": 0.00715869134232266}]}, {"c" : [{"v": 0.259821365707071}, {"v": 0.0376739163745637}]}, {"c" : [{"v": 0.178599979838847}, {"v": 0.191522612438798}]}, {"c" : [{"v": 0.378998114717995}, {"v": 0.16031798698678}]}, {"c" : [{"v": 0.391949095993766}, {"v": 0.574819549339104}]}, {"c" : [{"v": 0.577383592881307}, {"v": 0.0856906539487635}]}, {"c" : [{"v": 0.053520549502126}, {"v": 0.111016210264612}]}, {"c" : [{"v": 0.297242924600869}, {"v": 0.412534433948858}]}, {"c" : [{"v": 0.428544452288576}, {"v": 0.0357636140198389}]}, {"c" : [{"v": 0.0918757042102267}, {"v": 0.228308657834067}]}, {"c" : [{"v": 0.190344380332834}, {"v": 0.457965941286153}]}, {"c" : [{"v": 0.338537778016609}, {"v": 0.0193541916360743}]}, {"c" : [{"v": 0.0522494696131916}, {"v": 0.368386172803581}]}, {"c" : [{"v": 0.0347428112070792}, {"v": 0.095494029166148}]}, {"c" : [{"v": 0.210219450871412}, {"v": 0.0242439176969625}]}, {"c" : [{"v": 0.122892189339767}, {"v": 0.00357679148605275}]}, {"c" : [{"v": 0.000371688365513796}, {"v": 0.079247507497909}]}, {"c" : [{"v": 0.0570966912788544}, {"v": 0.0702248600780147}]}, {"c" : [{"v": 0.218039740112799}, {"v": 0.0490213889539702}]}, {"c" : [{"v": 0.147045751913101}, {"v": 0.432677957556849}]}, {"c" : [{"v": 0.000570721340157425}, {"v": 0.0298338152644888}]}, {"c" : [{"v": 0.652207196625111}, {"v": 0.687632196130228}]}, {"c" : [{"v": 0.0305616925963461}, {"v": 0.394853907970887}]}, {"c" : [{"v": 0.381678652068673}, {"v": 0.63115266130112}]}, {"c" : [{"v": 0.0932248320831791}, {"v": 0.0207906076830849}]}, {"c" : [{"v": 0.395139774934482}, {"v": 0.649575081292067}]}, {"c" : [{"v": 0.191757365185643}, {"v": 0.098506414859006}]}, {"c" : [{"v": 0.175175518470944}, {"v": 0.708174195733564}]}, {"c" : [{"v": 0.436039668414165}, {"v": 0.00159623661389382}]}, {"c" : [{"v": 0.0201617095539929}, {"v": 0.0367079353320967}]}, {"c" : [{"v": 0.133390951969091}, {"v": 0.316644047059716}]}, {"c" : [{"v": 0.423532012626735}, {"v": 0.309750366049419}]}, {"c" : [{"v": 0.0174625895478842}, {"v": 0.131192165584616}]}, {"c" : [{"v": 0.58505923243003}, {"v": 0.221488433512368}]}, {"c" : [{"v": 0.217816698592743}, {"v": 0.188919404613918}]}, {"c" : [{"v": 0.221882162115905}, {"v": 0.336169436389678}]}, {"c" : [{"v": 0.693484165909596}, {"v": 0.67352582197052}]}, {"c" : [{"v": 0.404825257075476}, {"v": 0.051574517107198}]}, {"c" : [{"v": 0.185347979341504}, {"v": 0.0802195985379715}]}, {"c" : [{"v": 0.063804028763005}, {"v": 0.156432998531625}]}, {"c" : [{"v": 0.00919596773258013}, {"v": 0.0274095399346454}]}, {"c" : [{"v": 0.0125618278832792}, {"v": 0.167775906668459}]}, {"c" : [{"v": 0.0752992791810972}, {"v": 0.391711171597289}]}, {"c" : [{"v": 0.534974782081084}, {"v": 0.211967416790289}]}, {"c" : [{"v": 0.60041676373416}, {"v": 0.543745813901947}]}, {"c" : [{"v": 0.91115958530576}, {"v": 0.258503457808187}]}, {"c" : [{"v": 0.0604498600054847}, {"v": 0.0315682641514671}]}, {"c" : [{"v": 0.394874852775954}, {"v": 0.0127531542344687}]}, {"c" : [{"v": 0.299100436548509}, {"v": 0.446194010159109}]}, {"c" : [{"v": 0.101265950625833}, {"v": 0.337724306700994}]}, {"c" : [{"v": 0.565109030705037}, {"v": 0.115219262386802}]}, {"c" : [{"v": 0.0272024236405523}, {"v": 0.210776599007015}]}, {"c" : [{"v": 0.88773441025493}, {"v": 0.201133172143517}]}, {"c" : [{"v": 0.244015401711631}, {"v": 0.488062397734711}]}, {"c" : [{"v": 0.166080055582329}, {"v": 0.0514358003109859}]}, {"c" : [{"v": 0.067502397968707}, {"v": 0.297461275049716}]}, {"c" : [{"v": 0.086584295924835}, {"v": 0.133245250783642}]}, {"c" : [{"v": 0.169990134038042}, {"v": 0.0142640701380839}]}, {"c" : [{"v": 0.455730541697334}, {"v": 0.0069618367327816}]}, {"c" : [{"v": 0.29043758451745}, {"v": 0.221977049153218}]}, {"c" : [{"v": 0.618610704399261}, {"v": 0.0682766202734437}]}, {"c" : [{"v": 0.699249883024742}, {"v": 0.0681272232927046}]}, {"c" : [{"v": 0.253005776659537}, {"v": 0.104763320329639}]}, {"c" : [{"v": 9.78593277643211E-05}, {"v": 0.0902183196095695}]}, {"c" : [{"v": 0.192709093485425}, {"v": 0.0856256975324389}]}, {"c" : [{"v": 0.01078052503756}, {"v": 0.475041734663437}]}, {"c" : [{"v": 0.341740709157688}, {"v": 0.507356628088623}]}, {"c" : [{"v": 0.299065732174822}, {"v": 0.620456133277049}]}, {"c" : [{"v": 0.351684724889736}, {"v": 0.316243543621547}]}, {"c" : [{"v": 0.00788361792086812}, {"v": 0.378850467981726}]}, {"c" : [{"v": 0.259992524238059}, {"v": 0.227428110432603}]}, {"c" : [{"v": 0.614108576111682}, {"v": 0.0503210058349059}]}, {"c" : [{"v": 0.432676997720879}, {"v": 0.179979375858919}]}, {"c" : [{"v": 0.124059882526864}, {"v": 0.236402997554433}]}, {"c" : [{"v": 0.121545594570922}, {"v": 0.476753439865217}]}, {"c" : [{"v": 0.706466943676286}, {"v": 0.52497604763612}]}, {"c" : [{"v": 0.335136628129125}, {"v": 0.32713907018393}]}, {"c" : [{"v": 0.431498465675208}, {"v": 0.48074043035877}]}, {"c" : [{"v": 0.367593698917394}, {"v": 0.2388619695976}]}, {"c" : [{"v": 0.171082213485164}, {"v": 0.172675081891775}]}, {"c" : [{"v": 0.0705940144794693}, {"v": 0.650037906139414}]}, {"c" : [{"v": 0.171381364183085}, {"v": 0.390356121913303}]}, {"c" : [{"v": 0.164218283723881}, {"v": 0.169834290658821}]}, {"c" : [{"v": 0.298621489289582}, {"v": 0.273150749801805}]}, {"c" : [{"v": 0.933591702431826}, {"v": 0.303250648224291}]}, {"c" : [{"v": 0.756255675959476}, {"v": 0.0947499782076783}]}, {"c" : [{"v": 0.00908374169863003}, {"v": 0.212994946251479}]}, {"c" : [{"v": 0.0162583588241896}, {"v": 0.0772177375270941}]}, {"c" : [{"v": 0.302322100270584}, {"v": 0.119862162278447}]}, {"c" : [{"v": 0.0484544620617181}, {"v": 0.0527935378276477}]}, {"c" : [{"v": 0.158948054569923}, {"v": 0.340122406511987}]}, {"c" : [{"v": 0.253808082221266}, {"v": 0.00394098430309953}]}, {"c" : [{"v": 0.163175746819028}, {"v": 0.214524845148375}]}, {"c" : [{"v": 0.220616672280022}, {"v": 0.0804900943297618}]}, {"c" : [{"v": 0.148668652278804}, {"v": 0.56116326702057}]}, {"c" : [{"v": 0.226876365639285}, {"v": 0.194576016299663}]}, {"c" : [{"v": 0.0713541987819081}, {"v": 0.0378104513532624}]}, {"c" : [{"v": 0.221455291094167}, {"v": 0.526542291778669}]}, {"c" : [{"v": 0.360091695041594}, {"v": 0.393325429661942}]}, {"c" : [{"v": 0.23727134427031}, {"v": 0.156530024858279}]}, {"c" : [{"v": 0.478846117578626}, {"v": 0.516976067949885}]}]});
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.ScatterChart(document.getElementById('9c715fb0-9d74-4000-aae8-3729ec5d1513'));
+                var chart = new google.visualization.ScatterChart(document.getElementById('b48eab96-ee0b-442a-a377-6146134c5164'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="9c715fb0-9d74-4000-aae8-3729ec5d1513" style="width: 700px; height: 400px;"></div>
+    <div id="b48eab96-ee0b-442a-a377-6146134c5164" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>
@@ -99,68 +99,68 @@ points by multiplying two numbers for the X coordinate and two numbers for the Y
 
             </div>
             <div class="span3">
-                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/">Home page</a></li>
+                    <li><a href="/XPlot/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/release-notes.html">Release Notes</a></li>
+                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
-                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
+                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
-                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
-                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
-                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
-                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
-                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
-                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
-                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
-                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
-                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
-                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
-                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
-                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
-                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
-                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
-                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
+                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
+                    <li><a href="/XPlot/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/XPlot/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/XPlot/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/XPlot/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/XPlot/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/XPlot/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/XPlot/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/reference/index.html">API Reference</a></li>
+                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>
