@@ -12,13 +12,16 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
-    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/style.css" />
+    <script type="text/javascript" src="/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +47,7 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+            <h3 class="muted"><a href="/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
@@ -54,6 +57,10 @@
 
 
 <h1>Scatter3d</h1>
+<p>
+  <span>Namespace: XPlot.Plotly</span><br />
+  <span>Parent Module: <a href="xplot-plotly-graph.html">Graph</a></span>
+</p>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -65,19 +72,20 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3390', 3390)" onmouseover="showTip(event, '3390', 3390)">
+          <code onmouseout="hideTip(event, '3354', 3354)" onmouseover="showTip(event, '3354', 3354)">
             new()
           </code>
-          <div class="tip" id="3390">
+          <div class="tip" id="3354">
             <strong>Signature:</strong> unit -&gt; Scatter3d<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4096-4096" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4105-4105" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>.ctor</code></p>
         </td>
       </tr>
     </tbody>
@@ -91,83 +99,30 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3391', 3391)" onmouseover="showTip(event, '3391', 3391)">
+          <code onmouseout="hideTip(event, '3355', 3355)" onmouseover="showTip(event, '3355', 3355)">
             error_x()
           </code>
-          <div class="tip" id="3391">
+          <div class="tip" id="3355">
             <strong>Signature:</strong> unit -&gt; Error_x<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4230-4230" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4239-4239" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_error_x</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3392', 3392)" onmouseover="showTip(event, '3392', 3392)">
+          <code onmouseout="hideTip(event, '3356', 3356)" onmouseover="showTip(event, '3356', 3356)">
             error_x()
           </code>
-          <div class="tip" id="3392">
+          <div class="tip" id="3356">
             <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4229-4229" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3393', 3393)" onmouseover="showTip(event, '3393', 3393)">
-            error_y()
-          </code>
-          <div class="tip" id="3393">
-            <strong>Signature:</strong> unit -&gt; Error_y<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4234-4234" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3394', 3394)" onmouseover="showTip(event, '3394', 3394)">
-            error_y()
-          </code>
-          <div class="tip" id="3394">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4233-4233" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3395', 3395)" onmouseover="showTip(event, '3395', 3395)">
-            error_z()
-          </code>
-          <div class="tip" id="3395">
-            <strong>Signature:</strong> unit -&gt; Error_z<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -176,332 +131,17 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_error_x</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3396', 3396)" onmouseover="showTip(event, '3396', 3396)">
-            error_z()
+          <code onmouseout="hideTip(event, '3357', 3357)" onmouseover="showTip(event, '3357', 3357)">
+            error_y()
           </code>
-          <div class="tip" id="3396">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4237-4237" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3397', 3397)" onmouseover="showTip(event, '3397', 3397)">
-            hoverinfo()
-          </code>
-          <div class="tip" id="3397">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4166-4166" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines which trace information appear on hover.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3398', 3398)" onmouseover="showTip(event, '3398', 3398)">
-            hoverinfo()
-          </code>
-          <div class="tip" id="3398">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4165-4165" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines which trace information appear on hover.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3399', 3399)" onmouseover="showTip(event, '3399', 3399)">
-            legendgroup()
-          </code>
-          <div class="tip" id="3399">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4147-4147" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the legend group for this trace. Traces part of the same legend group hide/show at the same time when toggling legend items.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3400', 3400)" onmouseover="showTip(event, '3400', 3400)">
-            legendgroup()
-          </code>
-          <div class="tip" id="3400">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4146-4146" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the legend group for this trace. Traces part of the same legend group hide/show at the same time when toggling legend items.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3401', 3401)" onmouseover="showTip(event, '3401', 3401)">
-            line()
-          </code>
-          <div class="tip" id="3401">
-            <strong>Signature:</strong> unit -&gt; Line<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4213-4213" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3402', 3402)" onmouseover="showTip(event, '3402', 3402)">
-            line()
-          </code>
-          <div class="tip" id="3402">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4212-4212" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3403', 3403)" onmouseover="showTip(event, '3403', 3403)">
-            marker()
-          </code>
-          <div class="tip" id="3403">
-            <strong>Signature:</strong> unit -&gt; Marker<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4217-4217" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3404', 3404)" onmouseover="showTip(event, '3404', 3404)">
-            marker()
-          </code>
-          <div class="tip" id="3404">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4216-4216" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3405', 3405)" onmouseover="showTip(event, '3405', 3405)">
-            mode()
-          </code>
-          <div class="tip" id="3405">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4195-4195" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines the drawing mode for this scatter trace. If the provided <code>mode</code> includes <em>text</em> then the <code>text</code> elements appear at the coordinates. Otherwise, the <code>text</code> elements appear on hover. If there are less than 20 points, then the default is <em>lines+markers</em>. Otherwise, <em>lines</em>.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3406', 3406)" onmouseover="showTip(event, '3406', 3406)">
-            mode()
-          </code>
-          <div class="tip" id="3406">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4194-4194" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines the drawing mode for this scatter trace. If the provided <code>mode</code> includes <em>text</em> then the <code>text</code> elements appear at the coordinates. Otherwise, the <code>text</code> elements appear on hover. If there are less than 20 points, then the default is <em>lines+markers</em>. Otherwise, <em>lines</em>.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3407', 3407)" onmouseover="showTip(event, '3407', 3407)">
-            name()
-          </code>
-          <div class="tip" id="3407">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4157-4157" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the trace name. The trace name appear as the legend item and on hover.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3408', 3408)" onmouseover="showTip(event, '3408', 3408)">
-            name()
-          </code>
-          <div class="tip" id="3408">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4156-4156" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the trace name. The trace name appear as the legend item and on hover.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3409', 3409)" onmouseover="showTip(event, '3409', 3409)">
-            opacity()
-          </code>
-          <div class="tip" id="3409">
-            <strong>Signature:</strong> unit -&gt; float<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4152-4152" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the opacity of the trace.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3410', 3410)" onmouseover="showTip(event, '3410', 3410)">
-            opacity()
-          </code>
-          <div class="tip" id="3410">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4151-4151" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the opacity of the trace.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3411', 3411)" onmouseover="showTip(event, '3411', 3411)">
-            projection()
-          </code>
-          <div class="tip" id="3411">
-            <strong>Signature:</strong> unit -&gt; Projection<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4209-4209" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3412', 3412)" onmouseover="showTip(event, '3412', 3412)">
-            projection()
-          </code>
-          <div class="tip" id="3412">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4208-4208" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3413', 3413)" onmouseover="showTip(event, '3413', 3413)">
-            scene()
-          </code>
-          <div class="tip" id="3413">
-            <strong>Signature:</strong> unit -&gt; string<br />
+          <div class="tip" id="3357">
+            <strong>Signature:</strong> unit -&gt; Error_y<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -509,17 +149,17 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Sets a reference between this trace's 3D coordinate system and a 3D scene. If <em>scene</em> (the default value), the (x,y,z) coordinates refer to <code>layout.scene</code>. If <em>scene2</em>, the (x,y,z) coordinates refer to <code>layout.scene2</code>, and so on.</p>
-
+          
+              <p>CompiledName: <code>set_error_y</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3414', 3414)" onmouseover="showTip(event, '3414', 3414)">
-            scene()
+          <code onmouseout="hideTip(event, '3358', 3358)" onmouseover="showTip(event, '3358', 3358)">
+            error_y()
           </code>
-          <div class="tip" id="3414">
+          <div class="tip" id="3358">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -528,22 +168,384 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
+          
+              <p>CompiledName: <code>get_error_y</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3359', 3359)" onmouseover="showTip(event, '3359', 3359)">
+            error_z()
+          </code>
+          <div class="tip" id="3359">
+            <strong>Signature:</strong> unit -&gt; Error_z<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4247-4247" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_error_z</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3360', 3360)" onmouseover="showTip(event, '3360', 3360)">
+            error_z()
+          </code>
+          <div class="tip" id="3360">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4246-4246" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_error_z</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3361', 3361)" onmouseover="showTip(event, '3361', 3361)">
+            hoverinfo()
+          </code>
+          <div class="tip" id="3361">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4175-4175" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines which trace information appear on hover.</p>
+
+
+              <p>CompiledName: <code>set_hoverinfo</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3362', 3362)" onmouseover="showTip(event, '3362', 3362)">
+            hoverinfo()
+          </code>
+          <div class="tip" id="3362">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4174-4174" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines which trace information appear on hover.</p>
+
+
+              <p>CompiledName: <code>get_hoverinfo</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3363', 3363)" onmouseover="showTip(event, '3363', 3363)">
+            legendgroup()
+          </code>
+          <div class="tip" id="3363">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4156-4156" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the legend group for this trace. Traces part of the same legend group hide/show at the same time when toggling legend items.</p>
+
+
+              <p>CompiledName: <code>set_legendgroup</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3364', 3364)" onmouseover="showTip(event, '3364', 3364)">
+            legendgroup()
+          </code>
+          <div class="tip" id="3364">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4155-4155" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the legend group for this trace. Traces part of the same legend group hide/show at the same time when toggling legend items.</p>
+
+
+              <p>CompiledName: <code>get_legendgroup</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3365', 3365)" onmouseover="showTip(event, '3365', 3365)">
+            line()
+          </code>
+          <div class="tip" id="3365">
+            <strong>Signature:</strong> unit -&gt; Line<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4222-4222" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_line</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3366', 3366)" onmouseover="showTip(event, '3366', 3366)">
+            line()
+          </code>
+          <div class="tip" id="3366">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4221-4221" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_line</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3367', 3367)" onmouseover="showTip(event, '3367', 3367)">
+            marker()
+          </code>
+          <div class="tip" id="3367">
+            <strong>Signature:</strong> unit -&gt; Marker<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4226-4226" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_marker</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3368', 3368)" onmouseover="showTip(event, '3368', 3368)">
+            marker()
+          </code>
+          <div class="tip" id="3368">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4225-4225" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_marker</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3369', 3369)" onmouseover="showTip(event, '3369', 3369)">
+            mode()
+          </code>
+          <div class="tip" id="3369">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4204-4204" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines the drawing mode for this scatter trace. If the provided <code>mode</code> includes <em>text</em> then the <code>text</code> elements appear at the coordinates. Otherwise, the <code>text</code> elements appear on hover. If there are less than 20 points, then the default is <em>lines+markers</em>. Otherwise, <em>lines</em>.</p>
+
+
+              <p>CompiledName: <code>set_mode</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3370', 3370)" onmouseover="showTip(event, '3370', 3370)">
+            mode()
+          </code>
+          <div class="tip" id="3370">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4203-4203" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines the drawing mode for this scatter trace. If the provided <code>mode</code> includes <em>text</em> then the <code>text</code> elements appear at the coordinates. Otherwise, the <code>text</code> elements appear on hover. If there are less than 20 points, then the default is <em>lines+markers</em>. Otherwise, <em>lines</em>.</p>
+
+
+              <p>CompiledName: <code>get_mode</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3371', 3371)" onmouseover="showTip(event, '3371', 3371)">
+            opacity()
+          </code>
+          <div class="tip" id="3371">
+            <strong>Signature:</strong> unit -&gt; float<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4161-4161" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the opacity of the trace.</p>
+
+
+              <p>CompiledName: <code>set_opacity</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3372', 3372)" onmouseover="showTip(event, '3372', 3372)">
+            opacity()
+          </code>
+          <div class="tip" id="3372">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4160-4160" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the opacity of the trace.</p>
+
+
+              <p>CompiledName: <code>get_opacity</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3373', 3373)" onmouseover="showTip(event, '3373', 3373)">
+            projection()
+          </code>
+          <div class="tip" id="3373">
+            <strong>Signature:</strong> unit -&gt; Projection<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4218-4218" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_projection</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3374', 3374)" onmouseover="showTip(event, '3374', 3374)">
+            projection()
+          </code>
+          <div class="tip" id="3374">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4217-4217" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_projection</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3375', 3375)" onmouseover="showTip(event, '3375', 3375)">
+            scene()
+          </code>
+          <div class="tip" id="3375">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4252-4252" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
           <p>Sets a reference between this trace's 3D coordinate system and a 3D scene. If <em>scene</em> (the default value), the (x,y,z) coordinates refer to <code>layout.scene</code>. If <em>scene2</em>, the (x,y,z) coordinates refer to <code>layout.scene2</code>, and so on.</p>
 
+
+              <p>CompiledName: <code>set_scene</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3415', 3415)" onmouseover="showTip(event, '3415', 3415)">
+          <code onmouseout="hideTip(event, '3376', 3376)" onmouseover="showTip(event, '3376', 3376)">
+            scene()
+          </code>
+          <div class="tip" id="3376">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4251-4251" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets a reference between this trace's 3D coordinate system and a 3D scene. If <em>scene</em> (the default value), the (x,y,z) coordinates refer to <code>layout.scene</code>. If <em>scene2</em>, the (x,y,z) coordinates refer to <code>layout.scene2</code>, and so on.</p>
+
+
+              <p>CompiledName: <code>get_scene</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3377', 3377)" onmouseover="showTip(event, '3377', 3377)">
             ShouldSerializeerror_x()
           </code>
-          <div class="tip" id="3415">
+          <div class="tip" id="3377">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4291-4291" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4300-4300" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -553,15 +555,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3416', 3416)" onmouseover="showTip(event, '3416', 3416)">
+          <code onmouseout="hideTip(event, '3378', 3378)" onmouseover="showTip(event, '3378', 3378)">
             ShouldSerializeerror_y()
           </code>
-          <div class="tip" id="3416">
+          <div class="tip" id="3378">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4292-4292" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4301-4301" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -571,15 +573,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3417', 3417)" onmouseover="showTip(event, '3417', 3417)">
+          <code onmouseout="hideTip(event, '3379', 3379)" onmouseover="showTip(event, '3379', 3379)">
             ShouldSerializeerror_z()
           </code>
-          <div class="tip" id="3417">
+          <div class="tip" id="3379">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4293-4293" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4302-4302" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -589,136 +591,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3418', 3418)" onmouseover="showTip(event, '3418', 3418)">
+          <code onmouseout="hideTip(event, '3380', 3380)" onmouseover="showTip(event, '3380', 3380)">
             ShouldSerializehoverinfo()
           </code>
-          <div class="tip" id="3418">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4277-4277" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3419', 3419)" onmouseover="showTip(event, '3419', 3419)">
-            ShouldSerializelegendgroup()
-          </code>
-          <div class="tip" id="3419">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4273-4273" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3420', 3420)" onmouseover="showTip(event, '3420', 3420)">
-            ShouldSerializeline()
-          </code>
-          <div class="tip" id="3420">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4287-4287" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3421', 3421)" onmouseover="showTip(event, '3421', 3421)">
-            ShouldSerializemarker()
-          </code>
-          <div class="tip" id="3421">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4288-4288" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3422', 3422)" onmouseover="showTip(event, '3422', 3422)">
-            ShouldSerializemode()
-          </code>
-          <div class="tip" id="3422">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4283-4283" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3423', 3423)" onmouseover="showTip(event, '3423', 3423)">
-            ShouldSerializename()
-          </code>
-          <div class="tip" id="3423">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4275-4275" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3424', 3424)" onmouseover="showTip(event, '3424', 3424)">
-            ShouldSerializeopacity()
-          </code>
-          <div class="tip" id="3424">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4274-4274" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3425', 3425)" onmouseover="showTip(event, '3425', 3425)">
-            ShouldSerializeprojection()
-          </code>
-          <div class="tip" id="3425">
+          <div class="tip" id="3380">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -733,100 +609,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3426', 3426)" onmouseover="showTip(event, '3426', 3426)">
-            ShouldSerializescene()
+          <code onmouseout="hideTip(event, '3381', 3381)" onmouseover="showTip(event, '3381', 3381)">
+            ShouldSerializelegendgroup()
           </code>
-          <div class="tip" id="3426">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4294-4294" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3427', 3427)" onmouseover="showTip(event, '3427', 3427)">
-            ShouldSerializeshowlegend()
-          </code>
-          <div class="tip" id="3427">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4272-4272" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3428', 3428)" onmouseover="showTip(event, '3428', 3428)">
-            ShouldSerializestream()
-          </code>
-          <div class="tip" id="3428">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4278-4278" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3429', 3429)" onmouseover="showTip(event, '3429', 3429)">
-            ShouldSerializesurfaceaxis()
-          </code>
-          <div class="tip" id="3429">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4284-4284" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3430', 3430)" onmouseover="showTip(event, '3430', 3430)">
-            ShouldSerializesurfacecolor()
-          </code>
-          <div class="tip" id="3430">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4285-4285" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3431', 3431)" onmouseover="showTip(event, '3431', 3431)">
-            ShouldSerializetext()
-          </code>
-          <div class="tip" id="3431">
+          <div class="tip" id="3381">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -841,190 +627,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3432', 3432)" onmouseover="showTip(event, '3432', 3432)">
-            ShouldSerializetextfont()
+          <code onmouseout="hideTip(event, '3382', 3382)" onmouseover="showTip(event, '3382', 3382)">
+            ShouldSerializeline()
           </code>
-          <div class="tip" id="3432">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4290-4290" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3433', 3433)" onmouseover="showTip(event, '3433', 3433)">
-            ShouldSerializetextposition()
-          </code>
-          <div class="tip" id="3433">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4289-4289" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3434', 3434)" onmouseover="showTip(event, '3434', 3434)">
-            ShouldSerializetextpositionsrc()
-          </code>
-          <div class="tip" id="3434">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4299-4299" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3435', 3435)" onmouseover="showTip(event, '3435', 3435)">
-            ShouldSerializetextsrc()
-          </code>
-          <div class="tip" id="3435">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4298-4298" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3436', 3436)" onmouseover="showTip(event, '3436', 3436)">
-            ShouldSerializetype()
-          </code>
-          <div class="tip" id="3436">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4270-4270" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3437', 3437)" onmouseover="showTip(event, '3437', 3437)">
-            ShouldSerializeuid()
-          </code>
-          <div class="tip" id="3437">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4276-4276" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3438', 3438)" onmouseover="showTip(event, '3438', 3438)">
-            ShouldSerializevisible()
-          </code>
-          <div class="tip" id="3438">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4271-4271" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3439', 3439)" onmouseover="showTip(event, '3439', 3439)">
-            ShouldSerializex()
-          </code>
-          <div class="tip" id="3439">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4279-4279" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3440', 3440)" onmouseover="showTip(event, '3440', 3440)">
-            ShouldSerializexsrc()
-          </code>
-          <div class="tip" id="3440">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4295-4295" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3441', 3441)" onmouseover="showTip(event, '3441', 3441)">
-            ShouldSerializey()
-          </code>
-          <div class="tip" id="3441">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4280-4280" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3442', 3442)" onmouseover="showTip(event, '3442', 3442)">
-            ShouldSerializeysrc()
-          </code>
-          <div class="tip" id="3442">
+          <div class="tip" id="3382">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -1039,28 +645,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3443', 3443)" onmouseover="showTip(event, '3443', 3443)">
-            ShouldSerializez()
+          <code onmouseout="hideTip(event, '3383', 3383)" onmouseover="showTip(event, '3383', 3383)">
+            ShouldSerializemarker()
           </code>
-          <div class="tip" id="3443">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4281-4281" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3444', 3444)" onmouseover="showTip(event, '3444', 3444)">
-            ShouldSerializezsrc()
-          </code>
-          <div class="tip" id="3444">
+          <div class="tip" id="3383">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -1075,53 +663,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3445', 3445)" onmouseover="showTip(event, '3445', 3445)">
-            showlegend()
+          <code onmouseout="hideTip(event, '3384', 3384)" onmouseover="showTip(event, '3384', 3384)">
+            ShouldSerializemode()
           </code>
-          <div class="tip" id="3445">
+          <div class="tip" id="3384">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4142-4142" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines whether or not an item corresponding to this trace is shown in the legend.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3446', 3446)" onmouseover="showTip(event, '3446', 3446)">
-            showlegend()
-          </code>
-          <div class="tip" id="3446">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4141-4141" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Determines whether or not an item corresponding to this trace is shown in the legend.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3447', 3447)" onmouseover="showTip(event, '3447', 3447)">
-            stream()
-          </code>
-          <div class="tip" id="3447">
-            <strong>Signature:</strong> unit -&gt; Stream<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4170-4170" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4292-4292" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -1131,10 +681,817 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3448', 3448)" onmouseover="showTip(event, '3448', 3448)">
+          <code onmouseout="hideTip(event, '3385', 3385)" onmouseover="showTip(event, '3385', 3385)">
+            ShouldSerializeopacity()
+          </code>
+          <div class="tip" id="3385">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4283-4283" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3386', 3386)" onmouseover="showTip(event, '3386', 3386)">
+            ShouldSerializeprojection()
+          </code>
+          <div class="tip" id="3386">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4295-4295" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3387', 3387)" onmouseover="showTip(event, '3387', 3387)">
+            ShouldSerializescene()
+          </code>
+          <div class="tip" id="3387">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4303-4303" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3388', 3388)" onmouseover="showTip(event, '3388', 3388)">
+            ShouldSerializeshowlegend()
+          </code>
+          <div class="tip" id="3388">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4281-4281" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3389', 3389)" onmouseover="showTip(event, '3389', 3389)">
+            ShouldSerializestream()
+          </code>
+          <div class="tip" id="3389">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4287-4287" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3390', 3390)" onmouseover="showTip(event, '3390', 3390)">
+            ShouldSerializesurfaceaxis()
+          </code>
+          <div class="tip" id="3390">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4293-4293" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3391', 3391)" onmouseover="showTip(event, '3391', 3391)">
+            ShouldSerializesurfacecolor()
+          </code>
+          <div class="tip" id="3391">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4294-4294" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3392', 3392)" onmouseover="showTip(event, '3392', 3392)">
+            ShouldSerializetext()
+          </code>
+          <div class="tip" id="3392">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4291-4291" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3393', 3393)" onmouseover="showTip(event, '3393', 3393)">
+            ShouldSerializetextfont()
+          </code>
+          <div class="tip" id="3393">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4299-4299" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3394', 3394)" onmouseover="showTip(event, '3394', 3394)">
+            ShouldSerializetextposition()
+          </code>
+          <div class="tip" id="3394">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4298-4298" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3395', 3395)" onmouseover="showTip(event, '3395', 3395)">
+            ShouldSerializetextpositionsrc()
+          </code>
+          <div class="tip" id="3395">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4308-4308" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3396', 3396)" onmouseover="showTip(event, '3396', 3396)">
+            ShouldSerializetextsrc()
+          </code>
+          <div class="tip" id="3396">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4307-4307" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3397', 3397)" onmouseover="showTip(event, '3397', 3397)">
+            ShouldSerializetype()
+          </code>
+          <div class="tip" id="3397">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4279-4279" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3398', 3398)" onmouseover="showTip(event, '3398', 3398)">
+            ShouldSerializeuid()
+          </code>
+          <div class="tip" id="3398">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4285-4285" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3399', 3399)" onmouseover="showTip(event, '3399', 3399)">
+            ShouldSerializevisible()
+          </code>
+          <div class="tip" id="3399">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4280-4280" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3400', 3400)" onmouseover="showTip(event, '3400', 3400)">
+            ShouldSerializex()
+          </code>
+          <div class="tip" id="3400">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4288-4288" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3401', 3401)" onmouseover="showTip(event, '3401', 3401)">
+            ShouldSerializexsrc()
+          </code>
+          <div class="tip" id="3401">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4304-4304" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3402', 3402)" onmouseover="showTip(event, '3402', 3402)">
+            ShouldSerializey()
+          </code>
+          <div class="tip" id="3402">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4289-4289" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3403', 3403)" onmouseover="showTip(event, '3403', 3403)">
+            ShouldSerializeysrc()
+          </code>
+          <div class="tip" id="3403">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4305-4305" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3404', 3404)" onmouseover="showTip(event, '3404', 3404)">
+            ShouldSerializez()
+          </code>
+          <div class="tip" id="3404">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4290-4290" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3405', 3405)" onmouseover="showTip(event, '3405', 3405)">
+            ShouldSerializezsrc()
+          </code>
+          <div class="tip" id="3405">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4306-4306" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3406', 3406)" onmouseover="showTip(event, '3406', 3406)">
+            showlegend()
+          </code>
+          <div class="tip" id="3406">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4151-4151" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines whether or not an item corresponding to this trace is shown in the legend.</p>
+
+
+              <p>CompiledName: <code>set_showlegend</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3407', 3407)" onmouseover="showTip(event, '3407', 3407)">
+            showlegend()
+          </code>
+          <div class="tip" id="3407">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4150-4150" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Determines whether or not an item corresponding to this trace is shown in the legend.</p>
+
+
+              <p>CompiledName: <code>get_showlegend</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3408', 3408)" onmouseover="showTip(event, '3408', 3408)">
             stream()
           </code>
-          <div class="tip" id="3448">
+          <div class="tip" id="3408">
+            <strong>Signature:</strong> unit -&gt; Stream<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4179-4179" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_stream</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3409', 3409)" onmouseover="showTip(event, '3409', 3409)">
+            stream()
+          </code>
+          <div class="tip" id="3409">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4178-4178" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_stream</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3410', 3410)" onmouseover="showTip(event, '3410', 3410)">
+            surfaceaxis()
+          </code>
+          <div class="tip" id="3410">
+            <strong>Signature:</strong> unit -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4209-4209" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>If <em>-1</em>, the scatter points are not fill with a surface If <em>0</em>, <em>1</em>, <em>2</em>, the scatter points are filled with a Delaunay surface about the x, y, z respectively.</p>
+
+
+              <p>CompiledName: <code>set_surfaceaxis</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3411', 3411)" onmouseover="showTip(event, '3411', 3411)">
+            surfaceaxis()
+          </code>
+          <div class="tip" id="3411">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4208-4208" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>If <em>-1</em>, the scatter points are not fill with a surface If <em>0</em>, <em>1</em>, <em>2</em>, the scatter points are filled with a Delaunay surface about the x, y, z respectively.</p>
+
+
+              <p>CompiledName: <code>get_surfaceaxis</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3412', 3412)" onmouseover="showTip(event, '3412', 3412)">
+            surfacecolor()
+          </code>
+          <div class="tip" id="3412">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4214-4214" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the surface fill color.</p>
+
+
+              <p>CompiledName: <code>set_surfacecolor</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3413', 3413)" onmouseover="showTip(event, '3413', 3413)">
+            surfacecolor()
+          </code>
+          <div class="tip" id="3413">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4213-4213" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the surface fill color.</p>
+
+
+              <p>CompiledName: <code>get_surfacecolor</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3414', 3414)" onmouseover="showTip(event, '3414', 3414)">
+            text()
+          </code>
+          <div class="tip" id="3414">
+            <strong>Signature:</strong> unit -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4199-4199" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets text elements associated with each (x,y,z) triplet. If a single string, the same string appears over all the data points. If an array of string, the items are mapped in order to the this trace's (x,y,z) coordinates.</p>
+
+
+              <p>CompiledName: <code>set_text</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3415', 3415)" onmouseover="showTip(event, '3415', 3415)">
+            text()
+          </code>
+          <div class="tip" id="3415">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4198-4198" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets text elements associated with each (x,y,z) triplet. If a single string, the same string appears over all the data points. If an array of string, the items are mapped in order to the this trace's (x,y,z) coordinates.</p>
+
+
+              <p>CompiledName: <code>get_text</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3416', 3416)" onmouseover="showTip(event, '3416', 3416)">
+            textfont()
+          </code>
+          <div class="tip" id="3416">
+            <strong>Signature:</strong> unit -&gt; Textfont<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4235-4235" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_textfont</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3417', 3417)" onmouseover="showTip(event, '3417', 3417)">
+            textfont()
+          </code>
+          <div class="tip" id="3417">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4234-4234" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_textfont</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3418', 3418)" onmouseover="showTip(event, '3418', 3418)">
+            textposition()
+          </code>
+          <div class="tip" id="3418">
+            <strong>Signature:</strong> unit -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4231-4231" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the positions of the <code>text</code> elements with respects to the (x,y) coordinates.</p>
+
+
+              <p>CompiledName: <code>set_textposition</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3419', 3419)" onmouseover="showTip(event, '3419', 3419)">
+            textposition()
+          </code>
+          <div class="tip" id="3419">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4230-4230" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the positions of the <code>text</code> elements with respects to the (x,y) coordinates.</p>
+
+
+              <p>CompiledName: <code>get_textposition</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3420', 3420)" onmouseover="showTip(event, '3420', 3420)">
+            textpositionsrc()
+          </code>
+          <div class="tip" id="3420">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4277-4277" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  textposition .</p>
+
+
+              <p>CompiledName: <code>set_textpositionsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3421', 3421)" onmouseover="showTip(event, '3421', 3421)">
+            textpositionsrc()
+          </code>
+          <div class="tip" id="3421">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4276-4276" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  textposition .</p>
+
+
+              <p>CompiledName: <code>get_textpositionsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3422', 3422)" onmouseover="showTip(event, '3422', 3422)">
+            textsrc()
+          </code>
+          <div class="tip" id="3422">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4272-4272" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  text .</p>
+
+
+              <p>CompiledName: <code>set_textsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3423', 3423)" onmouseover="showTip(event, '3423', 3423)">
+            textsrc()
+          </code>
+          <div class="tip" id="3423">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4271-4271" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  text .</p>
+
+
+              <p>CompiledName: <code>get_textsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3424', 3424)" onmouseover="showTip(event, '3424', 3424)">
+            type()
+          </code>
+          <div class="tip" id="3424">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4141-4141" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>set_type</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3425', 3425)" onmouseover="showTip(event, '3425', 3425)">
+            type()
+          </code>
+          <div class="tip" id="3425">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4140-4140" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>get_type</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3426', 3426)" onmouseover="showTip(event, '3426', 3426)">
+            uid()
+          </code>
+          <div class="tip" id="3426">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4170-4170" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the trace name. The trace name appear as the legend item and on hover.</p>
+
+
+              <p>CompiledName: <code>set_uid</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3427', 3427)" onmouseover="showTip(event, '3427', 3427)">
+            uid()
+          </code>
+          <div class="tip" id="3427">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -1143,562 +1500,62 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>Sets the trace name. The trace name appear as the legend item and on hover.</p>
+
+
+              <p>CompiledName: <code>get_uid</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3449', 3449)" onmouseover="showTip(event, '3449', 3449)">
-            surfaceaxis()
-          </code>
-          <div class="tip" id="3449">
-            <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4200-4200" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>If <em>-1</em>, the scatter points are not fill with a surface If <em>0</em>, <em>1</em>, <em>2</em>, the scatter points are filled with a Delaunay surface about the x, y, z respectively.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3450', 3450)" onmouseover="showTip(event, '3450', 3450)">
-            surfaceaxis()
-          </code>
-          <div class="tip" id="3450">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4199-4199" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>If <em>-1</em>, the scatter points are not fill with a surface If <em>0</em>, <em>1</em>, <em>2</em>, the scatter points are filled with a Delaunay surface about the x, y, z respectively.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3451', 3451)" onmouseover="showTip(event, '3451', 3451)">
-            surfacecolor()
-          </code>
-          <div class="tip" id="3451">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4205-4205" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the surface fill color.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3452', 3452)" onmouseover="showTip(event, '3452', 3452)">
-            surfacecolor()
-          </code>
-          <div class="tip" id="3452">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4204-4204" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the surface fill color.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3453', 3453)" onmouseover="showTip(event, '3453', 3453)">
-            text()
-          </code>
-          <div class="tip" id="3453">
-            <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4190-4190" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets text elements associated with each (x,y,z) triplet. If a single string, the same string appears over all the data points. If an array of string, the items are mapped in order to the this trace's (x,y,z) coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3454', 3454)" onmouseover="showTip(event, '3454', 3454)">
-            text()
-          </code>
-          <div class="tip" id="3454">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4189-4189" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets text elements associated with each (x,y,z) triplet. If a single string, the same string appears over all the data points. If an array of string, the items are mapped in order to the this trace's (x,y,z) coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3455', 3455)" onmouseover="showTip(event, '3455', 3455)">
-            textfont()
-          </code>
-          <div class="tip" id="3455">
-            <strong>Signature:</strong> unit -&gt; Textfont<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4226-4226" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3456', 3456)" onmouseover="showTip(event, '3456', 3456)">
-            textfont()
-          </code>
-          <div class="tip" id="3456">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4225-4225" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3457', 3457)" onmouseover="showTip(event, '3457', 3457)">
-            textposition()
-          </code>
-          <div class="tip" id="3457">
-            <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4222-4222" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the positions of the <code>text</code> elements with respects to the (x,y) coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3458', 3458)" onmouseover="showTip(event, '3458', 3458)">
-            textposition()
-          </code>
-          <div class="tip" id="3458">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4221-4221" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the positions of the <code>text</code> elements with respects to the (x,y) coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3459', 3459)" onmouseover="showTip(event, '3459', 3459)">
-            textpositionsrc()
-          </code>
-          <div class="tip" id="3459">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4268-4268" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  textposition .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3460', 3460)" onmouseover="showTip(event, '3460', 3460)">
-            textpositionsrc()
-          </code>
-          <div class="tip" id="3460">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4267-4267" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  textposition .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3461', 3461)" onmouseover="showTip(event, '3461', 3461)">
-            textsrc()
-          </code>
-          <div class="tip" id="3461">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4263-4263" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  text .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3462', 3462)" onmouseover="showTip(event, '3462', 3462)">
-            textsrc()
-          </code>
-          <div class="tip" id="3462">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4262-4262" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  text .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3463', 3463)" onmouseover="showTip(event, '3463', 3463)">
-            type()
-          </code>
-          <div class="tip" id="3463">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4132-4132" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3464', 3464)" onmouseover="showTip(event, '3464', 3464)">
-            type()
-          </code>
-          <div class="tip" id="3464">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4131-4131" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3465', 3465)" onmouseover="showTip(event, '3465', 3465)">
-            uid()
-          </code>
-          <div class="tip" id="3465">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4161-4161" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3466', 3466)" onmouseover="showTip(event, '3466', 3466)">
-            uid()
-          </code>
-          <div class="tip" id="3466">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4160-4160" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3467', 3467)" onmouseover="showTip(event, '3467', 3467)">
+          <code onmouseout="hideTip(event, '3428', 3428)" onmouseover="showTip(event, '3428', 3428)">
             visible()
           </code>
-          <div class="tip" id="3467">
+          <div class="tip" id="3428">
             <strong>Signature:</strong> unit -&gt; obj<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4137-4137" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4146-4146" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Determines whether or not this trace is visible. If <em>legendonly</em>, the trace is not drawn, but can appear as a legend item (provided that the legend itself is visible).</p>
 
+
+              <p>CompiledName: <code>set_visible</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3468', 3468)" onmouseover="showTip(event, '3468', 3468)">
+          <code onmouseout="hideTip(event, '3429', 3429)" onmouseover="showTip(event, '3429', 3429)">
             visible()
           </code>
-          <div class="tip" id="3468">
+          <div class="tip" id="3429">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4136-4136" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4145-4145" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Determines whether or not this trace is visible. If <em>legendonly</em>, the trace is not drawn, but can appear as a legend item (provided that the legend itself is visible).</p>
 
+
+              <p>CompiledName: <code>get_visible</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3469', 3469)" onmouseover="showTip(event, '3469', 3469)">
+          <code onmouseout="hideTip(event, '3430', 3430)" onmouseover="showTip(event, '3430', 3430)">
             x()
           </code>
-          <div class="tip" id="3469">
+          <div class="tip" id="3430">
             <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4175-4175" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the x coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3470', 3470)" onmouseover="showTip(event, '3470', 3470)">
-            x()
-          </code>
-          <div class="tip" id="3470">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4174-4174" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the x coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3471', 3471)" onmouseover="showTip(event, '3471', 3471)">
-            xsrc()
-          </code>
-          <div class="tip" id="3471">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4248-4248" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  x .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3472', 3472)" onmouseover="showTip(event, '3472', 3472)">
-            xsrc()
-          </code>
-          <div class="tip" id="3472">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4247-4247" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  x .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3473', 3473)" onmouseover="showTip(event, '3473', 3473)">
-            y()
-          </code>
-          <div class="tip" id="3473">
-            <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4180-4180" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the y coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3474', 3474)" onmouseover="showTip(event, '3474', 3474)">
-            y()
-          </code>
-          <div class="tip" id="3474">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4179-4179" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the y coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3475', 3475)" onmouseover="showTip(event, '3475', 3475)">
-            ysrc()
-          </code>
-          <div class="tip" id="3475">
-            <strong>Signature:</strong> unit -&gt; string<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4253-4253" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  y .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3476', 3476)" onmouseover="showTip(event, '3476', 3476)">
-            ysrc()
-          </code>
-          <div class="tip" id="3476">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4252-4252" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the source reference on plot.ly for  y .</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3477', 3477)" onmouseover="showTip(event, '3477', 3477)">
-            z()
-          </code>
-          <div class="tip" id="3477">
-            <strong>Signature:</strong> unit -&gt; obj<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4185-4185" class="github-link">
-              <img src="../content/img/github.png" class="normal" />
-              <img src="../content/img/github-blue.png" class="hover" />
-            </a>
-          <p>Sets the z coordinates.</p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3478', 3478)" onmouseover="showTip(event, '3478', 3478)">
-            z()
-          </code>
-          <div class="tip" id="3478">
-            <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -1706,37 +1563,41 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Sets the z coordinates.</p>
+          <p>Sets the x coordinates.</p>
 
+
+              <p>CompiledName: <code>set_x</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3479', 3479)" onmouseover="showTip(event, '3479', 3479)">
-            zsrc()
+          <code onmouseout="hideTip(event, '3431', 3431)" onmouseover="showTip(event, '3431', 3431)">
+            x()
           </code>
-          <div class="tip" id="3479">
-            <strong>Signature:</strong> unit -&gt; string<br />
+          <div class="tip" id="3431">
+            <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4258-4258" class="github-link">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4183-4183" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Sets the source reference on plot.ly for  z .</p>
+          <p>Sets the x coordinates.</p>
 
+
+              <p>CompiledName: <code>get_x</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3480', 3480)" onmouseover="showTip(event, '3480', 3480)">
-            zsrc()
+          <code onmouseout="hideTip(event, '3432', 3432)" onmouseover="showTip(event, '3432', 3432)">
+            xsrc()
           </code>
-          <div class="tip" id="3480">
-            <strong>Signature:</strong> unit -&gt; unit<br />
+          <div class="tip" id="3432">
+            <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -1744,8 +1605,199 @@
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
+          <p>Sets the source reference on plot.ly for  x .</p>
+
+
+              <p>CompiledName: <code>set_xsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3433', 3433)" onmouseover="showTip(event, '3433', 3433)">
+            xsrc()
+          </code>
+          <div class="tip" id="3433">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4256-4256" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  x .</p>
+
+
+              <p>CompiledName: <code>get_xsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3434', 3434)" onmouseover="showTip(event, '3434', 3434)">
+            y()
+          </code>
+          <div class="tip" id="3434">
+            <strong>Signature:</strong> unit -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4189-4189" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the y coordinates.</p>
+
+
+              <p>CompiledName: <code>set_y</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3435', 3435)" onmouseover="showTip(event, '3435', 3435)">
+            y()
+          </code>
+          <div class="tip" id="3435">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4188-4188" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the y coordinates.</p>
+
+
+              <p>CompiledName: <code>get_y</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3436', 3436)" onmouseover="showTip(event, '3436', 3436)">
+            ysrc()
+          </code>
+          <div class="tip" id="3436">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4262-4262" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  y .</p>
+
+
+              <p>CompiledName: <code>set_ysrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3437', 3437)" onmouseover="showTip(event, '3437', 3437)">
+            ysrc()
+          </code>
+          <div class="tip" id="3437">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4261-4261" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  y .</p>
+
+
+              <p>CompiledName: <code>get_ysrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3438', 3438)" onmouseover="showTip(event, '3438', 3438)">
+            z()
+          </code>
+          <div class="tip" id="3438">
+            <strong>Signature:</strong> unit -&gt; obj<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4194-4194" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the z coordinates.</p>
+
+
+              <p>CompiledName: <code>set_z</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3439', 3439)" onmouseover="showTip(event, '3439', 3439)">
+            z()
+          </code>
+          <div class="tip" id="3439">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4193-4193" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the z coordinates.</p>
+
+
+              <p>CompiledName: <code>get_z</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3440', 3440)" onmouseover="showTip(event, '3440', 3440)">
+            zsrc()
+          </code>
+          <div class="tip" id="3440">
+            <strong>Signature:</strong> unit -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4267-4267" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
           <p>Sets the source reference on plot.ly for  z .</p>
 
+
+              <p>CompiledName: <code>set_zsrc</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '3441', 3441)" onmouseover="showTip(event, '3441', 3441)">
+            zsrc()
+          </code>
+          <div class="tip" id="3441">
+            <strong>Signature:</strong> unit -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/TahaHachana/XPlot/tree/master/src/XPlot.Plotly/Graph.fs#L4266-4266" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Sets the source reference on plot.ly for  z .</p>
+
+
+              <p>CompiledName: <code>get_zsrc</code></p>
         </td>
       </tr>
     </tbody>
@@ -1753,57 +1805,68 @@
 
             </div>
             <div class="span3">
-                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/XPlot/">Home page</a></li>
+                    <li><a href="/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+                    <li><a href="/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
-                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
+                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    
-
-                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    
-                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    
+                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
+                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li><a href="/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>

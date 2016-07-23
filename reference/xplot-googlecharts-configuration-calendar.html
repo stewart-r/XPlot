@@ -12,13 +12,16 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
-    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/style.css" />
+    <script type="text/javascript" src="/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +47,7 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+            <h3 class="muted"><a href="/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
@@ -54,6 +57,10 @@
 
 
 <h1>Calendar</h1>
+<p>
+  <span>Namespace: XPlot.GoogleCharts</span><br />
+  <span>Parent Module: <a href="xplot-googlecharts-configuration.html">Configuration</a></span>
+</p>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -65,10 +72,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '182', 182)" onmouseover="showTip(event, '182', 182)">
+          <code onmouseout="hideTip(event, '179', 179)" onmouseover="showTip(event, '179', 179)">
             new()
           </code>
-          <div class="tip" id="182">
+          <div class="tip" id="179">
             <strong>Signature:</strong> unit -&gt; Calendar<br />
                       </div>
         </td>
@@ -78,6 +85,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>.ctor</code></p>
         </td>
       </tr>
     </tbody>
@@ -91,10 +99,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '183', 183)" onmouseover="showTip(event, '183', 183)">
+          <code onmouseout="hideTip(event, '180', 180)" onmouseover="showTip(event, '180', 180)">
             cellColor()
           </code>
-          <div class="tip" id="183">
+          <div class="tip" id="180">
             <strong>Signature:</strong> unit -&gt; CellColor<br />
                       </div>
         </td>
@@ -104,15 +112,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_cellColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '184', 184)" onmouseover="showTip(event, '184', 184)">
+          <code onmouseout="hideTip(event, '181', 181)" onmouseover="showTip(event, '181', 181)">
             cellColor()
           </code>
-          <div class="tip" id="184">
+          <div class="tip" id="181">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -122,15 +131,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_cellColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '185', 185)" onmouseover="showTip(event, '185', 185)">
+          <code onmouseout="hideTip(event, '182', 182)" onmouseover="showTip(event, '182', 182)">
             cellSize()
           </code>
-          <div class="tip" id="185">
+          <div class="tip" id="182">
             <strong>Signature:</strong> unit -&gt; int<br />
                       </div>
         </td>
@@ -140,15 +150,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_cellSize</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '186', 186)" onmouseover="showTip(event, '186', 186)">
+          <code onmouseout="hideTip(event, '183', 183)" onmouseover="showTip(event, '183', 183)">
             cellSize()
           </code>
-          <div class="tip" id="186">
+          <div class="tip" id="183">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -158,15 +169,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_cellSize</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '187', 187)" onmouseover="showTip(event, '187', 187)">
+          <code onmouseout="hideTip(event, '184', 184)" onmouseover="showTip(event, '184', 184)">
             dayOfWeekLabel()
           </code>
-          <div class="tip" id="187">
+          <div class="tip" id="184">
             <strong>Signature:</strong> unit -&gt; TextStyle<br />
                       </div>
         </td>
@@ -176,15 +188,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_dayOfWeekLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '188', 188)" onmouseover="showTip(event, '188', 188)">
+          <code onmouseout="hideTip(event, '185', 185)" onmouseover="showTip(event, '185', 185)">
             dayOfWeekLabel()
           </code>
-          <div class="tip" id="188">
+          <div class="tip" id="185">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -194,15 +207,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_dayOfWeekLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '189', 189)" onmouseover="showTip(event, '189', 189)">
+          <code onmouseout="hideTip(event, '186', 186)" onmouseover="showTip(event, '186', 186)">
             dayOfWeekRightSpace()
           </code>
-          <div class="tip" id="189">
+          <div class="tip" id="186">
             <strong>Signature:</strong> unit -&gt; int<br />
                       </div>
         </td>
@@ -212,15 +226,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_dayOfWeekRightSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '190', 190)" onmouseover="showTip(event, '190', 190)">
+          <code onmouseout="hideTip(event, '187', 187)" onmouseover="showTip(event, '187', 187)">
             dayOfWeekRightSpace()
           </code>
-          <div class="tip" id="190">
+          <div class="tip" id="187">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -230,15 +245,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_dayOfWeekRightSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
+          <code onmouseout="hideTip(event, '188', 188)" onmouseover="showTip(event, '188', 188)">
             daysOfWeek()
           </code>
-          <div class="tip" id="191">
+          <div class="tip" id="188">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -248,15 +264,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_daysOfWeek</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '192', 192)" onmouseover="showTip(event, '192', 192)">
+          <code onmouseout="hideTip(event, '189', 189)" onmouseover="showTip(event, '189', 189)">
             daysOfWeek()
           </code>
-          <div class="tip" id="192">
+          <div class="tip" id="189">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -266,15 +283,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_daysOfWeek</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '193', 193)" onmouseover="showTip(event, '193', 193)">
+          <code onmouseout="hideTip(event, '190', 190)" onmouseover="showTip(event, '190', 190)">
             focusedCellColor()
           </code>
-          <div class="tip" id="193">
+          <div class="tip" id="190">
             <strong>Signature:</strong> unit -&gt; CellColor<br />
                       </div>
         </td>
@@ -284,15 +302,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_focusedCellColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '194', 194)" onmouseover="showTip(event, '194', 194)">
+          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
             focusedCellColor()
           </code>
-          <div class="tip" id="194">
+          <div class="tip" id="191">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -302,15 +321,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_focusedCellColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
+          <code onmouseout="hideTip(event, '192', 192)" onmouseover="showTip(event, '192', 192)">
             monthLabel()
           </code>
-          <div class="tip" id="195">
+          <div class="tip" id="192">
             <strong>Signature:</strong> unit -&gt; TextStyle<br />
                       </div>
         </td>
@@ -320,15 +340,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_monthLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
+          <code onmouseout="hideTip(event, '193', 193)" onmouseover="showTip(event, '193', 193)">
             monthLabel()
           </code>
-          <div class="tip" id="196">
+          <div class="tip" id="193">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -338,15 +359,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_monthLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
+          <code onmouseout="hideTip(event, '194', 194)" onmouseover="showTip(event, '194', 194)">
             monthOutlineColor()
           </code>
-          <div class="tip" id="197">
+          <div class="tip" id="194">
             <strong>Signature:</strong> unit -&gt; CellColor<br />
                       </div>
         </td>
@@ -356,15 +378,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_monthOutlineColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '198', 198)" onmouseover="showTip(event, '198', 198)">
+          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
             monthOutlineColor()
           </code>
-          <div class="tip" id="198">
+          <div class="tip" id="195">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -374,15 +397,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_monthOutlineColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
+          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
             ShouldSerializecellColor()
           </code>
-          <div class="tip" id="199">
+          <div class="tip" id="196">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -397,10 +421,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
+          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
             ShouldSerializecellSize()
           </code>
-          <div class="tip" id="200">
+          <div class="tip" id="197">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -415,10 +439,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
+          <code onmouseout="hideTip(event, '198', 198)" onmouseover="showTip(event, '198', 198)">
             ShouldSerializedayOfWeekLabel()
           </code>
-          <div class="tip" id="201">
+          <div class="tip" id="198">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -433,10 +457,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
+          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
             ShouldSerializedayOfWeekRightSpace()
           </code>
-          <div class="tip" id="202">
+          <div class="tip" id="199">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -451,10 +475,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
+          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
             ShouldSerializedaysOfWeek()
           </code>
-          <div class="tip" id="203">
+          <div class="tip" id="200">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -469,10 +493,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
+          <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
             ShouldSerializefocusedCellColor()
           </code>
-          <div class="tip" id="204">
+          <div class="tip" id="201">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -487,10 +511,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
+          <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
             ShouldSerializemonthLabel()
           </code>
-          <div class="tip" id="205">
+          <div class="tip" id="202">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -505,10 +529,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
+          <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
             ShouldSerializemonthOutlineColor()
           </code>
-          <div class="tip" id="206">
+          <div class="tip" id="203">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -523,10 +547,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
+          <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
             ShouldSerializeunderMonthSpace()
           </code>
-          <div class="tip" id="207">
+          <div class="tip" id="204">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -541,10 +565,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
+          <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
             ShouldSerializeunderYearSpace()
           </code>
-          <div class="tip" id="208">
+          <div class="tip" id="205">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -559,10 +583,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
+          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
             ShouldSerializeunusedMonthOutlineColor()
           </code>
-          <div class="tip" id="209">
+          <div class="tip" id="206">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -577,10 +601,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
+          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
             underMonthSpace()
           </code>
-          <div class="tip" id="210">
+          <div class="tip" id="207">
             <strong>Signature:</strong> unit -&gt; int<br />
                       </div>
         </td>
@@ -590,15 +614,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_underMonthSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
             underMonthSpace()
           </code>
-          <div class="tip" id="211">
+          <div class="tip" id="208">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -608,15 +633,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_underMonthSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
+          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
             underYearSpace()
           </code>
-          <div class="tip" id="212">
+          <div class="tip" id="209">
             <strong>Signature:</strong> unit -&gt; int<br />
                       </div>
         </td>
@@ -626,15 +652,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_underYearSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
+          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
             underYearSpace()
           </code>
-          <div class="tip" id="213">
+          <div class="tip" id="210">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -644,15 +671,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_underYearSpace</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '214', 214)" onmouseover="showTip(event, '214', 214)">
+          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
             unusedMonthOutlineColor()
           </code>
-          <div class="tip" id="214">
+          <div class="tip" id="211">
             <strong>Signature:</strong> unit -&gt; CellColor<br />
                       </div>
         </td>
@@ -662,15 +690,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_unusedMonthOutlineColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
+          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
             unusedMonthOutlineColor()
           </code>
-          <div class="tip" id="215">
+          <div class="tip" id="212">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -680,6 +709,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_unusedMonthOutlineColor</code></p>
         </td>
       </tr>
     </tbody>
@@ -687,57 +717,68 @@
 
             </div>
             <div class="span3">
-                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/XPlot/">Home page</a></li>
+                    <li><a href="/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+                    <li><a href="/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
-                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
+                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    
-
-                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    
-                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    
+                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
+                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li><a href="/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>

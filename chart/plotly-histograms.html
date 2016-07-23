@@ -13,13 +13,16 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
-    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/style.css" />
+    <script type="text/javascript" src="/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,357 +48,126 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+            <h3 class="muted"><a href="/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
             <div class="span9" id="main">
                 
 <h1><a name="Plotly-Histograms" class="anchor" href="#Plotly-Histograms">Plotly Histograms</a></h1>
-
 <h2><a name="Basic-Histogram" class="anchor" href="#Basic-Histogram">Basic Histogram</a></h2>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
-<span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 64)" onmouseover="showTip(event, 'fs26', 64)" class="i">basicData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs27', 65)" onmouseover="showTip(event, 'fs27', 65)" class="i">Data</span>([<span onmouseout="hideTip(event, 'fs28', 66)" onmouseover="showTip(event, 'fs28', 66)" class="i">Histogram</span>(<span class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs11', 67)" onmouseover="showTip(event, 'fs11', 67)" class="i">basicX</span>)])
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 68)" onmouseover="showTip(event, 'fs29', 68)" class="i">basicLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs30', 69)" onmouseover="showTip(event, 'fs30', 69)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Basic Histogram&quot;</span>)
-
-<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs26', 70)" onmouseover="showTip(event, 'fs26', 70)" class="i">basicData</span>, <span onmouseout="hideTip(event, 'fs29', 71)" onmouseover="showTip(event, 'fs29', 71)" class="i">basicLayout</span>)
-</pre>
-</td>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs23', 61)" onmouseover="showTip(event, 'fs23', 61)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs24', 62)" onmouseover="showTip(event, 'fs24', 62)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 63)" onmouseover="showTip(event, 'fs8', 63)" class="i">basicX</span>)
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs25', 64)" onmouseover="showTip(event, 'fs25', 64)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs26', 65)" onmouseover="showTip(event, 'fs26', 65)" class="f">Plot</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs25', 66)" onmouseover="showTip(event, 'fs25', 66)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs27', 67)" onmouseover="showTip(event, 'fs27', 67)" class="f">WithWidth</span> <span class="n">700</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs25', 68)" onmouseover="showTip(event, 'fs25', 68)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="f">WithHeight</span> <span class="n">500</span>
+</code></pre></td>
 </tr>
 </table>
-
-<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/388.embed?width=640&height=480" ></iframe>
-
-<h2><a name="Horizontal-Histogram" class="anchor" href="#Horizontal-Histogram">Horizontal Histogram</a></h2>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 72)" onmouseover="showTip(event, 'fs31', 72)" class="i">horizontalData</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs27', 73)" onmouseover="showTip(event, 'fs27', 73)" class="i">Data</span>([<span onmouseout="hideTip(event, 'fs28', 74)" onmouseover="showTip(event, 'fs28', 74)" class="i">Histogram</span>(<span class="i">y</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs16', 75)" onmouseover="showTip(event, 'fs16', 75)" class="i">horizontalY</span>)])
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs32', 76)" onmouseover="showTip(event, 'fs32', 76)" class="i">horizontalLayout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs30', 77)" onmouseover="showTip(event, 'fs30', 77)" class="t">Layout</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Horizontal Histogram&quot;</span>)
-
-<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs31', 78)" onmouseover="showTip(event, 'fs31', 78)" class="i">horizontalData</span>, <span onmouseout="hideTip(event, 'fs32', 79)" onmouseover="showTip(event, 'fs32', 79)" class="i">horizontalLayout</span>)
-</pre>
-</td>
-</tr>
-</table>
-
-<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/389.embed?width=640&height=480" ></iframe>
-
-<h2><a name="Overlaid-Histogram" class="anchor" href="#Overlaid-Histogram">Overlaid Histogram</a></h2>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
-<span class="l">15: </span>
-<span class="l">16: </span>
-<span class="l">17: </span>
-<span class="l">18: </span>
-<span class="l">19: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs33', 80)" onmouseover="showTip(event, 'fs33', 80)" class="i">overlaidTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs28', 81)" onmouseover="showTip(event, 'fs28', 81)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs34', 82)" onmouseover="showTip(event, 'fs34', 82)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs17', 83)" onmouseover="showTip(event, 'fs17', 83)" class="i">overlaidX0</span>,
-        <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
-    )
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs35', 84)" onmouseover="showTip(event, 'fs35', 84)" class="i">overlaidTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs28', 85)" onmouseover="showTip(event, 'fs28', 85)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs34', 86)" onmouseover="showTip(event, 'fs34', 86)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs18', 87)" onmouseover="showTip(event, 'fs18', 87)" class="i">overlaidX1</span>,
-        <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
-    )
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs36', 88)" onmouseover="showTip(event, 'fs36', 88)" class="i">overlaidLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs30', 89)" onmouseover="showTip(event, 'fs30', 89)" class="t">Layout</span>(
-        <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;overlay&quot;</span>,
-        <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Overlaid Histogram&quot;</span>
-    )
-
-<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 90)" onmouseover="showTip(event, 'fs27', 90)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs33', 91)" onmouseover="showTip(event, 'fs33', 91)" class="i">overlaidTrace1</span>; <span onmouseout="hideTip(event, 'fs35', 92)" onmouseover="showTip(event, 'fs35', 92)" class="i">overlaidTrace2</span>], <span onmouseout="hideTip(event, 'fs36', 93)" onmouseover="showTip(event, 'fs36', 93)" class="i">overlaidLayout</span>)
-</pre>
-</td>
-</tr>
-</table>
-
-<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/390.embed?width=640&height=480" ></iframe>
-
-<h2><a name="Stacked-Histograms" class="anchor" href="#Stacked-Histograms">Stacked Histograms</a></h2>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs37', 94)" onmouseover="showTip(event, 'fs37', 94)" class="i">stackedTrace1</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 95)" onmouseover="showTip(event, 'fs28', 95)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs34', 96)" onmouseover="showTip(event, 'fs34', 96)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs22', 97)" onmouseover="showTip(event, 'fs22', 97)" class="i">stackedX0</span>)
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs38', 98)" onmouseover="showTip(event, 'fs38', 98)" class="i">stackedTrace2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs28', 99)" onmouseover="showTip(event, 'fs28', 99)" class="t">Histogram</span>(<span onmouseout="hideTip(event, 'fs34', 100)" onmouseover="showTip(event, 'fs34', 100)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs23', 101)" onmouseover="showTip(event, 'fs23', 101)" class="i">stackedX1</span>)
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs39', 102)" onmouseover="showTip(event, 'fs39', 102)" class="i">stackedLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs30', 103)" onmouseover="showTip(event, 'fs30', 103)" class="t">Layout</span>(
-        <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;stack&quot;</span>,
-        <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Stacked Histograms&quot;</span>
-    )
-
-<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 104)" onmouseover="showTip(event, 'fs27', 104)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs37', 105)" onmouseover="showTip(event, 'fs37', 105)" class="i">stackedTrace1</span>; <span onmouseout="hideTip(event, 'fs38', 106)" onmouseover="showTip(event, 'fs38', 106)" class="i">stackedTrace2</span>], <span onmouseout="hideTip(event, 'fs39', 107)" onmouseover="showTip(event, 'fs39', 107)" class="i">stackedLayout</span>)
-</pre>
-</td>
-</tr>
-</table>
-
-<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/394.embed?width=640&height=480" ></iframe>
-
-<h2><a name="Colored-and-Styled-Histograms" class="anchor" href="#Colored-and-Styled-Histograms">Colored and Styled Histograms</a></h2>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
-<span class="l">15: </span>
-<span class="l">16: </span>
-<span class="l">17: </span>
-<span class="l">18: </span>
-<span class="l">19: </span>
-<span class="l">20: </span>
-<span class="l">21: </span>
-<span class="l">22: </span>
-<span class="l">23: </span>
-<span class="l">24: </span>
-<span class="l">25: </span>
-<span class="l">26: </span>
-<span class="l">27: </span>
-<span class="l">28: </span>
-<span class="l">29: </span>
-<span class="l">30: </span>
-<span class="l">31: </span>
-<span class="l">32: </span>
-<span class="l">33: </span>
-<span class="l">34: </span>
-<span class="l">35: </span>
-<span class="l">36: </span>
-<span class="l">37: </span>
-<span class="l">38: </span>
-<span class="l">39: </span>
-<span class="l">40: </span>
-<span class="l">41: </span>
-<span class="l">42: </span>
-<span class="l">43: </span>
-<span class="l">44: </span>
-<span class="l">45: </span>
-<span class="l">46: </span>
-<span class="l">47: </span>
-<span class="l">48: </span>
-<span class="l">49: </span>
-<span class="l">50: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs40', 108)" onmouseover="showTip(event, 'fs40', 108)" class="i">coloredTrace1</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs28', 109)" onmouseover="showTip(event, 'fs28', 109)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs34', 110)" onmouseover="showTip(event, 'fs34', 110)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 111)" onmouseover="showTip(event, 'fs24', 111)" class="i">coloredX0</span>,
-        <span class="i">histnorm</span> <span class="o">=</span> <span class="s">&quot;count&quot;</span>,
-        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;control&quot;</span>,
-        <span class="i">autobinx</span> <span class="o">=</span> <span class="k">false</span>,
-        <span class="i">xbins</span> <span class="o">=</span>
-            <span class="i">XBins</span>(
-                <span class="i">start</span> <span class="o">=</span> <span class="o">-</span><span class="n">3.2</span>,
-                <span class="i">``end``</span> <span class="o">=</span> <span class="n">2.8</span>,
-                <span class="i">size</span> <span class="o">=</span> <span class="n">0.2</span>
-            ),
-        <span class="i">marker</span> <span class="o">=</span>
-            <span onmouseout="hideTip(event, 'fs41', 112)" onmouseover="showTip(event, 'fs41', 112)" class="t">Marker</span>(
-                <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;fuchsia&quot;</span>,
-                <span class="i">line</span> <span class="o">=</span>
-                    <span onmouseout="hideTip(event, 'fs42', 113)" onmouseover="showTip(event, 'fs42', 113)" class="t">Line</span>(
-                        <span class="i">color</span> <span class="o">=</span> <span class="s">&quot;grey&quot;</span>,
-                        <span class="i">width</span> <span class="o">=</span> <span class="n">0</span>
-                    ),
-                <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
-            )
-    )
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs43', 114)" onmouseover="showTip(event, 'fs43', 114)" class="i">coloredTrace2</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs28', 115)" onmouseover="showTip(event, 'fs28', 115)" class="t">Histogram</span>(
-        <span onmouseout="hideTip(event, 'fs34', 116)" onmouseover="showTip(event, 'fs34', 116)" class="i">x</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs25', 117)" onmouseover="showTip(event, 'fs25', 117)" class="i">coloredX1</span>,
-        <span class="i">name</span> <span class="o">=</span> <span class="s">&quot;experimental&quot;</span>,
-        <span class="i">autobinx</span> <span class="o">=</span> <span class="k">false</span>,
-        <span class="i">xbins</span> <span class="o">=</span>
-            <span class="i">XBins</span>(
-                <span class="i">start</span> <span class="o">=</span> <span class="o">-</span><span class="n">1.8</span>,
-                <span class="i">``end``</span> <span class="o">=</span> <span class="n">4.2</span>,
-                <span class="i">size</span> <span class="o">=</span> <span class="n">0.2</span>
-            ),
-        <span class="i">marker</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs41', 118)" onmouseover="showTip(event, 'fs41', 118)" class="t">Marker</span>(<span class="i">color</span> <span class="o">=</span> <span class="s">&quot;rgb(255, 217, 102)&quot;</span>),
-        <span class="i">opacity</span> <span class="o">=</span> <span class="n">0.75</span>
-    )
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs44', 119)" onmouseover="showTip(event, 'fs44', 119)" class="i">coloredLayout</span> <span class="o">=</span>
-    <span onmouseout="hideTip(event, 'fs30', 120)" onmouseover="showTip(event, 'fs30', 120)" class="t">Layout</span>(
-        <span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Colored and Styled Histograms&quot;</span>,
-        <span class="i">xaxis</span> <span class="o">=</span> <span class="i">XAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Value&quot;</span>),
-        <span class="i">yaxis</span> <span class="o">=</span> <span class="i">YAxis</span>(<span class="i">title</span> <span class="o">=</span> <span class="s">&quot;Count&quot;</span>),
-        <span class="i">barmode</span> <span class="o">=</span> <span class="s">&quot;overlay&quot;</span>,
-        <span class="i">bargap</span> <span class="o">=</span> <span class="n">0.25</span>,
-        <span class="i">bargroupgap</span> <span class="o">=</span> <span class="n">0.3</span>
-    )
-
-<span class="i">Figure</span>(<span onmouseout="hideTip(event, 'fs27', 121)" onmouseover="showTip(event, 'fs27', 121)" class="i">Data</span><span class="o">.</span><span class="i">From</span> [<span onmouseout="hideTip(event, 'fs40', 122)" onmouseover="showTip(event, 'fs40', 122)" class="i">coloredTrace1</span>; <span onmouseout="hideTip(event, 'fs43', 123)" onmouseover="showTip(event, 'fs43', 123)" class="i">coloredTrace2</span>], <span onmouseout="hideTip(event, 'fs44', 124)" onmouseover="showTip(event, 'fs44', 124)" class="i">coloredLayout</span>)
-</pre>
-</td>
-</tr>
-</table>
-
-<iframe width="640" height="480" frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~TahaHachana/395.embed?width=640&height=480" ></iframe>
+<div id="740ef0cf-60c0-4afe-8599-77cb55ee055a" style="width: 700px; height: 500px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <script>
+    var data = [{"type":"histogram","x":[0.48570160508780241,0.88076300197231483,2.1598973269795967,1.2941302148889982,1.3442010480594242,-0.63985965770702968,0.17806758541063258,-1.7161720071431572,2.0297037262589006,-1.8754300083258826,-0.76080380619953025,2.4033212538372504,-0.5538868803299033,1.2241506126067989,-0.10238719310280801,1.28975193144336,0.78466752223488812,1.0631025696748127,2.2355323022336728,-1.0601565820678218,-1.903292836775478,0.38945137442614308,-1.3542529876116358,-0.07927613656978523,1.8404091965329126,1.6889639386899604,1.6811060487007858,1.5020018747849624,0.93242174400441347,-0.725951649081488,1.0880403050067391,-1.0475253333191734,-0.41232618085670997,-0.53972500181822725,-0.78809528338547619,-0.66778502542696694,-0.14002645157204757,-1.992049904180121,2.0130774437879251,0.10538882610743738,0.61011072668571009,0.97080965059744606,0.92789259508112931,1.6639324287290722,-0.20584723253980586,0.024129656488027087,0.043024751891604131,-0.63285830136478516,-0.83090840897573681,-1.3956922811008592,-0.57187759963193574,-3.5762507837047703,1.0102905266398197,0.53334000379744673,2.2391383079355194,1.04494277628956,0.67620541865947748,-2.0052032679632257,0.49413554953066879,-1.1232664297925896,-0.046011707372600845,0.78035150013878529,0.42621343664434846,-1.4039094601964268,-0.8272545405892191,0.94887376673726076,0.91683069373893455,0.39683211021177384,-0.782331929088355,-1.2547597703171671,-0.027293579958007887,-0.44529396671198845,1.0103046213646432,0.916396134046335,1.675246688815536,-0.55053181910172444,-0.80971057825230375,-0.071425454843926775,-1.7127222405241853,0.2745091880696644,-0.34774892634635685,-1.2392240905264229,-0.17271221425395977,1.7426493733258686,-0.78894805999000972,0.064969538804226748,-1.5897695064612825,0.7480076241709146,-0.066205195583361978,-0.28571379360150395,-1.0154142415103737,-0.18400928549910348,-1.2355157427396817,0.68138353424144393,-0.94115789770261193,-0.63249978131496631,0.095921221944107266,0.49167519221083256,0.47267054699013888,2.376449931536377,-0.48802196512983959,-0.98245346142930767,-1.2791823921440515,0.53816709937077567,-0.15357313516959695,-2.0141422124256292,-0.81018934624182692,0.80508328453681666,-0.5149736367766945,2.3440644397543862,-0.60823472218501762,-0.53228431794339481,1.5813490113815638,0.55044462010819084,0.860457872787577,1.4665346997060424,0.67029025179711976,-1.6257673481019828,-1.3339244187904134,-0.30130154731113507,-1.0226323978232739,0.89853184278705089,-0.43538617019475767,-0.19565725644117415,-0.92688838329291545,0.539551808710923,-0.20990966052066037,0.81663282532081782,-0.57942885396517607,1.3375386209510076,0.17044196892874453,1.3956702449875698,-1.365743423276002,-0.089736912406579133,-1.211831803246914,0.30827002067660064,-0.87272237294460409,-0.29744398347204015,0.99672154134620361,-0.19890841936709158,-1.0845864949894666,0.40873264720381042,0.0948757536877588,0.53809702599641218,1.1123537586623133,-0.25380016563118818,1.1534839605336853,0.024408972612575523,0.20568617464894959,-1.3008282773545341,-1.8362604966520562,-0.50653075991680874,0.38274486008218839,1.3942968119426404,-0.89654399583880329,-0.72012661081466234,-0.5013157111960328,2.796288432575798,-0.35320917453709921,0.41350573615928887,-0.565809185818883,0.49251189262459166,-0.54139843709679281,0.29019560094571462,-1.140712838880859,0.85247052337318607,0.7489102457976371,1.6552152010355397,-0.13331983123064228,-0.3886835013259296,0.25996539332827279,0.15601981521858621,0.13356188481394607,1.560676151352185,-1.2418097061255096,-1.1734517772273461,-0.79140726840566311,0.29549068607558948,-0.37449978544957285,0.7420341612953304,-1.2109918801010668,-0.61618654415578844,-0.01876468338822946,1.7068358644104953,0.82088157003781081,-0.23273139556703992,-0.40923190646530094,1.0260425264293933,-0.11006587125904116,0.78542732916099445,-0.21128907657994486,-1.9679024687159039,-1.0561904864013678,-0.72280086577420943,-0.22224229269602308,1.4168429341546807,-0.37576280644350796,-0.3567046624411318,0.70941889996999008,-0.5100972886913453,0.10815491875106087,1.2932847940436059,-1.665537991371328,-0.35008904665390095,0.56527282062652673,0.11853515983427478,-1.1494250376052184,-0.831153053578221,0.48099895791867392,1.1319347325391673,-1.3609461380377133,-0.91312028664166156,0.20821761581854,0.2470149520760215,-0.82626810639517834,1.1185629881734824,-1.5666385985629185,-0.51091169902510158,1.2562324098283897,1.9921940352892464,0.12898631291179508,-1.4679724280049924,-1.9625179753731743,0.3143062317301682,-0.02413607147970968,0.48301290922427587,-0.043923121377877274,-1.1067108720023702,0.41804003956693242,-0.12030891711372918,0.13260767799014606,-1.6005520222695113,1.4090130526915938,1.0922202944651522,4.0924035605671412,0.18780557777242066,-0.98962676243081338,-1.1838178744831363,0.21170540649037128,-0.19379061258164143,1.7167523483599432,-1.6019914425022506,0.22871564859441454,0.50182205533700086,-0.11657390424212806,-0.26309618331324947,-1.0511339971775895,-0.22762918538773208,-0.32870250190216321,-0.86464563877700706,-0.78504859430160079,-1.3568602779837948,-0.077579087792981685,-0.16940235975188503,-0.64621792064770456,0.43524970254140033,1.4769743205555173,-0.57259366343569773,1.0826868216840524,-0.26591328102506789,-0.12256970459607662,0.73939223032525425,0.83634663375827856,2.1575558363215288,0.35825107079064589,1.9863117094543819,0.55045563899345451,-1.1281890376687052,-0.6853916012386192,0.86522044538708587,0.23412199042473433,-0.3328530939514398,0.40256348592942581,-1.8041786270593909,1.5114932532678118,-0.15497049180268191,-0.1432427982224217,0.28555464878027081,1.0414882485421493,-2.3530694198739188,-2.0571614249065635,-0.55410536675501254,-1.8178904290756528,1.0547400707463532,2.0078875185834475,-2.1445880688648651,-0.55011561497158112,-0.94479719991726718,-1.0429303613171994,1.4878852633385662,1.2836371681102654,-2.7779711585727571,-0.29540168486277374,-1.045713206915055,-0.48489859573930283,-0.8771072951655916,1.1226091596311392,0.24112524049166723,-0.043939709442505651,-1.3626285301040719,0.010107947458856596,1.1877604635998385,1.5229645020759,-1.4160803202687438,1.6163222822725711,-0.91081093509342081,1.5893961154115373,1.2064504366597317,-1.8948434469488238,0.72292115329591866,0.16924762621791509,-0.6167320754873018,0.535179596138922,1.0646917640918461,-0.62262116817463908,2.4637269222035747,-0.38660702392371837,0.28964022666766648,0.55400148452149411,-1.9198546645854264,-0.72469967486443487,0.14671361169293057,0.36728601327918531,-0.62855837443011064,0.6125051410983573,0.0071097878898805106,0.319010851506451,0.99896246755574136,-0.13908435348879555,2.6234813013842646,-0.44537516263838367,0.304802498498668,1.5765613231101425,-1.6330590590282061,0.14504454390461,-1.6401457771684025,0.0026119476846673041,-0.56490981856693445,-0.2673557600572169,0.13485638526228583,-0.72197508862060444,-0.38427799326924894,-0.29165394453781018,-0.62400435784648212,2.0168895203510089,0.29136594951598038,0.0759104255463782,-1.0421649684052863,-0.46419212965737228,-0.498539690132657,0.25469954068128875,-0.90537665829936065,-0.24232037545581925,1.4088402975859728,0.38217204645631087,0.037239044789627446,-0.94022654529266581,0.0792215272737611,0.45003631874166272,-0.93151045115296738,-0.0094785748831388572,-1.1957824222348392,-0.71544683688712662,-0.62516139051784514,-0.73505977479163853,-0.04412442687300093,0.12726364753659908,-0.48283436095874177,-0.30438047469533641,-0.19930796690423233,0.47447340726467446,1.5888897148116319,1.7098451994310426,0.23519737726285828,1.6262327224901292,-1.4244615928743103,0.795456660544528,0.17505757527907837,-1.5809032451173251,-0.14712701494948077,-1.4061650328621707,-0.472111207602105,0.93210098462229607,0.64595969503535955,-0.68124532200238541,0.082069286558112353,1.4510905097279485,0.14832320412870936,-0.06401455975659362,0.24867882552117679,0.91189025077343244,-0.040656264610436324,-0.51881198398827177,-0.71112559311507539,-0.68639891778573581,-0.206118698018043,0.36776583353537473,1.8132931303927187,-0.69260809329180761,-0.0830694275406612,0.40428627813025564,0.19150258159065609,0.19226586527201864,-0.68077028569554066,0.25660272765406539,0.60292850734558523,-1.5195240414404327,0.37836647567743947,-0.55451544291325783,0.51163721059242229,-0.68242224256271045,1.2947423133683751,-2.2995474817759951,1.4065830518437705,-0.89248645532192794,1.3938443157056188,0.80736995850169224,1.1013493795296081,1.5910519109420991,1.213767863990312,0.22397547746272484,-0.74701482511984951,0.94596071521461977,-0.38259358197113386,-0.60310112111191572,-0.16923145372350504,0.012292956054092537,0.23717120224367988,-0.00762188078478183,0.66838175562993607,0.77487840365912186,0.024121297524660048,-0.75456577195983965,0.60844376188945226,-1.0200271505733258,-1.303739419513162,-0.1674616745321442,-0.039008615701823394,-0.26640948936812453,0.67672780608162786,-0.375156117587508,-1.1331559200192898,-0.37566483028808595,-1.0698186049409071,1.3588855761943768,0.403570496275952,-1.4097216323066357,-0.75331255785578077,0.448299830809557,-0.84372905115080976,0.58628949085167481,-1.1200960595368836,1.609515249561204,0.55769767904619627,-0.014109634925124286,0.32446848233195591,-0.94264566782442638,0.581206753650204,-0.9256031431306152,-0.8762305716000689,-0.79419569004267487,-0.28887633986283606,0.33553059032040938,-0.79771504875342913,1.2458039659855189,-0.7902126021484327,0.51374622557604088,-1.4308342018895128,0.78822987143191059,1.6917841032739043,0.14003069585538186,-1.0259673888788263,-0.063661778475432723,0.90691448967877775,0.12943704086651073,0.64991581751907179,0.35658259815698717,-0.602851391838788,-0.71246408589670085,0.83698349715388964,1.0509434262234152,-0.55132908383054446,1.947297595564315,-1.6758451639425307,0.70691975848750888,-0.25434445826615082,1.0816936814930274,0.96403729673431049,0.88376455384387409,0.0707495492699215,-0.0340638671851637,2.0643527352101554,1.4767533030244329,-0.25880390714764678,-1.099706667992276,1.6752921356633086,0.63282007597686851,-1.3973177229473706,-0.908514911302876,2.2389257588125093]}];
+    var layout = "";
+    Plotly.newPlot('740ef0cf-60c0-4afe-8599-77cb55ee055a', data, layout);
+  </script>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.Plotly</div>
 <div class="tip" id="fs3">namespace MathNet</div>
 <div class="tip" id="fs4">namespace MathNet.Numerics</div>
 <div class="tip" id="fs5">namespace MathNet.Numerics.Distributions</div>
-<div class="tip" id="fs6">type Plotly =<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart<br />&#160;&#160;static member Show : chart:PlotlyChart -&gt; unit<br />&#160;&#160;static member WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br />&#160;&#160;static member WithLayout : layout:Layout -&gt; chart:PlotlyChart -&gt; PlotlyChart<br />&#160;&#160;static member WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart<br /><br />Full name: XPlot.Plotly.Plotly</div>
-<div class="tip" id="fs7">module MyCredentials</div>
-<div class="tip" id="fs8">val userAndKey : string * string<br /><br />Full name: MyCredentials.userAndKey</div>
-<div class="tip" id="fs9">val normal : Normal<br /><br />Full name: Plotly-histograms.normal</div>
-<div class="tip" id="fs10">Multiple items<br />type Normal =<br />&#160;&#160;new : unit -&gt; Normal + 3 overloads<br />&#160;&#160;member CumulativeDistribution : x:float -&gt; float<br />&#160;&#160;member Density : x:float -&gt; float<br />&#160;&#160;member DensityLn : x:float -&gt; float<br />&#160;&#160;member Entropy : float<br />&#160;&#160;member InverseCumulativeDistribution : p:float -&gt; float<br />&#160;&#160;member Maximum : float<br />&#160;&#160;member Mean : float<br />&#160;&#160;member Median : float<br />&#160;&#160;member Minimum : float<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Distributions.Normal<br /><br />--------------------<br />Normal() : unit<br />Normal(randomSource: System.Random) : unit<br />Normal(mean: float, stddev: float) : unit<br />Normal(mean: float, stddev: float, randomSource: System.Random) : unit</div>
-<div class="tip" id="fs11">val basicX : float []<br /><br />Full name: Plotly-histograms.basicX</div>
-<div class="tip" id="fs12">Normal.Samples() : System.Collections.Generic.IEnumerable&lt;float&gt;<br />Normal.Samples(values: float []) : unit</div>
-<div class="tip" id="fs13">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs14">val take : count:int -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.take</div>
-<div class="tip" id="fs15">val toArray : source:seq&lt;&#39;T&gt; -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Seq.toArray</div>
-<div class="tip" id="fs16">val horizontalY : float []<br /><br />Full name: Plotly-histograms.horizontalY</div>
-<div class="tip" id="fs17">val overlaidX0 : float []<br /><br />Full name: Plotly-histograms.overlaidX0</div>
-<div class="tip" id="fs18">val overlaidX1 : float []<br /><br />Full name: Plotly-histograms.overlaidX1</div>
-<div class="tip" id="fs19">module Array<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs20">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.map</div>
-<div class="tip" id="fs21">val x : float</div>
-<div class="tip" id="fs22">val stackedX0 : float []<br /><br />Full name: Plotly-histograms.stackedX0</div>
-<div class="tip" id="fs23">val stackedX1 : float []<br /><br />Full name: Plotly-histograms.stackedX1</div>
-<div class="tip" id="fs24">val coloredX0 : float []<br /><br />Full name: Plotly-histograms.coloredX0</div>
-<div class="tip" id="fs25">val coloredX1 : float []<br /><br />Full name: Plotly-histograms.coloredX1</div>
-<div class="tip" id="fs26">val basicData : obj<br /><br />Full name: Plotly-histograms.basicData</div>
-<div class="tip" id="fs27">namespace Microsoft.FSharp.Data</div>
-<div class="tip" id="fs28">Multiple items<br />type Histogram =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram<br /><br />--------------------<br />new : unit -&gt; Histogram</div>
-<div class="tip" id="fs29">val basicLayout : Layout<br /><br />Full name: Plotly-histograms.basicLayout</div>
-<div class="tip" id="fs30">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedragmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegeo : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
-<div class="tip" id="fs31">val horizontalData : obj<br /><br />Full name: Plotly-histograms.horizontalData</div>
-<div class="tip" id="fs32">val horizontalLayout : Layout<br /><br />Full name: Plotly-histograms.horizontalLayout</div>
-<div class="tip" id="fs33">val overlaidTrace1 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace1</div>
-<div class="tip" id="fs34">property Histogram.x: obj</div>
-<div class="tip" id="fs35">val overlaidTrace2 : Histogram<br /><br />Full name: Plotly-histograms.overlaidTrace2</div>
-<div class="tip" id="fs36">val overlaidLayout : Layout<br /><br />Full name: Plotly-histograms.overlaidLayout</div>
-<div class="tip" id="fs37">val stackedTrace1 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace1</div>
-<div class="tip" id="fs38">val stackedTrace2 : Histogram<br /><br />Full name: Plotly-histograms.stackedTrace2</div>
-<div class="tip" id="fs39">val stackedLayout : Layout<br /><br />Full name: Plotly-histograms.stackedLayout</div>
-<div class="tip" id="fs40">val coloredTrace1 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace1</div>
-<div class="tip" id="fs41">Multiple items<br />type Marker =<br />&#160;&#160;new : unit -&gt; Marker<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorbar : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolors : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Marker<br /><br />--------------------<br />new : unit -&gt; Marker</div>
-<div class="tip" id="fs42">Multiple items<br />type Line =<br />&#160;&#160;new : unit -&gt; Line<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedash : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Line<br /><br />--------------------<br />new : unit -&gt; Line</div>
-<div class="tip" id="fs43">val coloredTrace2 : Histogram<br /><br />Full name: Plotly-histograms.coloredTrace2</div>
-<div class="tip" id="fs44">val coloredLayout : obj<br /><br />Full name: Plotly-histograms.coloredLayout</div>
+<div class="tip" id="fs6">val normal : Normal<br /><br />Full name: Plotly-histograms.normal</div>
+<div class="tip" id="fs7">Multiple items<br />type Normal =<br />&#160;&#160;new : unit -&gt; Normal + 3 overloads<br />&#160;&#160;member CumulativeDistribution : x:float -&gt; float<br />&#160;&#160;member Density : x:float -&gt; float<br />&#160;&#160;member DensityLn : x:float -&gt; float<br />&#160;&#160;member Entropy : float<br />&#160;&#160;member InverseCumulativeDistribution : p:float -&gt; float<br />&#160;&#160;member Maximum : float<br />&#160;&#160;member Mean : float<br />&#160;&#160;member Median : float<br />&#160;&#160;member Minimum : float<br />&#160;&#160;...<br /><br />Full name: MathNet.Numerics.Distributions.Normal<br /><br />--------------------<br />Normal() : unit<br />Normal(randomSource: System.Random) : unit<br />Normal(mean: float, stddev: float) : unit<br />Normal(mean: float, stddev: float, randomSource: System.Random) : unit</div>
+<div class="tip" id="fs8">val basicX : float []<br /><br />Full name: Plotly-histograms.basicX</div>
+<div class="tip" id="fs9">Normal.Samples() : System.Collections.Generic.IEnumerable&lt;float&gt;<br />Normal.Samples(values: float []) : unit</div>
+<div class="tip" id="fs10">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs11">val take : count:int -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.take</div>
+<div class="tip" id="fs12">val toArray : source:seq&lt;&#39;T&gt; -&gt; &#39;T []<br /><br />Full name: Microsoft.FSharp.Collections.Seq.toArray</div>
+<div class="tip" id="fs13">val horizontalY : float []<br /><br />Full name: Plotly-histograms.horizontalY</div>
+<div class="tip" id="fs14">val overlaidX0 : float []<br /><br />Full name: Plotly-histograms.overlaidX0</div>
+<div class="tip" id="fs15">val overlaidX1 : float []<br /><br />Full name: Plotly-histograms.overlaidX1</div>
+<div class="tip" id="fs16">module Array<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs17">val map : mapping:(&#39;T -&gt; &#39;U) -&gt; array:&#39;T [] -&gt; &#39;U []<br /><br />Full name: Microsoft.FSharp.Collections.Array.map</div>
+<div class="tip" id="fs18">val x : float</div>
+<div class="tip" id="fs19">val stackedX0 : float []<br /><br />Full name: Plotly-histograms.stackedX0</div>
+<div class="tip" id="fs20">val stackedX1 : float []<br /><br />Full name: Plotly-histograms.stackedX1</div>
+<div class="tip" id="fs21">val coloredX0 : float []<br /><br />Full name: Plotly-histograms.coloredX0</div>
+<div class="tip" id="fs22">val coloredX1 : float []<br /><br />Full name: Plotly-histograms.coloredX1</div>
+<div class="tip" id="fs23">Multiple items<br />type Histogram =<br />&#160;&#160;inherit Trace<br />&#160;&#160;new : unit -&gt; Histogram<br />&#160;&#160;member ShouldSerializeautobinx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautobiny : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedx : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedy : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_x : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeerror_y : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistfunc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializehistnorm : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Histogram<br /><br />--------------------<br />new : unit -&gt; Histogram</div>
+<div class="tip" id="fs24">property Histogram.x: obj</div>
+<div class="tip" id="fs25">type Chart =<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Column : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Line : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Line : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Chart</div>
+<div class="tip" id="fs26">static member Chart.Plot : data:Trace -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />static member Chart.Plot : data:Trace * layout:Layout -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart</div>
+<div class="tip" id="fs27">static member Chart.WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
+<div class="tip" id="fs28">static member Chart.WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
 
             </div>
             <div class="span3">
-                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/XPlot/">Home page</a></li>
+                    <li><a href="/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+                    <li><a href="/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
-                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
+                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    
-
-                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    
-                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    
+                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
+                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li><a href="/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>

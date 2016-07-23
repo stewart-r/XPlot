@@ -12,13 +12,16 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
-    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/style.css" />
+    <script type="text/javascript" src="/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +47,7 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+            <h3 class="muted"><a href="/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
@@ -54,6 +57,10 @@
 
 
 <h1>Timeline</h1>
+<p>
+  <span>Namespace: XPlot.GoogleCharts</span><br />
+  <span>Parent Module: <a href="xplot-googlecharts-configuration.html">Configuration</a></span>
+</p>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -65,10 +72,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1003', 1003)" onmouseover="showTip(event, '1003', 1003)">
+          <code onmouseout="hideTip(event, '1000', 1000)" onmouseover="showTip(event, '1000', 1000)">
             new()
           </code>
-          <div class="tip" id="1003">
+          <div class="tip" id="1000">
             <strong>Signature:</strong> unit -&gt; Timeline<br />
                       </div>
         </td>
@@ -78,6 +85,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>.ctor</code></p>
         </td>
       </tr>
     </tbody>
@@ -91,10 +99,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1004', 1004)" onmouseover="showTip(event, '1004', 1004)">
+          <code onmouseout="hideTip(event, '1001', 1001)" onmouseover="showTip(event, '1001', 1001)">
             barLabelStyle()
           </code>
-          <div class="tip" id="1004">
+          <div class="tip" id="1001">
             <strong>Signature:</strong> unit -&gt; LabelStyle<br />
                       </div>
         </td>
@@ -104,15 +112,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_barLabelStyle</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1005', 1005)" onmouseover="showTip(event, '1005', 1005)">
+          <code onmouseout="hideTip(event, '1002', 1002)" onmouseover="showTip(event, '1002', 1002)">
             barLabelStyle()
           </code>
-          <div class="tip" id="1005">
+          <div class="tip" id="1002">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -122,15 +131,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_barLabelStyle</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1006', 1006)" onmouseover="showTip(event, '1006', 1006)">
+          <code onmouseout="hideTip(event, '1003', 1003)" onmouseover="showTip(event, '1003', 1003)">
             colorByRowLabel()
           </code>
-          <div class="tip" id="1006">
+          <div class="tip" id="1003">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -140,15 +150,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_colorByRowLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1007', 1007)" onmouseover="showTip(event, '1007', 1007)">
+          <code onmouseout="hideTip(event, '1004', 1004)" onmouseover="showTip(event, '1004', 1004)">
             colorByRowLabel()
           </code>
-          <div class="tip" id="1007">
+          <div class="tip" id="1004">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -158,15 +169,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_colorByRowLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1008', 1008)" onmouseover="showTip(event, '1008', 1008)">
+          <code onmouseout="hideTip(event, '1005', 1005)" onmouseover="showTip(event, '1005', 1005)">
             groupByRowLabel()
           </code>
-          <div class="tip" id="1008">
+          <div class="tip" id="1005">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -176,15 +188,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_groupByRowLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1009', 1009)" onmouseover="showTip(event, '1009', 1009)">
+          <code onmouseout="hideTip(event, '1006', 1006)" onmouseover="showTip(event, '1006', 1006)">
             groupByRowLabel()
           </code>
-          <div class="tip" id="1009">
+          <div class="tip" id="1006">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -194,15 +207,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_groupByRowLabel</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1010', 1010)" onmouseover="showTip(event, '1010', 1010)">
+          <code onmouseout="hideTip(event, '1007', 1007)" onmouseover="showTip(event, '1007', 1007)">
             rowLabelStyle()
           </code>
-          <div class="tip" id="1010">
+          <div class="tip" id="1007">
             <strong>Signature:</strong> unit -&gt; LabelStyle<br />
                       </div>
         </td>
@@ -212,15 +226,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_rowLabelStyle</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1011', 1011)" onmouseover="showTip(event, '1011', 1011)">
+          <code onmouseout="hideTip(event, '1008', 1008)" onmouseover="showTip(event, '1008', 1008)">
             rowLabelStyle()
           </code>
-          <div class="tip" id="1011">
+          <div class="tip" id="1008">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -230,15 +245,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_rowLabelStyle</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1012', 1012)" onmouseover="showTip(event, '1012', 1012)">
+          <code onmouseout="hideTip(event, '1009', 1009)" onmouseover="showTip(event, '1009', 1009)">
             ShouldSerializebarLabelStyle()
           </code>
-          <div class="tip" id="1012">
+          <div class="tip" id="1009">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -253,10 +269,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1013', 1013)" onmouseover="showTip(event, '1013', 1013)">
+          <code onmouseout="hideTip(event, '1010', 1010)" onmouseover="showTip(event, '1010', 1010)">
             ShouldSerializecolorByRowLabel()
           </code>
-          <div class="tip" id="1013">
+          <div class="tip" id="1010">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -271,10 +287,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1014', 1014)" onmouseover="showTip(event, '1014', 1014)">
+          <code onmouseout="hideTip(event, '1011', 1011)" onmouseover="showTip(event, '1011', 1011)">
             ShouldSerializegroupByRowLabel()
           </code>
-          <div class="tip" id="1014">
+          <div class="tip" id="1011">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -289,10 +305,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1015', 1015)" onmouseover="showTip(event, '1015', 1015)">
+          <code onmouseout="hideTip(event, '1012', 1012)" onmouseover="showTip(event, '1012', 1012)">
             ShouldSerializerowLabelStyle()
           </code>
-          <div class="tip" id="1015">
+          <div class="tip" id="1012">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -307,10 +323,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1016', 1016)" onmouseover="showTip(event, '1016', 1016)">
+          <code onmouseout="hideTip(event, '1013', 1013)" onmouseover="showTip(event, '1013', 1013)">
             ShouldSerializeshowBarLabels()
           </code>
-          <div class="tip" id="1016">
+          <div class="tip" id="1013">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -325,10 +341,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1017', 1017)" onmouseover="showTip(event, '1017', 1017)">
+          <code onmouseout="hideTip(event, '1014', 1014)" onmouseover="showTip(event, '1014', 1014)">
             ShouldSerializeshowRowLabels()
           </code>
-          <div class="tip" id="1017">
+          <div class="tip" id="1014">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -343,10 +359,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1018', 1018)" onmouseover="showTip(event, '1018', 1018)">
+          <code onmouseout="hideTip(event, '1015', 1015)" onmouseover="showTip(event, '1015', 1015)">
             ShouldSerializesingleColor()
           </code>
-          <div class="tip" id="1018">
+          <div class="tip" id="1015">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -361,10 +377,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1019', 1019)" onmouseover="showTip(event, '1019', 1019)">
+          <code onmouseout="hideTip(event, '1016', 1016)" onmouseover="showTip(event, '1016', 1016)">
             showBarLabels()
           </code>
-          <div class="tip" id="1019">
+          <div class="tip" id="1016">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -374,15 +390,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_showBarLabels</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1020', 1020)" onmouseover="showTip(event, '1020', 1020)">
+          <code onmouseout="hideTip(event, '1017', 1017)" onmouseover="showTip(event, '1017', 1017)">
             showBarLabels()
           </code>
-          <div class="tip" id="1020">
+          <div class="tip" id="1017">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -392,15 +409,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_showBarLabels</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1021', 1021)" onmouseover="showTip(event, '1021', 1021)">
+          <code onmouseout="hideTip(event, '1018', 1018)" onmouseover="showTip(event, '1018', 1018)">
             showRowLabels()
           </code>
-          <div class="tip" id="1021">
+          <div class="tip" id="1018">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -410,15 +428,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_showRowLabels</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1022', 1022)" onmouseover="showTip(event, '1022', 1022)">
+          <code onmouseout="hideTip(event, '1019', 1019)" onmouseover="showTip(event, '1019', 1019)">
             showRowLabels()
           </code>
-          <div class="tip" id="1022">
+          <div class="tip" id="1019">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -428,15 +447,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_showRowLabels</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1023', 1023)" onmouseover="showTip(event, '1023', 1023)">
+          <code onmouseout="hideTip(event, '1020', 1020)" onmouseover="showTip(event, '1020', 1020)">
             singleColor()
           </code>
-          <div class="tip" id="1023">
+          <div class="tip" id="1020">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -446,15 +466,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_singleColor</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1024', 1024)" onmouseover="showTip(event, '1024', 1024)">
+          <code onmouseout="hideTip(event, '1021', 1021)" onmouseover="showTip(event, '1021', 1021)">
             singleColor()
           </code>
-          <div class="tip" id="1024">
+          <div class="tip" id="1021">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -464,6 +485,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_singleColor</code></p>
         </td>
       </tr>
     </tbody>
@@ -471,57 +493,68 @@
 
             </div>
             <div class="span3">
-                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/XPlot/">Home page</a></li>
+                    <li><a href="/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+                    <li><a href="/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
-                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
+                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    
-
-                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    
-                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    
+                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
+                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li><a href="/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>

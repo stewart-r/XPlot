@@ -12,13 +12,16 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
+        //google.charts.load('current', { 'packages': ['map'] });
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
-    <script type="text/javascript" src="/XPlot/content/tips.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/style.css" />
+    <script type="text/javascript" src="/content/tips.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +47,7 @@
                     <a href="http://numerics.mathdotnet.com/"><img height="16" width="16" src="http://fslab.org/img/thumbs/mathnet.png" /> Math.NET</a>
                 </li>
             </ul>
-            <h3 class="muted"><a href="/XPlot/">XPlot</a></h3>
+            <h3 class="muted"><a href="/">XPlot</a></h3>
         </div>
         <hr />
         <div class="row">
@@ -54,6 +57,10 @@
 
 
 <h1>Gradient</h1>
+<p>
+  <span>Namespace: XPlot.GoogleCharts</span><br />
+  <span>Parent Module: <a href="xplot-googlecharts-configuration.html">Configuration</a></span>
+</p>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -65,10 +72,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '361', 361)" onmouseover="showTip(event, '361', 361)">
+          <code onmouseout="hideTip(event, '358', 358)" onmouseover="showTip(event, '358', 358)">
             new()
           </code>
-          <div class="tip" id="361">
+          <div class="tip" id="358">
             <strong>Signature:</strong> unit -&gt; Gradient<br />
                       </div>
         </td>
@@ -78,6 +85,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>.ctor</code></p>
         </td>
       </tr>
     </tbody>
@@ -91,10 +99,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '362', 362)" onmouseover="showTip(event, '362', 362)">
+          <code onmouseout="hideTip(event, '359', 359)" onmouseover="showTip(event, '359', 359)">
             color1()
           </code>
-          <div class="tip" id="362">
+          <div class="tip" id="359">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -104,15 +112,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_color1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '363', 363)" onmouseover="showTip(event, '363', 363)">
+          <code onmouseout="hideTip(event, '360', 360)" onmouseover="showTip(event, '360', 360)">
             color1()
           </code>
-          <div class="tip" id="363">
+          <div class="tip" id="360">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -122,15 +131,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_color1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '364', 364)" onmouseover="showTip(event, '364', 364)">
+          <code onmouseout="hideTip(event, '361', 361)" onmouseover="showTip(event, '361', 361)">
             color2()
           </code>
-          <div class="tip" id="364">
+          <div class="tip" id="361">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -140,15 +150,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_color2</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '365', 365)" onmouseover="showTip(event, '365', 365)">
+          <code onmouseout="hideTip(event, '362', 362)" onmouseover="showTip(event, '362', 362)">
             color2()
           </code>
-          <div class="tip" id="365">
+          <div class="tip" id="362">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -158,15 +169,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_color2</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '366', 366)" onmouseover="showTip(event, '366', 366)">
+          <code onmouseout="hideTip(event, '363', 363)" onmouseover="showTip(event, '363', 363)">
             ShouldSerializecolor1()
           </code>
-          <div class="tip" id="366">
+          <div class="tip" id="363">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -181,10 +193,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '367', 367)" onmouseover="showTip(event, '367', 367)">
+          <code onmouseout="hideTip(event, '364', 364)" onmouseover="showTip(event, '364', 364)">
             ShouldSerializecolor2()
           </code>
-          <div class="tip" id="367">
+          <div class="tip" id="364">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -199,10 +211,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '368', 368)" onmouseover="showTip(event, '368', 368)">
+          <code onmouseout="hideTip(event, '365', 365)" onmouseover="showTip(event, '365', 365)">
             ShouldSerializeuseObjectBoundingBoxUnits(...)
           </code>
-          <div class="tip" id="368">
+          <div class="tip" id="365">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -217,10 +229,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '369', 369)" onmouseover="showTip(event, '369', 369)">
+          <code onmouseout="hideTip(event, '366', 366)" onmouseover="showTip(event, '366', 366)">
             ShouldSerializex1()
           </code>
-          <div class="tip" id="369">
+          <div class="tip" id="366">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -235,10 +247,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '370', 370)" onmouseover="showTip(event, '370', 370)">
+          <code onmouseout="hideTip(event, '367', 367)" onmouseover="showTip(event, '367', 367)">
             ShouldSerializex2()
           </code>
-          <div class="tip" id="370">
+          <div class="tip" id="367">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -253,10 +265,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '371', 371)" onmouseover="showTip(event, '371', 371)">
+          <code onmouseout="hideTip(event, '368', 368)" onmouseover="showTip(event, '368', 368)">
             ShouldSerializey1()
           </code>
-          <div class="tip" id="371">
+          <div class="tip" id="368">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -271,10 +283,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '372', 372)" onmouseover="showTip(event, '372', 372)">
+          <code onmouseout="hideTip(event, '369', 369)" onmouseover="showTip(event, '369', 369)">
             ShouldSerializey2()
           </code>
-          <div class="tip" id="372">
+          <div class="tip" id="369">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -289,10 +301,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '373', 373)" onmouseover="showTip(event, '373', 373)">
+          <code onmouseout="hideTip(event, '370', 370)" onmouseover="showTip(event, '370', 370)">
             useObjectBoundingBoxUnits()
           </code>
-          <div class="tip" id="373">
+          <div class="tip" id="370">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -302,15 +314,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_useObjectBoundingBoxUnits</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '374', 374)" onmouseover="showTip(event, '374', 374)">
+          <code onmouseout="hideTip(event, '371', 371)" onmouseover="showTip(event, '371', 371)">
             useObjectBoundingBoxUnits()
           </code>
-          <div class="tip" id="374">
+          <div class="tip" id="371">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -320,15 +333,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_useObjectBoundingBoxUnits</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '375', 375)" onmouseover="showTip(event, '375', 375)">
+          <code onmouseout="hideTip(event, '372', 372)" onmouseover="showTip(event, '372', 372)">
             x1()
           </code>
-          <div class="tip" id="375">
+          <div class="tip" id="372">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -338,15 +352,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_x1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '376', 376)" onmouseover="showTip(event, '376', 376)">
+          <code onmouseout="hideTip(event, '373', 373)" onmouseover="showTip(event, '373', 373)">
             x1()
           </code>
-          <div class="tip" id="376">
+          <div class="tip" id="373">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -356,15 +371,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_x1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '377', 377)" onmouseover="showTip(event, '377', 377)">
+          <code onmouseout="hideTip(event, '374', 374)" onmouseover="showTip(event, '374', 374)">
             x2()
           </code>
-          <div class="tip" id="377">
+          <div class="tip" id="374">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -374,15 +390,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_x2</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '378', 378)" onmouseover="showTip(event, '378', 378)">
+          <code onmouseout="hideTip(event, '375', 375)" onmouseover="showTip(event, '375', 375)">
             x2()
           </code>
-          <div class="tip" id="378">
+          <div class="tip" id="375">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -392,15 +409,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_x2</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '379', 379)" onmouseover="showTip(event, '379', 379)">
+          <code onmouseout="hideTip(event, '376', 376)" onmouseover="showTip(event, '376', 376)">
             y1()
           </code>
-          <div class="tip" id="379">
+          <div class="tip" id="376">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -410,15 +428,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_y1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '380', 380)" onmouseover="showTip(event, '380', 380)">
+          <code onmouseout="hideTip(event, '377', 377)" onmouseover="showTip(event, '377', 377)">
             y1()
           </code>
-          <div class="tip" id="380">
+          <div class="tip" id="377">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -428,15 +447,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_y1</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '381', 381)" onmouseover="showTip(event, '381', 381)">
+          <code onmouseout="hideTip(event, '378', 378)" onmouseover="showTip(event, '378', 378)">
             y2()
           </code>
-          <div class="tip" id="381">
+          <div class="tip" id="378">
             <strong>Signature:</strong> unit -&gt; string<br />
                       </div>
         </td>
@@ -446,15 +466,16 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>set_y2</code></p>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '382', 382)" onmouseover="showTip(event, '382', 382)">
+          <code onmouseout="hideTip(event, '379', 379)" onmouseover="showTip(event, '379', 379)">
             y2()
           </code>
-          <div class="tip" id="382">
+          <div class="tip" id="379">
             <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
@@ -464,6 +485,7 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           
+              <p>CompiledName: <code>get_y2</code></p>
         </td>
       </tr>
     </tbody>
@@ -471,57 +493,68 @@
 
             </div>
             <div class="span3">
-                <img src="/XPlot/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
+                <img src="/img/logo.png" alt="F# Project" style="width:130px;margin:20px" />
                 <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
                     <li class="nav-header">XPlot</li>
-                    <li><a href="/XPlot/">Home page</a></li>
+                    <li><a href="/">Home page</a></li>
                     <li class="divider"></li>
                     <li><a href="http://www.nuget.org/packages?q=XPlot">Get Library via NuGet</a></li>
                     <li><a href="http://github.com/TahaHachana/XPlot">Source Code on GitHub</a></li>
-                    <li><a href="/XPlot/license.html">License (Apache 2.0)</a></li>
-                    <li><a href="/XPlot/release-notes.html">Release Notes</a></li>
+                    <li><a href="/license.html">License (Apache 2.0)</a></li>
+                    <li><a href="/release-notes.html">Release Notes</a></li>
 
-                    <li class="nav-header"><a href="/XPlot/google-charts.html">Google Charts</a></li>
-                    <li><a href="/XPlot/chart/google-annotation-chart.html">Annotation</a></li>
-                    <li><a href="/XPlot/chart/google-area-chart.html">Area</a></li>
-                    <li><a href="/XPlot/chart/google-bar-chart.html">Bar</a></li>
-                    <li><a href="/XPlot/chart/google-bubble-chart.html">Bubble</a></li>
-                    <li><a href="/XPlot/chart/google-calendar-chart.html">Calendar</a></li>
-                    <li><a href="/XPlot/chart/google-candlestick-chart.html">Candlestick</a></li>
-                    <li><a href="/XPlot/chart/google-column-chart.html">Column</a></li>
-                    <li><a href="/XPlot/chart/google-combo-chart.html">Combo</a></li>
-                    <li><a href="/XPlot/chart/google-gauge-chart.html">Gauge</a></li>
-                    <li><a href="/XPlot/chart/google-geo-chart.html">Geo</a></li>
-                    <li><a href="/XPlot/chart/google-histogram-chart.html">Histogram</a></li>
-                    <li><a href="/XPlot/chart/google-line-chart.html">Line</a></li>
-                    <li><a href="/XPlot/chart/google-map-chart.html">Map</a></li>
-                    <li><a href="/XPlot/chart/google-pie-chart.html">Pie</a></li>
-                    <li><a href="/XPlot/chart/google-sankey-diagram.html">Sankey</a></li>
-                    <li><a href="/XPlot/chart/google-scatter-chart.html">Scatter</a></li>
-                    <li><a href="/XPlot/chart/google-stepped-area-chart.html">Stepped Area</a></li>
-                    <li><a href="/XPlot/chart/google-timeline-chart.html">Timeline</a></li>
-                    <li><a href="/XPlot/chart/google-table-chart.html">Table</a></li>
-                    <li><a href="/XPlot/chart/google-treemap-chart.html">Treemap</a></li>
+                    <li class="nav-header"><a href="/google-charts.html">Google Charts</a></li>
+                    <li><a href="/chart/google-annotation-chart.html">Annotation</a></li>
+                    <li><a href="/chart/google-area-chart.html">Area</a></li>
+                    <li><a href="/chart/google-bar-chart.html">Bar</a></li>
+                    <li><a href="/chart/google-bubble-chart.html">Bubble</a></li>
+                    <li><a href="/chart/google-calendar-chart.html">Calendar</a></li>
+                    <li><a href="/chart/google-candlestick-chart.html">Candlestick</a></li>
+                    <li><a href="/chart/google-column-chart.html">Column</a></li>
+                    <li><a href="/chart/google-combo-chart.html">Combo</a></li>
+                    <li><a href="/chart/google-gauge-chart.html">Gauge</a></li>
+                    <li><a href="/chart/google-geo-chart.html">Geo</a></li>
+                    <li><a href="/chart/google-histogram-chart.html">Histogram</a></li>
+                    <li><a href="/chart/google-line-chart.html">Line</a></li>
+                    <li><a href="/chart/google-map-chart.html">Map</a></li>
+                    <li><a href="/chart/google-pie-chart.html">Pie</a></li>
+                    <li><a href="/chart/google-sankey-diagram.html">Sankey</a></li>
+                    <li><a href="/chart/google-scatter-chart.html">Scatter</a></li>
+                    <li><a href="/chart/google-stepped-area-chart.html">Stepped Area</a></li>
+                    <li><a href="/chart/google-timeline-chart.html">Timeline</a></li>
+                    <li><a href="/chart/google-table-chart.html">Table</a></li>
+                    <li><a href="/chart/google-treemap-chart.html">Treemap</a></li>
 
-                    
-
-                    <li class="nav-header"><a href="/XPlot/plotly.html">Plotly</a></li>
-                    
-                    <li><a href="/XPlot/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
-                    
+                    <li class="nav-header"><a href="/plotly.html">Plotly</a></li>
+                    <li><a href="/chart/plotly-bar-charts.html">Bar</a></li>
+                    <li><a href="/chart/plotly-line-scatter-plots.html">Line and Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-box-plots.html">Box Plots</a></li>
+                    <li><a href="/chart/plotly-bubble-charts.html">Bubble Charts</a></li>
+                    <li><a href="/chart/plotly-contour-plots.html">Contour Plots</a></li>
+                    <li><a href="/chart/plotly-area-plots.html">Area Plots</a></li>
+                    <li><a href="/chart/plotly-heatmaps.html">Heatmaps</a></li>
+                    <li><a href="/chart/plotly-histograms.html">Histograms</a></li>
+                    <li><a href="/chart/plotly-2d-histograms.html">2D Histograms</a></li>
+                    <li><a href="/chart/plotly-polar-charts.html">Polar Charts</a></li>
+                    <li><a href="/chart/plotly-time-series.html">Time Series</a></li>
+                    <li><a href="/chart/plotly-multiple-chart-types.html">Multiple Chart Types</a></li>
+                    <li><a href="/chart/plotly-log-plots.html">Log Plots</a></li>
+                    <li><a href="/chart/plotly-3d-scatter-plots.html">3D Scatter Plots</a></li>
+                    <li><a href="/chart/plotly-3d-surface-plots.html">3D Surface Plots</a></li>
+                    <li><a href="/chart/plotly-3d-line-plots.html">3D Line Plots</a></li>
 
                     <li class="nav-header">Documentation</li>
-                    <li><a href="/XPlot/reference/index.html">API Reference</a></li>
+                    <li><a href="/reference/index.html">API Reference</a></li>
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
-                    <li><a href="/XPlot/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
+                    <li><a href="/reference/xplot-googlecharts-chart.html">Google Chart type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration-options.html">Google Option type</a></li>
+                    <li><a href="/reference/xplot-googlecharts-configuration.html">Google configuration module</a></li>
 
                     <li class="divider"></li>
 
-                    <li><a href="/XPlot/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
-                    <li><a href="/XPlot/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
+                    <li><a href="/reference/xplot-plotly-graph.html">Plotly Graph module</a></li>
+                    <li><a href="/reference/xplot-plotly-graph-layout.html">Plotly Layout type</a></li>
                 </ul>
             </div>
         </div>
