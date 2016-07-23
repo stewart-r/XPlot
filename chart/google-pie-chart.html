@@ -13,12 +13,9 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.charts.load('current', { 'packages': ['map'] });
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
@@ -87,11 +84,11 @@
 
                 var options = {"legend":{"position":"right"},"title":"My Daily Activities"} 
 
-                var chart = new google.visualization.PieChart(document.getElementById('94514e8c-7839-4976-9859-d7673d111dd7'));
+                var chart = new google.visualization.PieChart(document.getElementById('a4834b2c-466c-4dab-9799-d5a824d6d6a4'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="94514e8c-7839-4976-9859-d7673d111dd7" style="width: 700px; height: 400px;"></div>
+    <div id="a4834b2c-466c-4dab-9799-d5a824d6d6a4" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>

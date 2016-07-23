@@ -13,12 +13,9 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.charts.load('current', { 'packages': ['map'] });
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
@@ -87,11 +84,11 @@
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.CandlestickChart(document.getElementById('46cc3169-fc3b-4423-8683-e2b213ed4632'));
+                var chart = new google.visualization.CandlestickChart(document.getElementById('a05a6877-61f8-4772-893d-720f70088d05'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="46cc3169-fc3b-4423-8683-e2b213ed4632" style="width: 700px; height: 400px;"></div>
+    <div id="a05a6877-61f8-4772-893d-720f70088d05" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>

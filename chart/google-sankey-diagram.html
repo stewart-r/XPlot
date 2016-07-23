@@ -13,12 +13,9 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.charts.load('current', { 'packages': ['map'] });
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
@@ -89,11 +86,11 @@
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.Sankey(document.getElementById('2730d7a5-a7c8-4bd8-8c29-1fc00f862574'));
+                var chart = new google.visualization.Sankey(document.getElementById('babe6df3-7630-4378-a9f0-1406eaae8009'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="2730d7a5-a7c8-4bd8-8c29-1fc00f862574" style="width: 700px; height: 400px;"></div>
+    <div id="babe6df3-7630-4378-a9f0-1406eaae8009" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>

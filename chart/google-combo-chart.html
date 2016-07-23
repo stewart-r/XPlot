@@ -13,12 +13,9 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.charts.load('current', { 'packages': ['map'] });
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
@@ -101,11 +98,11 @@
 
                 var options = {"hAxis":{"title":"Month"},"legend":{"position":"right"},"series":[{"type":"bars"},{"type":"bars"},{"type":"bars"},{"type":"bars"},{"type":"bars"},{"type":"line"}],"title":"Monthly Coffee Production by Country","vAxis":{"title":"Cups"},"seriesType":"bars"} 
 
-                var chart = new google.visualization.ComboChart(document.getElementById('bc85c153-6c35-4cc2-bc36-83dafdf24354'));
+                var chart = new google.visualization.ComboChart(document.getElementById('6f462c03-8c7a-4698-88e7-ac4171a0ff6c'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="bc85c153-6c35-4cc2-bc36-83dafdf24354" style="width: 700px; height: 400px;"></div>
+    <div id="6f462c03-8c7a-4698-88e7-ac4171a0ff6c" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>

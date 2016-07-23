@@ -13,12 +13,9 @@
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
-        //google.charts.load('current', { 'packages': ['map'] });
+        google.load("visualization", "1.1", { packages: ["corechart", "annotationchart", "calendar", "gauge", "geochart", "map", "sankey", "table", "timeline", "treemap"] })
     </script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/XPlot/content/style.css" />
@@ -93,11 +90,11 @@
 
                 var options = {"height":120,"legend":{"position":"none"},"width":400,"minorTicks":5,"redFrom":90,"redTo":100,"yellowFrom":75,"yellowTo":90} 
 
-                var chart = new google.visualization.Gauge(document.getElementById('d537d32e-2af5-4d5e-a749-af1fedcd7df2'));
+                var chart = new google.visualization.Gauge(document.getElementById('7edbaef3-8d3b-4218-a02a-4a9dfffbc9d3'));
                 chart.draw(data, options);
             }
     </script>
-    <div id="d537d32e-2af5-4d5e-a749-af1fedcd7df2" style="width: 700px; height: 400px;"></div>
+    <div id="7edbaef3-8d3b-4218-a02a-4a9dfffbc9d3" style="width: 700px; height: 400px;"></div>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>
