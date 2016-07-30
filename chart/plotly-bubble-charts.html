@@ -52,6 +52,7 @@
             <div class="span9" id="main">
                 
 <h1><a name="Plotly-Bubble-Charts" class="anchor" href="#Plotly-Bubble-Charts">Plotly Bubble Charts</a></h1>
+<p><a href="https://github.com/TahaHachana/XPlot/blob/master/docs/content/chart/plotly-bubble-charts.fsx">Full source</a></p>
 <h2><a name="Marker-Size-Color-and-Symbol-as-an-Array" class="anchor" href="#Marker-Size-Color-and-Symbol-as-an-Array">Marker Size, Color, and Symbol as an Array</a></h2>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
@@ -99,9 +100,6 @@
 <span class="l">44: </span>
 <span class="l">45: </span>
 <span class="l">46: </span>
-<span class="l">47: </span>
-<span class="l">48: </span>
-<span class="l">49: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">trace1</span> <span class="o">=</span>
     <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="t">Scatter</span>(
@@ -145,21 +143,18 @@
             )
     )
 
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 19)" onmouseover="showTip(event, 'fs11', 19)" class="i">layout</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs12', 20)" onmouseover="showTip(event, 'fs12', 20)" class="t">Layout</span>(<span class="i">showlegend</span> <span class="o">=</span> <span class="k">false</span>)
-
-[<span onmouseout="hideTip(event, 'fs3', 21)" onmouseover="showTip(event, 'fs3', 21)" class="i">trace1</span>; <span onmouseout="hideTip(event, 'fs8', 22)" onmouseover="showTip(event, 'fs8', 22)" class="i">trace2</span>; <span onmouseout="hideTip(event, 'fs9', 23)" onmouseover="showTip(event, 'fs9', 23)" class="i">trace3</span>]
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs13', 24)" onmouseover="showTip(event, 'fs13', 24)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 25)" onmouseover="showTip(event, 'fs14', 25)" class="f">Plot</span>
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs13', 26)" onmouseover="showTip(event, 'fs13', 26)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 27)" onmouseover="showTip(event, 'fs15', 27)" class="f">WithWidth</span> <span class="n">700</span>
-<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs13', 28)" onmouseover="showTip(event, 'fs13', 28)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 29)" onmouseover="showTip(event, 'fs16', 29)" class="f">WithHeight</span> <span class="n">500</span>
+[<span onmouseout="hideTip(event, 'fs3', 19)" onmouseover="showTip(event, 'fs3', 19)" class="i">trace1</span>; <span onmouseout="hideTip(event, 'fs8', 20)" onmouseover="showTip(event, 'fs8', 20)" class="i">trace2</span>; <span onmouseout="hideTip(event, 'fs9', 21)" onmouseover="showTip(event, 'fs9', 21)" class="i">trace3</span>]
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 22)" onmouseover="showTip(event, 'fs11', 22)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 23)" onmouseover="showTip(event, 'fs12', 23)" class="f">Plot</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 24)" onmouseover="showTip(event, 'fs11', 24)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 25)" onmouseover="showTip(event, 'fs13', 25)" class="f">WithWidth</span> <span class="n">700</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 26)" onmouseover="showTip(event, 'fs11', 26)" class="t">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 27)" onmouseover="showTip(event, 'fs14', 27)" class="f">WithHeight</span> <span class="n">500</span>
 </code></pre></td>
 </tr>
 </table>
-<div id="4e05f2b0-e752-4fcf-81ab-951e3dbe6f5e" style="width: 700px; height: 500px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="a189a98f-fc99-4fb2-b7ab-3b2f10288f8e" style="width: 700px; height: 500px;"><!-- Plotly chart will be drawn inside this DIV --></div>
   <script>
     var data = [{"type":"scatter","x":[1,2,3,4],"y":[10,11,12,13],"mode":"markers","marker":{"opacity":[{"Item1":0.6,"Item2":0.7,"Item3":0.8,"Item4":0.9}],"size":[12,22,32,42],"color":["hsl(0,100,40)","hsl(33,100,40)","hsl(66,100,40)","hsl(99,100,40)"]}},{"type":"scatter","x":[1,2,3,4],"y":[11,12,13,14],"mode":"markers","marker":{"symbol":["circle","square","diamond","cross"],"size":18,"color":"rgb(31, 119, 180)"}},{"type":"scatter","x":[1,2,3,4],"y":[12,13,14,15],"mode":"markers","marker":{"size":18,"line":{"color":["rgb(120,120,120)","rgb(120,120,120)","red","rgb(120,120,120)"],"width":[2,2,6,2]}}}];
     var layout = "";
-    Plotly.newPlot('4e05f2b0-e752-4fcf-81ab-951e3dbe6f5e', data, layout);
+    Plotly.newPlot('a189a98f-fc99-4fb2-b7ab-3b2f10288f8e', data, layout);
   </script>
 
 <div class="tip" id="fs1">namespace XPlot</div>
@@ -172,12 +167,10 @@
 <div class="tip" id="fs8">val trace2 : Scatter<br /><br />Full name: Plotly-bubble-charts.trace2</div>
 <div class="tip" id="fs9">val trace3 : Scatter<br /><br />Full name: Plotly-bubble-charts.trace3</div>
 <div class="tip" id="fs10">Multiple items<br />type Line =<br />&#160;&#160;new : unit -&gt; Line<br />&#160;&#160;member ShouldSerializeautocolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecauto : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmax : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecmin : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolor : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorscale : unit -&gt; bool<br />&#160;&#160;member ShouldSerializecolorsrc : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedash : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeoutliercolor : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Line<br /><br />--------------------<br />new : unit -&gt; Line</div>
-<div class="tip" id="fs11">val layout : Layout<br /><br />Full name: Plotly-bubble-charts.layout</div>
-<div class="tip" id="fs12">Multiple items<br />type Layout =<br />&#160;&#160;new : unit -&gt; Layout<br />&#160;&#160;member ShouldSerializeangularaxis : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeannotations : unit -&gt; bool<br />&#160;&#160;member ShouldSerializeautosize : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebargap : unit -&gt; bool<br />&#160;&#160;member ShouldSerializebarmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedirection : unit -&gt; bool<br />&#160;&#160;member ShouldSerializedragmode : unit -&gt; bool<br />&#160;&#160;member ShouldSerializefont : unit -&gt; bool<br />&#160;&#160;member ShouldSerializegeo : unit -&gt; bool<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Graph.Layout<br /><br />--------------------<br />new : unit -&gt; Layout</div>
-<div class="tip" id="fs13">type Chart =<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Column : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Line : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Line : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Chart</div>
-<div class="tip" id="fs14">static member Chart.Plot : data:Trace -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />static member Chart.Plot : data:Trace * layout:Layout -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart</div>
-<div class="tip" id="fs15">static member Chart.WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
-<div class="tip" id="fs16">static member Chart.WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
+<div class="tip" id="fs11">type Chart =<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Bar : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Column : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Column : data:seq&lt;#value&gt; -&gt; PlotlyChart<br />&#160;&#160;static member Line : data:seq&lt;#seq&lt;&#39;a1 * &#39;a2&gt;&gt; -&gt; PlotlyChart (requires &#39;a1 :&gt; key and &#39;a2 :&gt; value)<br />&#160;&#160;static member Line : data:seq&lt;#key * #value&gt; -&gt; PlotlyChart<br />&#160;&#160;...<br /><br />Full name: XPlot.Plotly.Chart</div>
+<div class="tip" id="fs12">static member Chart.Plot : data:Trace -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; -&gt; PlotlyChart<br />static member Chart.Plot : data:Trace * layout:Layout -&gt; PlotlyChart<br />static member Chart.Plot : data:seq&lt;#Trace&gt; * layout:Layout -&gt; PlotlyChart</div>
+<div class="tip" id="fs13">static member Chart.WithWidth : width:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
+<div class="tip" id="fs14">static member Chart.WithHeight : height:int -&gt; chart:PlotlyChart -&gt; PlotlyChart</div>
 
             </div>
             <div class="span3">
