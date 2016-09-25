@@ -67,19 +67,18 @@ using a simple F# list comprehension:</p>
 </code></pre></td>
 </tr>
 </table>
-
-    <script type="text/javascript">
-        google.setOnLoadCallback(drawChart);
+<script type="text/javascript">
+    google.setOnLoadCallback(drawChart);
             function drawChart() {
                 var data = new google.visualization.DataTable({"cols": [{"type": "number" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": 0}, {"v": 0}]}, {"c" : [{"v": 0.5}, {"v": 0.479425538604203}]}, {"c" : [{"v": 1}, {"v": 0.841470984807897}]}, {"c" : [{"v": 1.5}, {"v": 0.997494986604054}]}, {"c" : [{"v": 2}, {"v": 0.909297426825682}]}, {"c" : [{"v": 2.5}, {"v": 0.598472144103957}]}, {"c" : [{"v": 3}, {"v": 0.141120008059867}]}, {"c" : [{"v": 3.5}, {"v": -0.35078322768962}]}, {"c" : [{"v": 4}, {"v": -0.756802495307928}]}, {"c" : [{"v": 4.5}, {"v": -0.977530117665097}]}, {"c" : [{"v": 5}, {"v": -0.958924274663138}]}, {"c" : [{"v": 5.5}, {"v": -0.705540325570392}]}, {"c" : [{"v": 6}, {"v": -0.279415498198926}]}]});
 
                 var options = {"legend":{"position":"none"}} 
 
-                var chart = new google.visualization.LineChart(document.getElementById('b3c7a503-79e7-42c6-bc3c-f748949c1081'));
+                var chart = new google.visualization.LineChart(document.getElementById('bd8522b3-bd35-46d3-beec-cd097ad5be03'));
                 chart.draw(data, options);
             }
-    </script>
-    <div id="b3c7a503-79e7-42c6-bc3c-f748949c1081" style="width: 700px; height: 400px;"></div>
+</script>
+<div id="bd8522b3-bd35-46d3-beec-cd097ad5be03" style="width: 700px; height: 400px;"></div>
 <h2><a name="A-smooth-function-chart" class="anchor" href="#A-smooth-function-chart">A smooth function chart</a></h2>
 <p>By default, line charts use straight line segments between the points. You can add
 smoothing by creating <code>Options</code> with <code>curveType="function"</code> as follows:</p>
@@ -91,19 +90,18 @@ smoothing by creating <code>Options</code> with <code>curveType="function"</code
 </code></pre></td>
 </tr>
 </table>
-
-    <script type="text/javascript">
-        google.setOnLoadCallback(drawChart);
+<script type="text/javascript">
+    google.setOnLoadCallback(drawChart);
             function drawChart() {
                 var data = new google.visualization.DataTable({"cols": [{"type": "number" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Column 2" ,"label": "Column 2" }], "rows" : [{"c" : [{"v": 0}, {"v": 0}]}, {"c" : [{"v": 0.5}, {"v": 0.479425538604203}]}, {"c" : [{"v": 1}, {"v": 0.841470984807897}]}, {"c" : [{"v": 1.5}, {"v": 0.997494986604054}]}, {"c" : [{"v": 2}, {"v": 0.909297426825682}]}, {"c" : [{"v": 2.5}, {"v": 0.598472144103957}]}, {"c" : [{"v": 3}, {"v": 0.141120008059867}]}, {"c" : [{"v": 3.5}, {"v": -0.35078322768962}]}, {"c" : [{"v": 4}, {"v": -0.756802495307928}]}, {"c" : [{"v": 4.5}, {"v": -0.977530117665097}]}, {"c" : [{"v": 5}, {"v": -0.958924274663138}]}, {"c" : [{"v": 5.5}, {"v": -0.705540325570392}]}, {"c" : [{"v": 6}, {"v": -0.279415498198926}]}]});
 
                 var options = {"legend":{"position":"none"},"curveType":"function"} 
 
-                var chart = new google.visualization.LineChart(document.getElementById('949f7ca2-66cc-4e0c-b901-396c91764c16'));
+                var chart = new google.visualization.LineChart(document.getElementById('a8e936c6-f548-49dd-be20-62e683104b9f'));
                 chart.draw(data, options);
             }
-    </script>
-    <div id="949f7ca2-66cc-4e0c-b901-396c91764c16" style="width: 700px; height: 400px;"></div>
+</script>
+<div id="a8e936c6-f548-49dd-be20-62e683104b9f" style="width: 700px; height: 400px;"></div>
 <p>You can find more information about other options that you can specify in the documentation
 <a href="reference/xplot-googlecharts-configuration-options.html">for the <code>Options</code> type</a> in the API
 reference. Another way to explore the available configuration options is to type dot right
@@ -142,19 +140,18 @@ chart with annotations:</p>
 </code></pre></td>
 </tr>
 </table>
-
-    <script type="text/javascript">
-        google.setOnLoadCallback(drawChart);
+<script type="text/javascript">
+    google.setOnLoadCallback(drawChart);
             function drawChart() {
                 var data = new google.visualization.DataTable({"cols": [{"type": "string" ,"id": "Column 1" ,"label": "Column 1" }, {"type": "number" ,"id": "Sales" ,"label": "Sales" }, {"type": "number" ,"id": "Expenses" ,"label": "Expenses" }], "rows" : [{"c" : [{"v": "2013"}, {"v": 1000}, {"v": 400}]}, {"c" : [{"v": "2014"}, {"v": 1170}, {"v": 460}]}, {"c" : [{"v": "2015"}, {"v": 660}, {"v": 1120}]}, {"c" : [{"v": "2016"}, {"v": 1030}, {"v": 540}]}]});
 
                 var options = {"legend":{"position":"right"},"title":"Company Performance","curveType":"function"} 
 
-                var chart = new google.visualization.LineChart(document.getElementById('6d89eede-37b6-42c1-86bd-0b1ccc07daa9'));
+                var chart = new google.visualization.LineChart(document.getElementById('863a103e-7df2-42c9-97d3-91d3afe4a948'));
                 chart.draw(data, options);
             }
-    </script>
-    <div id="6d89eede-37b6-42c1-86bd-0b1ccc07daa9" style="width: 700px; height: 400px;"></div>
+</script>
+<div id="863a103e-7df2-42c9-97d3-91d3afe4a948" style="width: 700px; height: 400px;"></div>
 <p>Note that the two inputs are sequences of tuples with X (year) and Y (value) pairs. We then
 create <code>Options</code> object to specify the title, smooth curve and also the legend of the chart.
 Then we call <code>Chart.Line</code> followed by <code>Chart.WithOptions</code> and also <code>Chart.WithLabels</code> to
@@ -162,8 +159,8 @@ provide labels for the two series.</p>
 
 <div class="tip" id="fs1">namespace XPlot</div>
 <div class="tip" id="fs2">namespace XPlot.GoogleCharts</div>
-<div class="tip" id="fs3">type Chart =<br />&#160;&#160;static member Annotation : data:seq&lt;#seq&lt;DateTime * &#39;V * string * string&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;V :&gt; value)<br />&#160;&#160;static member Annotation : data:seq&lt;DateTime * #value * string * string&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Calendar : data:seq&lt;DateTime * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Chart</div>
-<div class="tip" id="fs4">static member Chart.Line : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />static member Chart.Line : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart</div>
+<div class="tip" id="fs3">type Chart =<br />&#160;&#160;static member Annotation : data:seq&lt;#seq&lt;DateTime * &#39;V * string * string&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;V :&gt; value)<br />&#160;&#160;static member Annotation : data:seq&lt;DateTime * #value * string * string&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Area : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Area : data:seq&lt;#value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bar : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bar : data:seq&lt;#value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;static member Bubble : data:seq&lt;string * #value * #value * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />&#160;&#160;...<br /><br />Full name: XPlot.GoogleCharts.Chart</div>
+<div class="tip" id="fs4">static member Chart.Line : data:seq&lt;#seq&lt;&#39;K * &#39;V&gt;&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart (requires &#39;K :&gt; key and &#39;V :&gt; value)<br />static member Chart.Line : data:seq&lt;#key * #value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart<br />static member Chart.Line : data:seq&lt;#value&gt; * ?Labels:seq&lt;string&gt; * ?Options:Options -&gt; GoogleChart</div>
 <div class="tip" id="fs5">val x : float</div>
 <div class="tip" id="fs6">val sin : value:&#39;T -&gt; &#39;T (requires member Sin)<br /><br />Full name: Microsoft.FSharp.Core.Operators.sin</div>
 <div class="tip" id="fs7">static member Chart.WithOptions : options:Options -&gt; chart:GoogleChart -&gt; GoogleChart</div>
