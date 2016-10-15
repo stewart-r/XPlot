@@ -1,7 +1,7 @@
-module client
-
 #I "bin/"
-#r "bin/XPlot.GoogleCharts.dll"
+
+#r "bin/NewtonSoft.Json.dll"
+
 //#r "bin/XPlot.D3.dll"
 #load "src/XPlot.D3/Main.fs"
 
@@ -19,6 +19,7 @@ let nodes =
 
 nodes
 |> Chart.ForceLayout
+|> Chart.Show
 
 //let Bolivia = ["2004/05", 165.; "2005/06", 135.; "2006/07", 157.; "2007/08", 139.; "2008/09", 136.]
 //let Ecuador = ["2004/05", 938.; "2005/06", 1120.; "2006/07", 1167.; "2007/08", 1110.; "2008/09", 691.]
