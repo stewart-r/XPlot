@@ -88,6 +88,9 @@ NUGET
       Microsoft.NETCore.Platforms (>= 1.0.1) - framework: dnxcore50, >= netstandard10
       Microsoft.NETCore.Targets (>= 1.0.1) - framework: dnxcore50, >= netstandard10
       System.Runtime (>= 4.1) - framework: dnxcore50, >= netstandard10
+    System.Drawing.Primitives (4.0)
+      System.Runtime (>= 4.1) - framework: >= netstandard11
+      System.Runtime.Extensions (>= 4.1) - framework: >= netstandard11
     System.Dynamic.Runtime (4.0.11) - framework: >= netstandard10
       System.Collections (>= 4.0.11) - framework: dnxcore50, >= netstandard13
       System.Diagnostics.Debug (>= 4.0.11) - framework: dnxcore50, >= netstandard13

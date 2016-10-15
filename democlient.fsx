@@ -8,8 +8,7 @@
 //open XPlot.GoogleCharts
 //open XPlot
 open XPlot.D3
-
-
+open System.Drawing
 
 let nodes = 
     [   "blog1"
@@ -19,6 +18,19 @@ let nodes =
 
 nodes
 |> Chart.ForceLayout
+|> Chart.WithNodeOptions (fun x -> 
+    if x.Name = "blog1" then
+        {
+            Fill = Color.FromName("red")
+            Stroke = Color.FromName("blue")
+            StrokeWidth = 4
+        }
+    else 
+        {
+            Fill = Color.FromName("green")
+            Stroke = Color.FromName("blue")
+            StrokeWidth = 4
+        })
 |> Chart.Show
 
 //let Bolivia = ["2004/05", 165.; "2005/06", 135.; "2006/07", 157.; "2007/08", 139.; "2008/09", 136.]
