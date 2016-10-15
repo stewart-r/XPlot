@@ -7,6 +7,8 @@ module client
 
 //open XPlot.GoogleCharts
 //open XPlot
+open XPlot.D3
+
 
 
 let nodes = 
@@ -15,10 +17,8 @@ let nodes =
         "content1"]
     |> List.map(fun x -> {Name=x})
 
-
-let edges = [
-
-]
+nodes
+|> Chart.ForceLayout
 
 //let Bolivia = ["2004/05", 165.; "2005/06", 135.; "2006/07", 157.; "2007/08", 139.; "2008/09", 136.]
 //let Ecuador = ["2004/05", 938.; "2005/06", 1120.; "2006/07", 1167.; "2007/08", 1110.; "2008/09", 691.]
