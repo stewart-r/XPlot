@@ -8,6 +8,10 @@ type Node = {
         Name:string
     }
 
+type NodeOptions = {
+    Fill:
+}
+
 module Html =
 
     let jsTemplate =
@@ -31,8 +35,7 @@ module Html =
             .attr('class', 'node')
             .attr('cx', function(d,i) { return (i+1)*(width/4); }) //relative position
             .attr('cy', function(d,i) { return height/2; }) //relative position
-            .attr('r', width * 0.05) //radius = size of circle
-            ;
+            .attr('r', width * 0.05); //radius = size of circle
 
 
         // create the force layout graph
@@ -41,21 +44,20 @@ module Html =
             .nodes(nodes)
             .start();
         """
-        
-        // """google.setOnLoadCallback(drawChart);
-        //     function drawChart() {
-        //         var data = {DATA};
-
-        //         var options = {OPTIONS} 
-
-        //         var chart = new google.visualization.{TYPE}(document.getElementById('{GUID}'));
-        //         chart.draw(data, options);
-        //     }"""
 
     let inlineTemplate =
         """<script type="text/javascript">
                 {JS}
             </script>
+        <style>
+
+            .node {
+                fill: #ccc;
+                stroke: #fff;
+                stroke-width: 2px;
+            }
+
+        </style>
             <div id="{GUID}" style="width: {WIDTH}px; height: {HEIGHT}px;"></div>"""
 
     let pageTemplate =
@@ -65,7 +67,15 @@ module Html =
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <title>D3 Chart</title>
-                    
+                    <style>
+
+                        .node {
+                            fill: #ccc;
+                            stroke: #fff;
+                            stroke-width: 2px;
+                        }
+
+                    </style>
                 </head>
                 <body>
                     <div id="{GUID}" style="width: {WIDTH}px; height: {HEIGHT}px;"></div>
