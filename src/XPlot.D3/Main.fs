@@ -10,6 +10,16 @@ type Node = {
         Name:string
     }
 
+type Edge = {
+    From:Node
+    To:Node
+}
+
+type Link = {
+    source:int
+    target:int
+}
+
 
 [<AutoOpen>]
 module Customisation = 
@@ -25,6 +35,16 @@ module Customisation =
             StrokeHex:string
             StrokeWidth:string
         }
+
+    type EdgeOptions = {
+        Stroke: Color
+        StrokeWidth:int
+    }
+
+    type EdgeStyle = {
+        StrokeHex: string
+        StrokeWidth: string
+    }
 
     type Options = {
         NodeOptions:Node -> NodeOptions
@@ -50,16 +70,27 @@ module Html =
         // set a width and height for our SVG
         var width = 640,
             height = 480;
-
+        
         // Define the nodes to be drawn
         var nodes = {NODES};
 
+        var links = {EDGES}
+        
         // Add a SVG to the body for our graph
         var svg = d3.select('#{GUID}').append('svg')
             .attr('width', width)
             .attr('height', height);
 
+        var link = svg.selectAll('.link')
+            .data(links)
+            .enter().append('line')
+            .style('stroke','black')
+            .style('stroke-width', '1px')
+            .attr('class', 'link');
+
         var nodeStyles = {NODESTYLES}
+
+        var radius = width / (nodes.length * 7);
 
         // Now it's the nodes turn. Each node is drawn as a circle.
         var node = svg.selectAll('.node')
@@ -71,15 +102,33 @@ module Html =
             .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
             .attr('cx', function(d,i) { return (i+1)*(width/4); }) //relative position
             .attr('cy', function(d,i) { return height/2; }) //relative position
-            .attr('r', width * 0.05); //radius = size of circle
+            .attr('r', radius); 
+
+        function tick(e) {
+                node.attr('r', radius)
+                    .attr('cx', function(d) { return d.x; })
+                    .attr('cy', function(d) { return d.y; })
+                    .call(force.drag) //let them be dragged around
+                    ;
+            
+                link.attr('x1', function(d) { return d.source.x; })
+                    .attr('y1', function(d) { return d.source.y; })
+                    .attr('x2', function(d) { return d.target.x; })
+                    .attr('y2', function(d) { return d.target.y; });
+            }
 
 
         // create the force layout graph
         var force = d3.layout.force()
             .size([width, height])
             .nodes(nodes)
+            .links(links)
+            .on("tick", tick)
+            .linkDistance(width/2) 
             .start();
         """
+
+
 
     let inlineTemplate =
         """
@@ -116,6 +165,8 @@ type ForceLayoutChart() =
 
     [<DefaultValue>]
     val mutable private nodes : seq<Node> 
+    [<DefaultValue>]
+    val mutable private edges : seq<Link>
     
     // [<DefaultValue>]
     // val mutable private options : Options
@@ -169,9 +220,11 @@ type ForceLayoutChart() =
             |> Seq.map (__.Options.NodeOptions >> toNodeStyle) 
             |> Array.ofSeq 
             |> JsonConvert.SerializeObject
+        let edgesJson = __.edges |> JsonConvert.SerializeObject
 
         Html.jsTemplate.Replace("{NODES}", nodesJson)
             .Replace("{NODESTYLES}", nodeStylesJson )
+            .Replace("{EDGES}", edgesJson)
             // .Replace("{TYPE}", __.``type``.ToString())
             // .Replace("{GUID}", __.Id)
 
@@ -197,14 +250,33 @@ type ForceLayoutChart() =
     member __.WithNodeOptions nodeOptions = 
         __.Options <- {__.Options with NodeOptions = nodeOptions} 
 
-    static member Create nodes = 
+    static member Create (nodes:seq<Node>) = 
         let ret = ForceLayoutChart()
         ret.nodes <- nodes
+        ret.edges <- []
+        ret
+
+    static member Create (edges:seq<string * string>) = 
+        let ret = ForceLayoutChart()
+        ret.nodes <- 
+            edges 
+            |> Seq.map fst 
+            |> Seq.append (edges |> Seq.map snd)
+            |> Seq.distinct
+            |> Seq.map (fun x -> {Name = x })
+        let nodeIdxLkUp = 
+            ret.nodes
+            |> Seq.mapi (fun i n -> n.Name, i )
+            |> Map.ofSeq
+        ret.edges <- edges |> Seq.map (fun e -> {source =  nodeIdxLkUp.[fst e]; target =  nodeIdxLkUp.[snd e] })
         ret
 
 type Chart =
-    static member Create nodes = 
+    static member Create (nodes:seq<Node>) = 
         ForceLayoutChart.Create nodes
+    
+    static member Create (edges:seq<string * string>) = 
+        ForceLayoutChart.Create edges
 
     static member WithNodeOptions nodeOptions (chart:ForceLayoutChart) =
         chart.WithNodeOptions nodeOptions
@@ -215,8 +287,11 @@ type Chart =
     static member Show(chart : ForceLayoutChart) = chart.Show()
 
 type Chart with
-    static member ForceLayout(nodes:seq<Node>) =
+    static member ForceLayout (nodes:seq<Node>) =
         Chart.Create nodes
+
+    static member ForceLayout (edges:seq<string * string>) = 
+        Chart.Create edges
 
 
 

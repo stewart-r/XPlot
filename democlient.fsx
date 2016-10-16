@@ -10,26 +10,31 @@
 open XPlot.D3
 open System.Drawing
 
-let nodes = 
-    [   "blog1"
-        "content2"
-        "content1"]
-    |> List.map(fun x -> {Name=x})
+let edges = 
+    [   "blog1", "content2"
+        "content2", "content1"
+        "content1", "blog1"]
+    // |> List.map(fun x -> 
+    //     {
+    //         From = {Name= fst x}
+    //         To = {Name = snd x}
+    //     }
+    //         )
 
-nodes
+edges
 |> Chart.ForceLayout
 |> Chart.WithNodeOptions (fun x -> 
     if x.Name = "blog1" then
         {
             Fill = Color.FromName("red")
             Stroke = Color.FromName("blue")
-            StrokeWidth = 4
+            StrokeWidth = 1
         }
     else 
         {
             Fill = Color.FromName("green")
             Stroke = Color.FromName("blue")
-            StrokeWidth = 4
+            StrokeWidth = 1
         })
 |> Chart.Show
 
