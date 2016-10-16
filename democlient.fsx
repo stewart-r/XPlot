@@ -29,12 +29,14 @@ edges
             Fill = Color.FromName("red")
             Stroke = Color.FromName("blue")
             StrokeWidth = 1
+            RadiusScale = 1.5
         }
     else 
         {
             Fill = Color.FromName("green")
             Stroke = Color.FromName("blue")
             StrokeWidth = 1
+            RadiusScale = 0.5
         })
 |> Chart.Show
 

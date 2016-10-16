@@ -28,12 +28,14 @@ module Customisation =
         Fill: Color
         Stroke: Color
         StrokeWidth:int
+        RadiusScale:float
     }
 
     type NodeStyle = {
             FillHex :string
             StrokeHex:string
             StrokeWidth:string
+            RadiusScale:float
         }
 
     type EdgeOptions = {
@@ -53,17 +55,22 @@ module Customisation =
     let grey = Color.FromArgb(200,200,200)
     let darkGrey = Color.FromArgb(150,150,150)
 
-    let defaultOptions = 
+    let defaultNodeOptions = 
         {
-            NodeOptions = (fun _ -> 
-            {
-                Fill = Color.FromName("red")
-                Stroke = darkGrey
-                StrokeWidth = 2
-            })
+            RadiusScale = 1.0
+            Fill = grey
+            Stroke = darkGrey
+            StrokeWidth = 2
         }
 
-module Html =
+    let defaultOptions = 
+        {
+            NodeOptions = (fun n -> defaultNodeOptions)
+        }
+
+    
+
+module HtmlGeneration =
 
     let jsTemplate =
         """
@@ -102,10 +109,10 @@ module Html =
             .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
             .attr('cx', function(d,i) { return (i+1)*(width/4); }) //relative position
             .attr('cy', function(d,i) { return height/2; }) //relative position
-            .attr('r', radius); 
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; }); 
 
         function tick(e) {
-                node.attr('r', radius)
+                node.attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
                     .attr('cx', function(d) { return d.x; })
                     .attr('cy', function(d) { return d.y; })
                     .call(force.drag) //let them be dragged around
@@ -161,7 +168,7 @@ type ChartGallery =
     | ForceLayout
 
 
-type ForceLayoutChart() = 
+type public ForceLayoutChart() = 
 
     [<DefaultValue>]
     val mutable private nodes : seq<Node> 
@@ -180,7 +187,7 @@ type ForceLayoutChart() =
             match __.``type`` with
             | ForceLayout -> "forcelayoutchart"
 
-        Html.pageTemplate
+        HtmlGeneration.pageTemplate
             .Replace("{PACKAGES}", packages)
             .Replace("{JS}", __.GetInlineJS())
             .Replace("{GUID}", __.Id)
@@ -196,7 +203,7 @@ type ForceLayoutChart() =
         System.Diagnostics.Process.Start(path) |> ignore
 
     member __.GetInlineHtml() =
-        Html.inlineTemplate
+        HtmlGeneration.inlineTemplate
             .Replace("{JS}", __.GetInlineJS())
             .Replace("{GUID}", __.Id)
             .Replace("{WIDTH}", string(__.Width))
@@ -210,6 +217,7 @@ type ForceLayoutChart() =
                 FillHex = toHex nodeOptions.Fill
                 StrokeHex = toHex nodeOptions.Stroke
                 StrokeWidth = sprintf "%dpx" nodeOptions.StrokeWidth
+                RadiusScale = nodeOptions.RadiusScale
             }
 
     /// The chart's inline JavaScript code.
@@ -222,7 +230,7 @@ type ForceLayoutChart() =
             |> JsonConvert.SerializeObject
         let edgesJson = __.edges |> JsonConvert.SerializeObject
 
-        Html.jsTemplate.Replace("{NODES}", nodesJson)
+        HtmlGeneration.jsTemplate.Replace("{NODES}", nodesJson)
             .Replace("{NODESTYLES}", nodeStylesJson )
             .Replace("{EDGES}", edgesJson)
             // .Replace("{TYPE}", __.``type``.ToString())
@@ -286,7 +294,7 @@ type Chart =
     /// Displays a chart in the default browser.
     static member Show(chart : ForceLayoutChart) = chart.Show()
 
-type Chart with
+type public Chart with
     static member ForceLayout (nodes:seq<Node>) =
         Chart.Create nodes
 
