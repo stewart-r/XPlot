@@ -114,7 +114,7 @@ type public ForceLayoutChart() =
 
     member val Width = 900 with get, set
 
-    
+    member __.WithWidth width = __.Width <- width
 
     /// Sets the chart's height.
     member __.WithHeight height = __.Height <- height
@@ -152,6 +152,7 @@ type public ForceLayoutChart() =
         ret.edges <- edges |> Seq.map (fun e -> {source =  nodeIdxLkUp.[fst e]; target =  nodeIdxLkUp.[snd e] })
         ret
 
+
 type Chart =
     static member Create (nodes:seq<Node>) = 
         ForceLayoutChart.Create nodes
@@ -162,6 +163,14 @@ type Chart =
     static member WithNodeOptions nodeOptions (chart:ForceLayoutChart) =
         chart.WithNodeOptions nodeOptions
         chart 
+    
+    static member WithWidth width (chart:ForceLayoutChart) =
+        chart.WithWidth width
+        chart
+
+    static member WithHeight height (chart:ForceLayoutChart) =
+        chart.WithHeight height
+        chart
 
 
     /// Displays a chart in the default browser.
@@ -173,6 +182,10 @@ type public Chart with
 
     static member ForceLayout (edges:seq<string * string>) = 
         Chart.Create edges
+
+    
+        
+
 
 
 

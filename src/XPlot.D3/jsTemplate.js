@@ -1,6 +1,6 @@
 // set a width and height for our SVG
-        var width = 640,
-            height = 480;
+        var width = {WIDTH},
+            height = {HEIGHT};
         
         // Define the nodes to be drawn
         var nodes = {NODES};

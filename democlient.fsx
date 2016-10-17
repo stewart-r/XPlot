@@ -3,6 +3,7 @@
 #r "bin/NewtonSoft.Json.dll"
 
 //#r "bin/XPlot.D3.dll"
+#load "src/XPlot.D3/Configuration.fs"
 #load "src/XPlot.D3/Main.fs"
 
 //open XPlot.GoogleCharts
@@ -14,30 +15,11 @@ let edges =
     [   "blog1", "content2"
         "content2", "content1"
         "content1", "blog1"]
-    // |> List.map(fun x -> 
-    //     {
-    //         From = {Name= fst x}
-    //         To = {Name = snd x}
-    //     }
-    //         )
 
 edges
 |> Chart.ForceLayout
-|> Chart.WithNodeOptions (fun x -> 
-    if x.Name = "blog1" then
-        {
-            Fill = Color.FromName("red")
-            Stroke = Color.FromName("blue")
-            StrokeWidth = 1
-            RadiusScale = 1.5
-        }
-    else 
-        {
-            Fill = Color.FromName("green")
-            Stroke = Color.FromName("blue")
-            StrokeWidth = 1
-            RadiusScale = 0.5
-        })
+|> Chart.WithHeight 1000
+|> Chart.WithWidth 1000
 |> Chart.Show
 
 //let Bolivia = ["2004/05", 165.; "2005/06", 135.; "2006/07", 157.; "2007/08", 139.; "2008/09", 136.]
