@@ -106,8 +106,7 @@ type public ForceLayoutChart() =
         HtmlGeneration.jsTemplate.Replace("{NODES}", nodesJson)
             .Replace("{NODESTYLES}", nodeStylesJson )
             .Replace("{EDGES}", edgesJson)
-            // .Replace("{TYPE}", __.``type``.ToString())
-            // .Replace("{GUID}", __.Id)
+            .Replace("{GRAVITY}", (__.Options.Gravity.ToString()))
 
     member val Height = 500 with get, set
 
@@ -127,6 +126,9 @@ type public ForceLayoutChart() =
         Guid.NewGuid().ToString().Replace("-","")
         |> sprintf "d3%s"
         with get, set
+
+    member __.WithGravity gravity = 
+        __.Options <- {__.Options with Gravity = gravity}
     
     member __.WithNodeOptions nodeOptions = 
         __.Options <- {__.Options with NodeOptions = nodeOptions} 
@@ -172,6 +174,9 @@ type Chart =
         chart.WithHeight height
         chart
 
+    static member WithGravity gravity (chart:ForceLayoutChart) = 
+        chart.WithGravity gravity
+        chart
 
     /// Displays a chart in the default browser.
     static member Show(chart : ForceLayoutChart) = chart.Show()

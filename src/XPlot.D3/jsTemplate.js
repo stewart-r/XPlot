@@ -54,6 +54,7 @@
             .size([width, height])
             .nodes(nodes)
             .links(links)
+            .gravity({GRAVITY})
             .on("tick", tick)
             .linkDistance(width/2) 
-            .start();
+        .start();
