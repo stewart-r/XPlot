@@ -5,70 +5,7 @@ open System
 open System.Drawing
 open System.Text
 open Newtonsoft.Json
-
-type Node = {
-        Name:string
-    }
-
-type Edge = {
-    From:Node
-    To:Node
-}
-
-type Link = {
-    source:int
-    target:int
-}
-
-
-[<AutoOpen>]
-module Customisation = 
-
-    type NodeOptions = {
-        Fill: Color
-        Stroke: Color
-        StrokeWidth:int
-        RadiusScale:float
-    }
-
-    type NodeStyle = {
-            FillHex :string
-            StrokeHex:string
-            StrokeWidth:string
-            RadiusScale:float
-        }
-
-    type EdgeOptions = {
-        Stroke: Color
-        StrokeWidth:int
-    }
-
-    type EdgeStyle = {
-        StrokeHex: string
-        StrokeWidth: string
-    }
-
-    type Options = {
-        NodeOptions:Node -> NodeOptions
-    }
-
-    let grey = Color.FromArgb(200,200,200)
-    let darkGrey = Color.FromArgb(150,150,150)
-
-    let defaultNodeOptions = 
-        {
-            RadiusScale = 1.0
-            Fill = grey
-            Stroke = darkGrey
-            StrokeWidth = 2
-        }
-
-    let defaultOptions = 
-        {
-            NodeOptions = (fun n -> defaultNodeOptions)
-        }
-
-    
+open XPlot.D3.Configuration
 
 module HtmlGeneration =
 
