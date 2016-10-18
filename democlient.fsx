@@ -21,5 +21,6 @@ edges
 {
     Stroke = Color.PowderBlue
     StrokeWidth = 2.0
+    Distance = 250.0
 }) 
 |> Chart.Show

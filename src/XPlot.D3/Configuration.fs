@@ -40,11 +40,13 @@ module Configuration =
     type EdgeOptions = {
         Stroke: Color
         StrokeWidth:float
+        Distance:float
     }
 
     type EdgeStyle = {
         StrokeHex: string
         StrokeWidth: string
+        Distance:float
     }
 
     type Options = {
@@ -67,6 +69,7 @@ module Configuration =
         {
             StrokeWidth = 2.0
             Stroke = Color.Black
+            Distance = 150.0
         }
 
     let defaultOptions = 

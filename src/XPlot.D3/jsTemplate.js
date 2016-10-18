@@ -58,5 +58,8 @@
             .links(links)
             .gravity({GRAVITY})
             .on("tick", tick)
-            .linkDistance(width/2) 
-        .start();
+            .linkDistance( function (d,i) {
+                return linkStyles[i]['Distance'];
+            })
+            .linkStrength(1)
+            .start();

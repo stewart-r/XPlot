@@ -98,6 +98,7 @@ type public ForceLayoutChart() =
         {
             StrokeHex = toHex edgeOptions.Stroke
             StrokeWidth = sprintf "%fpx" edgeOptions.StrokeWidth
+            Distance = edgeOptions.Distance
         }
 
     member private __.links() = 
