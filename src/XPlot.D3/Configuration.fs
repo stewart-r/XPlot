@@ -26,7 +26,7 @@ module Configuration =
     type NodeOptions = {
         Fill: Color
         Stroke: Color
-        StrokeWidth:int
+        StrokeWidth:float
         RadiusScale:float
     }
 
@@ -39,7 +39,7 @@ module Configuration =
 
     type EdgeOptions = {
         Stroke: Color
-        StrokeWidth:int
+        StrokeWidth:float
     }
 
     type EdgeStyle = {
@@ -48,6 +48,7 @@ module Configuration =
     }
 
     type Options = {
+        EdgeOptions:Edge -> EdgeOptions
         NodeOptions:Node -> NodeOptions
         Gravity:float
     }
@@ -55,18 +56,24 @@ module Configuration =
     let grey = Color.FromArgb(200,200,200)
     let darkGrey = Color.FromArgb(150,150,150)
 
-    let defaultNodeOptions = 
+    let defaultNodeOptions:NodeOptions = 
         {
             RadiusScale = 1.0
             Fill = grey
             Stroke = darkGrey
-            StrokeWidth = 2
+            StrokeWidth = 2.0
+        }
+    let defaultEdgeOptions:EdgeOptions = 
+        {
+            StrokeWidth = 2.0
+            Stroke = Color.Black
         }
 
     let defaultOptions = 
         {
             Gravity = 1.0
             NodeOptions = (fun n -> defaultNodeOptions)
+            EdgeOptions = (fun e -> defaultEdgeOptions)
         }
 
     

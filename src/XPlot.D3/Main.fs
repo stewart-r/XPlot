@@ -45,8 +45,10 @@ type public ForceLayoutChart() =
 
     [<DefaultValue>]
     val mutable private nodes : seq<Node> 
+    
+
     [<DefaultValue>]
-    val mutable private edges : seq<Link>
+    val mutable private edges : seq<Edge>
     
     // [<DefaultValue>]
     // val mutable private options : Options
@@ -89,9 +91,23 @@ type public ForceLayoutChart() =
             {
                 FillHex = toHex nodeOptions.Fill
                 StrokeHex = toHex nodeOptions.Stroke
-                StrokeWidth = sprintf "%dpx" nodeOptions.StrokeWidth
+                StrokeWidth = sprintf "%fpx" nodeOptions.StrokeWidth
                 RadiusScale = nodeOptions.RadiusScale
             }
+    let toEdgeStyle (edgeOptions:EdgeOptions) = 
+        {
+            StrokeHex = toHex edgeOptions.Stroke
+            StrokeWidth = sprintf "%fpx" edgeOptions.StrokeWidth
+        }
+
+    member private __.links() = 
+        let nodeIdxLkUp = 
+            __.nodes
+            |> Seq.mapi (fun i n -> n.Name, i )
+            |> Map.ofSeq
+        __.edges 
+            |> Seq.map (fun e -> {source =  nodeIdxLkUp.[e.From.Name]; target =  nodeIdxLkUp.[e.To.Name] })
+
 
     /// The chart's inline JavaScript code.
     member __.GetInlineJS() =
@@ -101,11 +117,17 @@ type public ForceLayoutChart() =
             |> Seq.map (__.Options.NodeOptions >> toNodeStyle) 
             |> Array.ofSeq 
             |> JsonConvert.SerializeObject
-        let edgesJson = __.edges |> JsonConvert.SerializeObject
+        let edgesJson = __.links() |> JsonConvert.SerializeObject
+        let edgeStylesJson = 
+            __.edges
+            |> Seq.map(__.Options.EdgeOptions >> toEdgeStyle )
+            |> Array.ofSeq
+            |> JsonConvert.SerializeObject
 
         HtmlGeneration.jsTemplate.Replace("{NODES}", nodesJson)
             .Replace("{NODESTYLES}", nodeStylesJson )
-            .Replace("{EDGES}", edgesJson)
+            .Replace("{LINKS}", edgesJson)
+            .Replace("{LINKSTYLES}", edgeStylesJson )
             .Replace("{GRAVITY}", (__.Options.Gravity.ToString()))
 
     member val Height = 500 with get, set
@@ -118,6 +140,7 @@ type public ForceLayoutChart() =
     /// Sets the chart's height.
     member __.WithHeight height = __.Height <- height
 
+
     /// Sets the chart's container div id.
     member __.WithId newId = __.Id <- newId
 
@@ -129,6 +152,9 @@ type public ForceLayoutChart() =
 
     member __.WithGravity gravity = 
         __.Options <- {__.Options with Gravity = gravity}
+
+    member __.WithEdgeOptions edgeOptions =
+        __.Options <- {__.Options with EdgeOptions = edgeOptions} 
     
     member __.WithNodeOptions nodeOptions = 
         __.Options <- {__.Options with NodeOptions = nodeOptions} 
@@ -139,19 +165,20 @@ type public ForceLayoutChart() =
         ret.edges <- []
         ret
 
-    static member Create (edges:seq<string * string>) = 
+    static member Create (edgeMappings:seq<string * string>) = 
         let ret = ForceLayoutChart()
         ret.nodes <- 
-            edges 
+            edgeMappings 
             |> Seq.map fst 
-            |> Seq.append (edges |> Seq.map snd)
+            |> Seq.append (edgeMappings |> Seq.map snd)
             |> Seq.distinct
             |> Seq.map (fun x -> {Name = x })
-        let nodeIdxLkUp = 
-            ret.nodes
-            |> Seq.mapi (fun i n -> n.Name, i )
-            |> Map.ofSeq
-        ret.edges <- edges |> Seq.map (fun e -> {source =  nodeIdxLkUp.[fst e]; target =  nodeIdxLkUp.[snd e] })
+        let edges = edgeMappings |> Seq.map(fun e -> 
+            {
+                From = {Name = (fst e)}
+                To = {Name = (snd e)}
+            })
+        ret.edges <- edges
         ret
 
 
@@ -164,7 +191,11 @@ type Chart =
 
     static member WithNodeOptions nodeOptions (chart:ForceLayoutChart) =
         chart.WithNodeOptions nodeOptions
-        chart 
+        chart
+
+    static member WithEdgeOptions edgeOptions (chart:ForceLayoutChart) =
+        chart.WithEdgeOptions edgeOptions
+        chart  
     
     static member WithWidth width (chart:ForceLayoutChart) =
         chart.WithWidth width

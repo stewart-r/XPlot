@@ -17,4 +17,9 @@ edges
 |> Chart.WithHeight 1000
 |> Chart.WithWidth 1000
 |> Chart.WithGravity 2.5
+|> Chart.WithEdgeOptions (fun e ->
+{
+    Stroke = Color.PowderBlue
+    StrokeWidth = 2.0
+}) 
 |> Chart.Show

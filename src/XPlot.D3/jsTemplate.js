@@ -5,18 +5,20 @@
         // Define the nodes to be drawn
         var nodes = {NODES};
 
-        var links = {EDGES}
+        var links = {LINKS}
         
         // Add a SVG to the body for our graph
         var svg = d3.select('#{GUID}').append('svg')
             .attr('width', width)
             .attr('height', height);
 
+        var linkStyles = {LINKSTYLES}
+
         var link = svg.selectAll('.link')
             .data(links)
             .enter().append('line')
-            .style('stroke','black')
-            .style('stroke-width', '1px')
+            .style('stroke',function(d,i) { return linkStyles[i]['StrokeHex']; })
+            .style('stroke-width', function(d,i) { return linkStyles[i]['StrokeWidth']; })
             .attr('class', 'link');
 
         var nodeStyles = {NODESTYLES}
