@@ -2,7 +2,6 @@
 #I "../../bin"
 #r "XPlot.Plotly.dll"
 #r "XPlot.GoogleCharts.dll"
-#r "XPlot.D3.dll"
 open XPlot.GoogleCharts
 open System.Drawing
 
@@ -103,43 +102,10 @@ traces
 |> Chart.Plot
 |> Chart.WithLayout layout
 (*** include-it:polar ***)
-
 (**
 The code snippet creates one `Scatter` data series for each of the trials in the input. It sets the `r` and `t`
 properties to two lists of input values. If we wanted to produce an ordinary rectangular scatter plot, we could
 instead set the `x` and `y` properties.
-
-
-### D3 Example
-
-The following example shows how a simple D3 network chart can be created
-*)
-(*** define-output:network ***) 
-open XPlot.D3
-let network = 
-  [
-  "A", "B"
-  "B", "C"
-  "C", "A"
-  "D", "A"
-  ]
-
-let chart = 
-  network
-  |> Chart.ForceLayout
-  |> Chart.WithNodeOptions( fun node -> 
-      match node.Name with
-      | "A" -> { defaultNodeOptions with Fill = Color.FromArgb(150,30,30)}
-      | _ -> {defaultNodeOptions with Fill = Color.CornflowerBlue}
-    )
-  |> Chart.WithEdgeOptions (fun e -> {defaultEdgeOptions with Distance = 500.0})
-  |> Chart.WithGravity 1.0
-
-chart.GetInlineHtml()
-
-(*** include-it:network ***)
-
-(**
 
 How to get XPlot
 ----------------

@@ -154,7 +154,7 @@ let createFsiEvaluator root output (floatFormat:string) =
 //        fig.Height <- 300
 //        Some [ InlineBlock (fig.GetInlineHtml(name)) ]
         Some [ InlineBlock <| chart.GetInlineHtml() ]
-    | :? D3.ForceLayoutChart as chart -> Some [ InlineBlock <| chart.GetInlineHtml() ]
+    | :? D3.ForceLayoutChart as chart -> Some [ InlineBlock <| chart.GetHtml() ]
 
     | SeriesValues s ->
         // Pretty print series!

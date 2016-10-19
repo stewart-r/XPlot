@@ -2,7 +2,6 @@
 
 open System.IO
 open System
-open System.Drawing
 open System.Text
 open Newtonsoft.Json
 open XPlot.D3.Configuration
@@ -85,7 +84,7 @@ type public ForceLayoutChart() =
             .Replace("{HEIGHT}", string(__.Height))
     
     let toHex (color:Color) = 
-        String.Format("#{0:X2}{1:X2}{2:X2}", color.R, color.G, color.B)
+        String.Format("#{0:X2}{1:X2}{2:X2}", color.Red, color.Green, color.Blue)
 
     let toNodeStyle (nodeOptions:NodeOptions) =
             {
@@ -130,6 +129,7 @@ type public ForceLayoutChart() =
             .Replace("{LINKS}", edgesJson)
             .Replace("{LINKSTYLES}", edgeStylesJson )
             .Replace("{GRAVITY}", (__.Options.Gravity.ToString()))
+            .Replace("{CHARGE}", (__.Options.Charge.ToString()))
 
     member val Height = 500 with get, set
 
@@ -153,6 +153,9 @@ type public ForceLayoutChart() =
 
     member __.WithGravity gravity = 
         __.Options <- {__.Options with Gravity = gravity}
+    
+    member __.WithCharge charge = 
+        __.Options <- {__.Options with Charge = charge}
 
     member __.WithEdgeOptions edgeOptions =
         __.Options <- {__.Options with EdgeOptions = edgeOptions} 
@@ -208,6 +211,10 @@ type Chart =
 
     static member WithGravity gravity (chart:ForceLayoutChart) = 
         chart.WithGravity gravity
+        chart
+    
+    static member WithCharge charge (chart:ForceLayoutChart) = 
+        chart.WithCharge charge
         chart
 
     /// Displays a chart in the default browser.
