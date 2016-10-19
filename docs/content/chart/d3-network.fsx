@@ -20,14 +20,11 @@ edges
 |> Chart.WithGravity 0.5
 |> Chart.WithCharge -2000.0
 |> Chart.WithEdgeOptions (fun e ->
-    if e.From.Name = "A" then
-        if e.To.Name = "B" then
-            {defaultEdgeOptions with Distance = 200.0}
-        else 
-            {defaultEdgeOptions with StrokeWidth = 4.5}
-    else 
-        {defaultEdgeOptions with Distance = 100.0}
-        )
+    let pr = e.From.Name, e.To.Name
+    match pr with 
+    | "A","B" -> { defaultEdgeOptions with Distance = 200.0 }
+    | "A","D" -> { defaultEdgeOptions with StrokeWidth = 4.5 } 
+    | _ -> {defaultEdgeOptions with Distance = 100.0})
 |> Chart.WithNodeOptions(fun n ->
     match n.Name with
     | "A" -> {defaultNodeOptions with Fill = {Red = 150uy; Green = 150uy; Blue=195uy}} 
