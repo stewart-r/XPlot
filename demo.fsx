@@ -1,13 +1,12 @@
-(*** hide ***)
-#I "../../../bin/"
-#r "XPlot.D3.dll"
-open XPlot.D3
-(**
-##D3 Network Example
+#I "bin/"
+#r "bin/Newtonsoft.Json.dll"
 
-We can create a Force Layout chart like so
-*)
-(*** define-output:netchart ***)
+#load "src/XPlot.D3/Configuration.fs"
+#load "src/XPlot.D3/Main.fs"
+
+open XPlot.D3
+
+
 let edges = 
     [   "A", "B"
         "B", "C"
@@ -31,6 +30,4 @@ edges
     | "A" -> {defaultNodeOptions with Fill = {Red = 150uy; Green = 150uy; Blue=195uy}} 
     | "B" -> {defaultNodeOptions with RadiusScale=1.5; Fill = {Red = 150uy; Green = 195uy; Blue=150uy}}
     | _ -> defaultNodeOptions)
-(*** include-it:netchart ***)
-
-
+|> Chart.Show

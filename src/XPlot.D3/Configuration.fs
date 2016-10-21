@@ -5,6 +5,10 @@ open System
 open System.Text
 open Newtonsoft.Json
 
+type Label = 
+| TextLabel of string
+| HtmlLabel of string
+
 type Color = {
     Red:byte
     Green:byte
@@ -33,6 +37,7 @@ module Configuration =
         Stroke: Color
         StrokeWidth:float
         RadiusScale:float
+        Label: Option<Label>
     }
 
     type NodeStyle = {
@@ -71,6 +76,7 @@ module Configuration =
             Fill = grey
             Stroke = darkGrey
             StrokeWidth = 2.0
+            Label = None
         }
     let defaultEdgeOptions:EdgeOptions = 
         {

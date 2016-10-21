@@ -32,7 +32,10 @@
             .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
             .attr('cx', function(d,i) { return width/2; }) 
             .attr('cy', function(d,i) { return height/2; })
-            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; }); 
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; });
+
+        // var node = svg.selectAll('node')
+        //     .append('text',"onions") 
 
         function tick(e) {
                 node.attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
