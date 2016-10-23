@@ -12,7 +12,7 @@ let edges =
         "B", "C"
         "C", "A"
         "A", "D"
-        "B", "E"]
+        "B", "E"]   
 edges
 |> Chart.ForceLayout
 |> Chart.WithHeight 300
@@ -26,6 +26,10 @@ edges
     | "A","D" -> { defaultEdgeOptions with StrokeWidth = 4.5 } 
     | _ -> {defaultEdgeOptions with Distance = 100.0})
 |> Chart.WithNodeOptions(fun n ->
+    let lbl = Some ({
+                        Text = n.Name + " node"
+                        HtmlAttrs = ["font-family","sans-serif"]}) 
+    let baseOpt = {defaultNodeOptions with Label = lbl}
     match n.Name with
     | "A" -> {defaultNodeOptions with Fill = {Red = 150uy; Green = 150uy; Blue=195uy}} 
     | "B" -> {defaultNodeOptions with RadiusScale=1.5; Fill = {Red = 150uy; Green = 195uy; Blue=150uy}}

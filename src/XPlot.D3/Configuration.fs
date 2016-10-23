@@ -5,9 +5,10 @@ open System
 open System.Text
 open Newtonsoft.Json
 
-type Label = 
-| TextLabel of string
-| HtmlLabel of string
+type NodeLabel = {
+    Text: string
+    HtmlAttrs: list<string * string>
+}
 
 type Color = {
     Red:byte
@@ -37,7 +38,7 @@ module Configuration =
         Stroke: Color
         StrokeWidth:float
         RadiusScale:float
-        Label: Option<Label>
+        Label: Option<NodeLabel>
     }
 
     type NodeStyle = {

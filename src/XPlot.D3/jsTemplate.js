@@ -34,8 +34,14 @@
             .attr('cy', function(d,i) { return height/2; })
             .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; });
 
-        // var node = svg.selectAll('node')
-        //     .append('text',"onions") 
+        var lbls = svg.selectAll("text")
+            .data(nodes)
+            .enter()
+            .append('text')
+            .attr('x', width/2)
+            .attr('y', height/2)
+            .text(function (d) {return d.Name;});
+            
 
         function tick(e) {
                 node.attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
@@ -43,6 +49,10 @@
                     .attr('cy', function(d) { return d.y; })
                     .call(force.drag) 
                     ;
+                
+                lbls.attr('x', function(d) { return d.x + 20; })
+                    .attr('y', function(d) { return d.y; })
+                    .call(force.drag)
             
                 link.attr('x1', function(d) { return d.source.x; })
                     .attr('y1', function(d) { return d.source.y; })
