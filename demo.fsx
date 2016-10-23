@@ -28,10 +28,10 @@ edges
 |> Chart.WithNodeOptions(fun n ->
     let lbl = Some ({
                         Text = n.Name + " node"
-                        HtmlAttrs = ["font-family","sans-serif"]}) 
+                        StyleAttrs = ["font-family","sans-serif";"fill","red"]}) 
     let baseOpt = {defaultNodeOptions with Label = lbl}
     match n.Name with
-    | "A" -> {defaultNodeOptions with Fill = {Red = 150uy; Green = 150uy; Blue=195uy}} 
-    | "B" -> {defaultNodeOptions with RadiusScale=1.5; Fill = {Red = 150uy; Green = 195uy; Blue=150uy}}
-    | _ -> defaultNodeOptions)
+    | "A" -> {baseOpt with Fill = {Red = 150uy; Green = 150uy; Blue=195uy}} 
+    | "B" -> {baseOpt with RadiusScale=1.5; Fill = {Red = 150uy; Green = 195uy; Blue=150uy}}
+    | _ -> baseOpt)
 |> Chart.Show

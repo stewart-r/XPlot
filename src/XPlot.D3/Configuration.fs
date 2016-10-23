@@ -7,7 +7,7 @@ open Newtonsoft.Json
 
 type NodeLabel = {
     Text: string
-    HtmlAttrs: list<string * string>
+    StyleAttrs: list<string * string>
 }
 
 type Color = {
@@ -46,6 +46,8 @@ module Configuration =
             StrokeHex:string
             StrokeWidth:string
             RadiusScale:float
+            LabelText:string
+            LabelAttrs:List<string * string>
         }
 
     type EdgeOptions = {
