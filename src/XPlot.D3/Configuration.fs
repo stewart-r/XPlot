@@ -33,12 +33,15 @@ type Link = {
 [<AutoOpen>]
 module Configuration = 
 
+    type FixOrFloat = FixStart | FixEnd | Float
+
     type NodeOptions = {
         Fill: Color
         Stroke: Color
         StrokeWidth:float
         RadiusScale:float
         Label: Option<NodeLabel>
+        FixOrFloat:FixOrFloat
     }
 
     type NodeStyle = {
@@ -48,6 +51,7 @@ module Configuration =
             RadiusScale:float
             LabelText:string
             LabelAttrs:List<string * string>
+            FixOrFloat:FixOrFloat
         }
 
     type EdgeOptions = {
@@ -80,6 +84,7 @@ module Configuration =
             Stroke = darkGrey
             StrokeWidth = 2.0
             Label = None
+            FixOrFloat = Float
         }
     let defaultEdgeOptions:EdgeOptions = 
         {

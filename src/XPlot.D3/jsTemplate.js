@@ -5,8 +5,6 @@
         var nodes = {NODES};
 
         var links = {LINKS};
-
-        //var labels = {LABELS};
         
         var svg = d3.select('#{GUID}').append('svg')
             .attr('width', width)
@@ -23,6 +21,18 @@
 
         var nodeStyles = {NODESTYLES}
 
+        function getNodeIdxsOfType(nodeType){
+            var ret = []
+            for (i = 0; i < nodeStyles.length; i++){
+                if (nodeStyles[i].FixOrFloat == nodeType){
+                    ret.push(i)
+                }
+            }
+            return ret;
+        }
+
+        var
+
         var radius = width / (nodes.length * 7);
 
         var node = svg.selectAll('.node')
@@ -34,7 +44,12 @@
             .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
             .attr('cx', function(d,i) { return width/2; }) 
             .attr('cy', function(d,i) { return height/2; })
-            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; });
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
+            .each(function (d,i) {
+                if (i==1){
+                    d3.select(this).classed("fixed", d.fixed = true);
+                }
+            });
 
         var lbls = svg.selectAll("text")
             .data(nodes)
