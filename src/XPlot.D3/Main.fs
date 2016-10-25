@@ -100,6 +100,7 @@ type public ForceLayoutChart() =
                     match nodeOptions.Label with
                     | None -> []
                     | Some lbl -> lbl.StyleAttrs
+                FixOrFloat = nodeOptions.FixOrFloat
             }
     let toEdgeStyle (edgeOptions:EdgeOptions) = 
         {

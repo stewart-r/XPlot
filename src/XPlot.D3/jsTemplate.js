@@ -5,8 +5,6 @@
         var nodes = {NODES};
 
         var links = {LINKS};
-
-        //var labels = {LABELS};
         
         var svg = d3.select('#{GUID}').append('svg')
             .attr('width', width)
@@ -23,7 +21,21 @@
 
         var nodeStyles = {NODESTYLES}
 
+        function getNodeIdxsOfType(nodeType){
+            var ret = []
+            for (i = 0; i < nodeStyles.length; i++){
+                if (nodeStyles[i].FixOrFloat.Case == nodeType){
+                    ret.push(i)
+                }
+            }
+            return ret;
+        }
+        var startPointIdxs = getNodeIdxsOfType("FixStart");
+        var endPointIdxs = getNodeIdxsOfType("FixEnd");
         var radius = width / (nodes.length * 7);
+
+        var endPointMargin = 200;
+        var startPointMargin = 20;
 
         var node = svg.selectAll('.node')
             .data(nodes)
@@ -32,9 +44,23 @@
             .style('stroke',function(d,i) { return nodeStyles[i]['StrokeHex']; })
             .style('stroke-width',function(d,i) { return nodeStyles[i]['StrokeWidth']; })
             .style('fill',function(d,i) { return nodeStyles[i]['FillHex']; })
-            .attr('cx', function(d,i) { return width/2; }) 
-            .attr('cy', function(d,i) { return height/2; })
-            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; });
+            .attr('x', function(d,i) { return width/2; }) 
+            .attr('y', function(d,i) { return height/2; })
+            .attr('r', function(d,i) { return nodeStyles[i]['RadiusScale'] * radius; })
+            .each(function (d,i) {
+                var startIdx = startPointIdxs.indexOf(i); 
+                if (startIdx > -1){
+                    d.x = startPointMargin;
+                    d.y = (startIdx + 1) * height / (startPointIdxs.length + 1);
+                    d3.select(this).classed("fixed", d.fixed = true);
+                }
+                var endIdx = endPointIdxs.indexOf(i);
+                if (endIdx > -1){
+                    d.x = width - endPointMargin;
+                    d.y = (endIdx + 1) * height / (endPointIdxs.length + 1);
+                    d3.select(this).classed("fixed", d.fixed = true);
+                }
+            });
 
         var lbls = svg.selectAll("text")
             .data(nodes)
